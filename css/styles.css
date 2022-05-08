@@ -1,2 +1,139 @@
 @import url(https://fonts.googleapis.com/css?family=Monda:regular,700);
 @import url(https://fonts.googleapis.com/css?family=Staatliches:regular);
+body {
+  min-height: 3000px;
+  font-family: Monda;
+  font-weight: regular;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.firstscreen__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  background-color: #e1e1e1;
+  overflow: hidden;
+}
+.firstscreen__info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.firstscreen__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  z-index: 2;
+  background-image: url("/images/voice01.png");
+  background-size: cover;
+}
+
+.welcomeinfo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  gap: 5%;
+  z-index: 2;
+  margin-top: 22%;
+}
+.welcomeinfo__img {
+  width: 55%;
+  z-index: 2;
+}
+.welcomeinfo__zigzag {
+  position: absolute;
+  top: -5%;
+  right: -25%;
+  width: 60%;
+  z-index: 1;
+}
+
+.stickers {
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+.stickers__item {
+  position: absolute;
+  display: inline-block;
+  padding: 0 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  color: #e1e1e1;
+}
+.stickers__item_black {
+  background-color: #000;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+}
+.stickers__item_purple {
+  right: 0;
+  bottom: 0;
+  background-color: #9913e1;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.textblock {
+  line-height: 1.4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.textblock__bold {
+  font-weight: 700;
+  color: #9913e1;
+}
+
+.firstbg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.firstbg__ragged {
+  position: absolute;
+  height: 100%;
+}
+.firstbg__logo {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 10%;
+}
+.firstbg__grange {
+  position: absolute;
+  top: -23%;
+  left: 24%;
+  width: 48%;
+  -webkit-transform: rotate(-10.2deg);
+          transform: rotate(-10.2deg);
+}
+.firstbg__downbutton {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}

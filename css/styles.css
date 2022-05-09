@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Monda:regular,700);
 @import url(https://fonts.googleapis.com/css?family=Staatliches:regular);
 body {
-  min-height: 3000px;
   font-family: Monda;
   font-weight: regular;
 }
@@ -18,6 +17,8 @@ body {
 .textblock {
   line-height: 1.4rem;
   font-size: 1.2rem;
+  text-align: justify;
+  z-index: 5;
 }
 .textblock_center {
   text-align: center;
@@ -27,7 +28,63 @@ body {
   color: #9913e1;
 }
 .textblock__bold_white {
-  color: #fff;
+  color: #e1e1e1;
+}
+
+.stickers {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  z-index: 6;
+}
+.stickers__item {
+  position: absolute;
+  display: inline-block;
+  padding: 0 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  color: #e1e1e1;
+}
+.stickers__item_black {
+  background-color: #000;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+}
+.stickers__item_purple {
+  right: 0;
+  bottom: 0;
+  background-color: #9913e1;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.button {
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  border: 4px solid #9913e1;
+  background-color: #e1e1e1;
+  color: #9913e1;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.button_white {
+  border: 4px solid #e1e1e1;
+  background-color: #9913e1;
+  color: #e1e1e1;
+}
+
+.downbutton {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  height: 13%;
+  z-index: 7;
+}
+.downbutton img {
+  height: 100%;
 }
 
 .header__container {
@@ -38,6 +95,7 @@ body {
   z-index: 3;
   width: 100%;
 }
+
 .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +116,7 @@ body {
 }
 
 .firstscreen__container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +134,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #000;
+}
+.firstscreen__welcomeinfo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
 .firstscreen__bgelement {
   position: absolute;
@@ -93,14 +156,6 @@ body {
 .firstscreen__bgelement_grange {
   left: 24%;
   width: 48%;
-}
-.firstscreen__bgelement_downbutton {
-  bottom: 10%;
-  left: 10%;
-  height: 13%;
-}
-.firstscreen__bgelement_downbutton img {
-  height: 100%;
 }
 .firstscreen__image {
   -webkit-box-flex: 0;
@@ -126,9 +181,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
   gap: 5%;
   z-index: 2;
 }
@@ -137,7 +189,7 @@ body {
   width: 55%;
   margin-top: 25%;
 }
-.welcomeinfo__zigzag {
+.welcomeinfo__bgelement {
   position: absolute;
   top: 25%;
   right: -25%;
@@ -145,29 +197,157 @@ body {
   z-index: 1;
 }
 
-.stickers {
+.dates__container {
   position: relative;
-  width: 100%;
-  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
-.stickers__item {
-  position: absolute;
-  display: inline-block;
-  padding: 0 18px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
+.dates__datesinfo {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  background-color: #9913e1;
+}
+.dates__calendar {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65%;
+          flex: 0 0 65%;
+  background-color: #e1e1e1;
+}
+
+.datesinfo__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+.datesinfo__title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+  font-family: Staatliches;
+  font-size: 6rem;
+  line-height: 5.5rem;
+}
+.datesinfo__title span {
   color: #e1e1e1;
 }
-.stickers__item_black {
-  background-color: #000;
-  -webkit-transform: rotate(-6deg);
-          transform: rotate(-6deg);
+.datesinfo__description {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
 }
-.stickers__item_purple {
-  right: 0;
+.datesinfo__bgelement {
+  position: absolute;
+  left: 0;
   bottom: 0;
-  background-color: #9913e1;
-  -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg);
+}
+
+.calendar__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2%;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+.calendar__choosedate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 30px;
+  width: 100%;
+  margin: 6% 0 4%;
+}
+.calendar__actualdate {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #9913e1;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.calendar__rightbutton {
+  width: 9%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.calendar__stickers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.calendar__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.calendar__textblock {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+}
+.calendar__bgelement {
+  position: absolute;
+}
+.calendar__bgelement_zigzag {
+  left: 22%;
+  bottom: 5%;
+  width: 23%;
+}
+.calendar__bgelement_ragged {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.calendar__bgelement_grangeleft {
+  left: 0;
+  bottom: 0;
+}
+.calendar__bgelement_grangeright {
+  right: 0;
 }

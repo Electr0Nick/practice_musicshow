@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Staatliches:regular);
 
 body {
-    min-height: 3000px;
+    // min-height: 3000px;
     font-family: Monda;
     font-weight: regular;
 }
@@ -19,6 +19,8 @@ body {
 .textblock {
     line-height: 1.4rem;
     font-size: 1.2rem;
+    text-align: justify;
+    z-index: 5;
     &_center {
         text-align: center;
     }
@@ -26,8 +28,62 @@ body {
         font-weight: 700;
         color: #9913e1;
         &_white {
-            color: #fff;
+            color: #e1e1e1;
         }
+    }
+}
+
+.stickers {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    z-index: 6;
+    &__item {
+        position: absolute;
+        display: inline-block;
+        padding: 0 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        color: #e1e1e1;
+        &_black {
+            background-color: #000;
+            transform: rotate(-6deg);
+        }
+        &_purple {
+            right: 0;
+            bottom: 0;
+            background-color: #9913e1;
+            transform: rotate(-3deg);
+        }
+    }
+}
+
+.button {
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    border: 4px solid #9913e1;
+    background-color: #e1e1e1;
+    color: #9913e1;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    &_white {
+        border: 4px solid #e1e1e1;
+        background-color: #9913e1;
+        color: #e1e1e1;
+    }
+}
+
+.downbutton {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    height: 13%;
+    z-index: 7;
+    img {
+        height: 100%;
     }
 }
 
@@ -41,8 +97,6 @@ body {
         z-index: 3;
         width: 100%;
     }
-    &__nav {
-    }
 }
 .navigation {
     &__list {
@@ -50,8 +104,6 @@ body {
         justify-content: center;
         gap: 3%;
         padding: 20px 0;
-    }
-    &__item {
     }
     &__link {
         text-transform: uppercase;

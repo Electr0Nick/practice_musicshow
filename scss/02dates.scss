@@ -1,0 +1,108 @@
+.dates {
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &__datesinfo {
+        position: relative;
+        flex: 0 0 35%;
+        background-color: #9913e1;
+    }
+    &__calendar {
+        position: relative;
+        flex: 0 0 65%;
+        background-color: #e1e1e1;
+    }
+}
+.datesinfo {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    &__title {
+        flex: 0 0 48%;
+        font-family: Staatliches;
+        font-size: 6rem;
+        line-height: 5.5rem;
+        span {
+            color: #e1e1e1;
+        }
+    }
+    &__description {
+        flex: 0 0 48%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__bgelement {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+.calendar {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+        width: 60%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    &__choosedate {
+        display: flex;
+        justify-content: end;
+        gap: 30px;
+        width: 100%;
+        margin: 6% 0 4%;
+    }
+    &__actualdate {
+        align-self: center;
+        color: #9913e1;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    &__rightbutton {
+        width: 9%;
+        transform: rotate(-90deg);
+    }
+    &__stickers {
+        display: flex;
+        justify-content: center;
+    }
+    &__description {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__textblock {
+        flex: 0 0 48%;
+    }
+    &__bgelement {
+        position: absolute;
+        &_zigzag {
+            left: 22%;
+            bottom: 5%;
+            width: 23%;
+        }
+        &_ragged {
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        &_grangeleft {
+            left: 0;
+            bottom: 0;
+        }
+        &_grangeright {
+            right: 0;
+        }
+    }
+}

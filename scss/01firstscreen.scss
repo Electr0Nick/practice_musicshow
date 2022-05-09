@@ -1,5 +1,6 @@
 .firstscreen {
     &__container {
+        position: relative;
         display: flex;
         justify-content: space-between;
         height: 100%;
@@ -9,7 +10,9 @@
         position: relative;
         display: flex;
         justify-content: center;
-        border: 1px solid #000;
+    }
+    &__welcomeinfo {
+        flex: 0 0 50%;
     }
     &__bgelement {
         position: absolute;
@@ -27,14 +30,6 @@
             left: 24%;
             width: 48%;
         }
-        &_downbutton {
-            bottom: 10%;
-            left: 10%;
-            height: 13%;
-            img {
-                height: 100%;
-            }
-        }
     }
     &__image {
         flex: 0 0 30%;
@@ -49,7 +44,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 0 0 50%;
     gap: 5%;
     z-index: 2;
     &__img {
@@ -57,35 +51,11 @@
         width: 55%;
         margin-top: 25%;
     }
-    &__zigzag {
+    &__bgelement {
         position: absolute;
         top: 25%;
         right: -25%;
         width: 60%;
         z-index: 1;
-    }
-}
-.stickers {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    &__item {
-        position: absolute;
-        display: inline-block;
-        padding: 0 18px;
-        text-transform: uppercase;
-        font-weight: 700;
-        text-align: center;
-        color: #e1e1e1;
-        &_black {
-            background-color: #000;
-            transform: rotate(-6deg);
-        }
-        &_purple {
-            right: 0;
-            bottom: 0;
-            background-color: #9913e1;
-            transform: rotate(-3deg);
-        }
     }
 }

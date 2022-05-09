@@ -11,44 +11,71 @@
 </head>
 
 <body>
-    <!-- <header class="header">
-        <div class="container">
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__link"><a href="#">Home</a></li>
-                    <li class="header__link"><a href="#">Event</a></li>
-                    <li class="header__link"><a href="#">Tickets</a></li>
-                    <li class="header__link"><a href="#">About</a></li>
+    <!-- -----------------------------------------------header----------------------------------------------- -->
+    <header class="header">
+        <div class="header__container container">
+            <nav class="header__nav navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a class="navigation__link navigation__link_active" href="#">Home</a>
+                    </li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">Event</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">Tickets</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">About</a></li>
                 </ul>
             </nav>
         </div>
-    </header> -->
-    <div class="firstscreen">
-        <div class="container firstscreen__wrapper">
+    </header>
+
+    <!-- -----------------------------------------------firstscreen----------------------------------------------- -->
+    <div class="firstscreen screen">
+        <div class="firstscreen__container container">
             <div class="firstscreen__info">
-                <div class="firstscreen__presentation welcomeinfo">
+                <div class="firstscreen__welcomeinfo welcomeinfo">
                     <img class="welcomeinfo__img" src="images/musicshow.png" alt="Music Show logo">
                     <div class="welcomeinfo__stickers stickers">
                         <div class="stickers__item stickers__item_black">a place to quench your thirst for music</div>
                         <div class="stickers__item stickers__item_purple">party out with us for three days!</div>
                     </div>
-                    <p class="welcomeinfo__discription textblock"><span class="textblock__bold">Lorem ipsum dolor sit
-                            amet</span> consectetur adipisicing elit, sed do ei usmod tempor
+                    <p class="welcomeinfo__textblock textblock textblock_center"><span class="textblock__bold">Lorem
+                            ipsum dolor sit amet</span> consectetur adipisicing elit, sed do ei usmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     <img class="welcomeinfo__zigzag" src="images/zigzag01.png" alt="Design element">
                 </div>
-                <div class="firstscreen__bgelements firstbg">
-                    <img class="firstbg__ragged" src="images/blackrock01.png" alt="Design element">
-                    <img class="firstbg__logo" src="images/logo.png" alt="Logo">
-                    <img class="firstbg__grange" src="images/bgdots01.png" alt="Design element">
-                    <a class="firstbg__downbutton" href="#"><img src="images/arrow.png" alt="Downscreen button"></a>
-                </div>
+                <img class="firstscreen__bgelement firstscreen__bgelement_ragged" src="images/blackrock01.png"
+                    alt="Design element">
+                <img class="firstscreen__bgelement firstscreen__bgelement_logo" src="images/logo.png" alt="Logo">
+                <img class="firstscreen__bgelement firstscreen__bgelement_grange" src="images/bgdots01.png"
+                    alt="Design element">
+                <a class="firstscreen__bgelement firstscreen__bgelement_downbutton" href="#"><img src="images/arrow.png"
+                        alt="Downscreen button"></a>
             </div>
-            <div class="firstscreen__image">
+            <div class="firstscreen__image"></div>
+        </div>
+    </div>
+
+    <!-- -----------------------------------------------dates----------------------------------------------- -->
+    <div class="dates screen">
+        <div class="dates__container container">
+            <div class="dates__datesinfo datesinfo">
+                <div class="datesinfo__content">
+                    <h2 class="datesinfo__title">party your heart out!</h2>
+                    <p class="datesinfo__textblock textblock"><span class="textblock__bold textblock__bold_white">Lorem
+                            ipsum dolor sit amet</span> consectetur adipisicing elit, sed do ei usmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud exercitation.</p>
+                    <button class="datesinfo__button button button_white">Learn more</button>
+                </div>
+                <img class="datesinfo__bgelement" src="images/zigzag02.png" alt="Design element">
+            </div>
+            <div class="dates__calendar calendar">
+                <div class="calendar__content">
+
+                </div>
             </div>
         </div>
     </div>
 
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,62 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Monda:regular,700);
-@import url(https://fonts.googleapis.com/css?family=Staatliches:regular);
-body {
-  min-height: 3000px;
-  font-family: Monda;
-  font-weight: regular;
-}
-
-.screen {
-  height: 100vh;
-}
-
-.container {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
-.textblock {
-  line-height: 1.4rem;
-  font-size: 1.2rem;
-}
-.textblock_center {
-  text-align: center;
-}
-.textblock__bold {
-  font-weight: 700;
-  color: #9913e1;
-}
-.textblock__bold_white {
-  color: #fff;
-}
-
-.header__container {
-  position: absolute;
-  top: 10%;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  width: 100%;
-}
-.navigation__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 3%;
-  padding: 20px 0;
-}
-.navigation__link {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-}
-.navigation__link_active {
-  font-weight: 700;
-  color: #9913e1;
-}
-
 .firstscreen__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,32 +16,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #000;
-}
-.firstscreen__bgelement {
-  position: absolute;
-  z-index: 1;
-}
-.firstscreen__bgelement_ragged {
-  left: 0;
-  height: 100%;
-}
-.firstscreen__bgelement_logo {
-  top: 10%;
-  left: 10%;
-  width: 10%;
-}
-.firstscreen__bgelement_grange {
-  left: 24%;
-  width: 48%;
-}
-.firstscreen__bgelement_downbutton {
-  bottom: 10%;
-  left: 10%;
-  height: 13%;
-}
-.firstscreen__bgelement_downbutton img {
-  height: 100%;
 }
 .firstscreen__image {
   -webkit-box-flex: 0;
@@ -170,4 +85,45 @@ body {
   background-color: #9913e1;
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
+}
+
+.textblock {
+  line-height: 1.4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.textblock__bold {
+  font-weight: 700;
+  color: #9913e1;
+}
+
+.bgelements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.bgelements__ragged {
+  position: absolute;
+  height: 100%;
+}
+.bgelements__logo {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 10%;
+}
+.bgelements__grange {
+  position: absolute;
+  left: 24%;
+  width: 48%;
+}
+.bgelements__downbutton {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  height: 13%;
+}
+.bgelements__downbutton img {
+  height: 100%;
 }

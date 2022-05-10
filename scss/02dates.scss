@@ -8,12 +8,12 @@
     &__datesinfo {
         position: relative;
         flex: 0 0 35%;
-        background-color: #9913e1;
+        background-color: $color-purple;
     }
     &__calendar {
         position: relative;
         flex: 0 0 65%;
-        background-color: #e1e1e1;
+        background-color: $color-gray;
     }
 }
 .datesinfo {
@@ -27,12 +27,6 @@
     }
     &__title {
         flex: 0 0 48%;
-        font-family: Staatliches;
-        font-size: 6rem;
-        line-height: 5.5rem;
-        span {
-            color: #e1e1e1;
-        }
     }
     &__description {
         flex: 0 0 48%;
@@ -66,7 +60,7 @@
     }
     &__actualdate {
         align-self: center;
-        color: #9913e1;
+        color: $color-purple;
         font-size: 1.7rem;
         font-weight: bold;
     }

@@ -12,23 +12,7 @@ body {
 .container {
   max-width: 1920px;
   margin: 0 auto;
-}
-
-.textblock {
-  line-height: 1.4rem;
-  font-size: 1.2rem;
-  text-align: justify;
-  z-index: 5;
-}
-.textblock_center {
-  text-align: center;
-}
-.textblock__bold {
-  font-weight: 700;
-  color: #9913e1;
-}
-.textblock__bold_white {
-  color: #e1e1e1;
+  overflow: hidden;
 }
 
 .stickers {
@@ -59,6 +43,37 @@ body {
           transform: rotate(-3deg);
 }
 
+.textblock {
+  line-height: 1.4rem;
+  font-size: 1.2rem;
+  text-align: justify;
+  z-index: 5;
+}
+.textblock_center {
+  text-align: center;
+}
+.textblock__bold {
+  font-weight: 700;
+  color: #9913e1;
+}
+.textblock__bold_white {
+  color: #e1e1e1;
+}
+
+.title {
+  position: relative;
+  z-index: 5;
+  font-family: Staatliches;
+  font-size: 6rem;
+  line-height: 5.5rem;
+}
+.title span {
+  color: #9913e1;
+}
+.title_white span {
+  color: #e1e1e1;
+}
+
 .button {
   width: 250px;
   height: 50px;
@@ -76,10 +91,23 @@ body {
   color: #e1e1e1;
 }
 
+.upbutton {
+  position: absolute;
+  top: 8%;
+  right: 3%;
+  height: 13%;
+  z-index: 7;
+}
+.upbutton img {
+  height: 100%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .downbutton {
   position: absolute;
   bottom: 10%;
-  left: 5%;
+  left: 3%;
   height: 13%;
   z-index: 7;
 }
@@ -241,12 +269,6 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 48%;
           flex: 0 0 48%;
-  font-family: Staatliches;
-  font-size: 6rem;
-  line-height: 5.5rem;
-}
-.datesinfo__title span {
-  color: #e1e1e1;
 }
 .datesinfo__description {
   -webkit-box-flex: 0;
@@ -350,4 +372,113 @@ body {
 }
 .calendar__bgelement_grangeright {
   right: 0;
+}
+
+.tickets__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  background-color: #e1e1e1;
+}
+.tickets__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  z-index: 2;
+  background-image: url("../images/voice03.png");
+  background-size: cover;
+}
+.tickets__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.tickets__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tickets__photo {
+  height: 30%;
+}
+.tickets__bgelement {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.ticketsinfo__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15%;
+  width: 86%;
+  height: 70%;
+}
+.ticketsinfo__titleblock {
+  position: relative;
+}
+.ticketsinfo__bgelement {
+  position: absolute;
+  left: 22%;
+  bottom: -8%;
+  width: 50%;
+  z-index: 1;
+}
+.ticketsinfo__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 4%;
+}
+.ticketsinfo__descriptblock {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.ticketsinfo__textblock {
+  margin-bottom: 5%;
+}
+.ticketsphoto {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 3%;
 }

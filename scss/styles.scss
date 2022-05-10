@@ -80,6 +80,7 @@ body {
 }
 
 .button {
+    z-index: 4;
     width: 250px;
     height: 50px;
     border-radius: 25px;
@@ -96,28 +97,25 @@ body {
     }
 }
 
-.upbutton {
+.navbutton {
     position: absolute;
-    top: 8%;
-    right: 3%;
-    height: 13%;
-    z-index: 7;
-    img {
-        height: 100%;
-        transform: rotate(180deg);
-    }
-}
-
-.downbutton {
-    position: absolute;
-    bottom: 10%;
     left: 3%;
     height: 13%;
     z-index: 7;
     img {
         height: 100%;
     }
+    &_up {
+        top: 8%;
+        img {
+            transform: rotate(180deg);
+        }
+    }
+    &_down {
+        bottom: 10%;
+    }
 }
+
 
 // ----------------------------------------------header----------------------------------------------
 .header {
@@ -151,3 +149,4 @@ body {
 @import "01firstscreen";
 @import "02dates";
 @import "03tickets.scss";
+@import "04about.scss";

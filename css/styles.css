@@ -75,6 +75,7 @@ body {
 }
 
 .button {
+  z-index: 4;
   width: 250px;
   height: 50px;
   border-radius: 25px;
@@ -91,28 +92,24 @@ body {
   color: #e1e1e1;
 }
 
-.upbutton {
+.navbutton {
   position: absolute;
-  top: 8%;
-  right: 3%;
-  height: 13%;
-  z-index: 7;
-}
-.upbutton img {
-  height: 100%;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.downbutton {
-  position: absolute;
-  bottom: 10%;
   left: 3%;
   height: 13%;
   z-index: 7;
 }
-.downbutton img {
+.navbutton img {
   height: 100%;
+}
+.navbutton_up {
+  top: 8%;
+}
+.navbutton_up img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.navbutton_down {
+  bottom: 10%;
 }
 
 .header__container {
@@ -250,6 +247,10 @@ body {
           flex: 0 0 65%;
   background-color: #e1e1e1;
 }
+.dates__upbutton, .dates__downbutton {
+  left: auto;
+  right: 3%;
+}
 
 .datesinfo__content {
   display: -webkit-box;
@@ -303,7 +304,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2%;
+  gap: 4%;
   width: 60%;
   height: 100%;
   margin: 0 auto;
@@ -317,7 +318,7 @@ body {
           justify-content: end;
   gap: 30px;
   width: 100%;
-  margin: 6% 0 4%;
+  margin: 6% 0 2%;
 }
 .calendar__actualdate {
   -ms-flex-item-align: center;
@@ -336,9 +337,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 60%;
 }
 .calendar__description {
   display: -webkit-box;
@@ -424,6 +423,12 @@ body {
   top: 0;
   right: 0;
 }
+.tickets__upbutton {
+  top: 15%;
+}
+.tickets__downbutton {
+  bottom: 15%;
+}
 
 .ticketsinfo__wrapper {
   display: -webkit-box;
@@ -481,4 +486,96 @@ body {
       -ms-flex-pack: end;
           justify-content: end;
   gap: 3%;
+}
+
+.about__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  background-color: #e1e1e1;
+}
+.about__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  z-index: 2;
+  background-image: url("../images/voice05.png");
+  background-size: cover;
+}
+.about__upbutton, .about__downbutton {
+  left: auto;
+  right: 3%;
+}
+
+.aboutinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.aboutinfo__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 60%;
+  height: 80%;
+}
+.aboutinfo__button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.aboutinfo__sliderbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 8% 0;
+}
+.aboutinfo__leftbutton img {
+  width: 75%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.aboutinfo__rightbutton {
+  text-align: right;
+}
+.aboutinfo__rightbutton img {
+  width: 75%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.aboutinfo__bgelement {
+  position: absolute;
+  z-index: 1;
+}
+.aboutinfo__bgelement_zigzag {
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 95%;
+}
+.aboutinfo__bgelement_ragged {
+  top: 0;
+  left: 0;
 }

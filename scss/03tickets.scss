@@ -30,6 +30,12 @@
         top: 0;
         right: 0;
     }
+    &__upbutton {
+        top: 15%;
+    }
+    &__downbutton {
+        bottom: 15%;
+    }
 }
 .ticketsinfo {
     &__wrapper {

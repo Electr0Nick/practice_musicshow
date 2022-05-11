@@ -288,6 +288,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+  width: 21%;
 }
 
 .calendar__content {
@@ -368,9 +369,11 @@ body {
 .calendar__bgelement_grangeleft {
   left: 0;
   bottom: 0;
+  height: 67%;
 }
 .calendar__bgelement_grangeright {
   right: 0;
+  height: 82%;
 }
 
 .tickets__container {
@@ -422,6 +425,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  height: 37%;
 }
 .tickets__upbutton {
   top: 15%;
@@ -476,6 +480,7 @@ body {
 .ticketsinfo__textblock {
   margin-bottom: 5%;
 }
+
 .ticketsphoto {
   position: relative;
   z-index: 2;
@@ -578,4 +583,85 @@ body {
 .aboutinfo__bgelement_ragged {
   top: 0;
   left: 0;
+  height: 84%;
+}
+
+.bonus__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.bonus__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  z-index: 2;
+  background-image: url("../images/people04.png");
+  background-size: cover;
+}
+.bonus__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65%;
+          flex: 0 0 65%;
+  background-color: #e1e1e1;
+}
+
+.bonusinfo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bonusinfo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  height: 55%;
+}
+.bonusinfo__description {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 55%;
+          flex: 0 0 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15%;
+}
+.bonusinfo__bgelement {
+  position: absolute;
+}
+.bonusinfo__bgelement_zigzag1 {
+  top: 10%;
+  left: -2%;
+  width: 22%;
+}
+.bonusinfo__bgelement_zigzag2 {
+  right: -3%;
+  bottom: 10%;
+  width: 30%;
+}
+.bonusinfo__bgelement_grange {
+  top: 0;
+  right: 0;
+  height: 50%;
 }

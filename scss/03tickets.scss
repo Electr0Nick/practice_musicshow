@@ -29,6 +29,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        height: 37%;
     }
     &__upbutton {
         top: 15%;
@@ -47,8 +48,6 @@
     }
     &__titleblock {
         position: relative;
-    }
-    &__title {
     }
     &__bgelement {
         position: absolute;
@@ -69,8 +68,6 @@
     }
     &__textblock {
         margin-bottom: 5%;
-    }
-    &__button {
     }
 }
 .ticketsphoto {

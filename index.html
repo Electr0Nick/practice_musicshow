@@ -16,18 +16,19 @@
         <div class="header__container container">
             <nav class="header__nav navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a class="navigation__link navigation__link_active" href="#">Home</a>
+                    <li class="navigation__item"><a class="navigation__link navigation__link_active" href="#home">Home</a>
                     </li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">Dates</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">Tickets</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">About</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#dates">Dates</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#tickets">Tickets</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#about">About</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#bonus">Bonus</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- -----------------------------------------------firstscreen----------------------------------------------- -->
-    <div class="firstscreen screen">
+    <div class="firstscreen screen" id="home">
         <div class="firstscreen__container container">
             <div class="firstscreen__info">
                 <div class="firstscreen__welcomeinfo welcomeinfo">
@@ -53,7 +54,7 @@
     </div>
 
     <!-- -----------------------------------------------dates----------------------------------------------- -->
-    <div class="dates screen">
+    <div class="dates screen" id="dates">
         <div class="dates__container container">
             <div class="dates__datesinfo datesinfo">
                 <div class="datesinfo__content">
@@ -104,9 +105,8 @@
         </div>
     </div>
 
-
     <!-- -----------------------------------------------tickets----------------------------------------------- -->
-    <div class="tickets screen">
+    <div class="tickets screen" id="tickets">
         <div class="tickets__container container">
             <div class="tickets__image"></div>
             <div class="tickets__content">
@@ -149,7 +149,7 @@
     </div>
 
     <!-- -----------------------------------------------about----------------------------------------------- -->
-    <div class="about screen">
+    <div class="about screen" id="about">
         <div class="about__container container">
             <div class="about__info aboutinfo">
                 <div class="aboutinfo__wrapper">
@@ -177,7 +177,34 @@
             <a class="about__downbutton navbutton navbutton_down" href="#"><img src="images/arrow01.png"></a>
         </div>
     </div>
-
+    
+    <!-- -----------------------------------------------bonus----------------------------------------------- -->
+    <div class="bonus screen" id="bonus">
+        <div class="bonus__container container">
+            <div class="bonus__image"></div>
+            <div class="bonus__info bonusinfo">
+                <div class="bonusinfo__container">
+                    <h2 class="bonusinfo__title title"><span>party like</span> there’s no tomorrow</h2>
+                    <div class="bonusinfo__description">
+                        <div class="bonusinfo__stickers stickers">
+                            <div class="stickers__item stickers__item_black">a place to quench your thirst for music</div>
+                            <div class="stickers__item stickers__item_purple">party out with us for three days!</div>
+                        </div>
+                        <p class="bonusinfo__textblock textblock textblock_center"><span class="textblock__bold">Lorem
+                                ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
+                            exercitation.
+                        </p>
+                    </div>
+                </div>
+                <img class="bonusinfo__bgelement bonusinfo__bgelement_zigzag1" src="images/zigzag01.png" alt="Design element">
+                <img class="bonusinfo__bgelement bonusinfo__bgelement_zigzag2" src="images/zigzag05.png" alt="Design element">
+                <img class="bonusinfo__bgelement bonusinfo__bgelement_grange" src="images/bgdots05.png" alt="Design element">
+            </div>
+            <a class="bonus__upbutton navbutton navbutton_up" href="#"><img src="images/arrow02.png" alt="Upscreen button"></a>
+            <a class="bonus__downbutton navbutton navbutton_down" href="#"><img src="images/arrow01.png"></a>
+        </div>
+    </div>
 
 
     <script src="js/script.js"></script>

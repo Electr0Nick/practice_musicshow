@@ -43,6 +43,7 @@
         position: absolute;
         left: 0;
         bottom: 0;
+        width: 21%;
     }
 }
 .calendar {
@@ -99,11 +100,13 @@
         &_grangeleft {
             left: 0;
             bottom: 0;
+            height: 67%;
         }
         &_grangeright {
             right: 0;
+            height: 82%;
         }
-    }
+    }   
 }
 
 

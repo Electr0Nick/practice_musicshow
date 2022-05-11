@@ -1,0 +1,56 @@
+.bonus {
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &__image {
+        flex: 0 0 35%;
+        z-index: 2;
+        background-image: url("../images/people04.png");
+        background-size: cover;
+    }
+    &__info {
+        flex: 0 0 65%;
+        background-color: $color-gray;
+    }
+}
+.bonusinfo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container {
+        display: flex;
+        width: 65%;
+        height: 55%;
+    }
+    &__title {
+    }
+    &__description {
+        flex: 0 0 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15%;
+    }
+    &__bgelement {
+        position: absolute;
+        &_zigzag1 {
+            top: 10%;
+            left: -2%;
+            width: 22%;
+        }
+        &_zigzag2 {
+            right: -3%;
+            bottom: 10%;
+            width: 30%;
+        }
+        &_grange {
+            top: 0;
+            right: 0;
+            height: 50%;
+        }
+    }
+}

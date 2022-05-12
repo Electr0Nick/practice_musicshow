@@ -21,12 +21,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &__container {
+    &__content {
         display: flex;
         width: 65%;
         height: 55%;
-    }
-    &__title {
     }
     &__description {
         flex: 0 0 55%;

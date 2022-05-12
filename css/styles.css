@@ -114,7 +114,7 @@ body {
 
 .header__container {
   position: absolute;
-  top: 10%;
+  top: 8%;
   left: 0;
   right: 0;
   z-index: 3;
@@ -128,7 +128,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 3%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10%;
+  width: 40%;
+  margin: 0 auto;
   padding: 20px 0;
 }
 .navigation__link {
@@ -160,28 +164,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.firstscreen__welcomeinfo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-}
-.firstscreen__bgelement {
-  position: absolute;
-  z-index: 1;
-}
-.firstscreen__bgelement_ragged {
-  left: 0;
-  height: 100%;
-}
-.firstscreen__bgelement_logo {
-  top: 10%;
-  left: 10%;
-  width: 10%;
-}
-.firstscreen__bgelement_grange {
-  left: 24%;
-  width: 48%;
-}
 .firstscreen__image {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
@@ -191,7 +173,10 @@ body {
   background-size: cover;
 }
 
-.welcomeinfo {
+.firstscreeninfo__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,17 +194,34 @@ body {
   gap: 5%;
   z-index: 2;
 }
-.welcomeinfo__img {
+.firstscreeninfo__img {
   z-index: 2;
-  width: 55%;
-  margin-top: 25%;
+  width: 50%;
+  margin-top: 30%;
 }
-.welcomeinfo__bgelement {
+.firstscreeninfo__bgelement {
   position: absolute;
-  top: 25%;
-  right: -25%;
-  width: 60%;
   z-index: 1;
+}
+.firstscreeninfo__bgelement_zigzag {
+  position: absolute;
+  top: 30%;
+  right: -20%;
+  width: 55%;
+  z-index: 1;
+}
+.firstscreeninfo__bgelement_ragged {
+  left: 0;
+  height: 100%;
+}
+.firstscreeninfo__bgelement_logo {
+  top: 10%;
+  left: 10%;
+  width: 10%;
+}
+.firstscreeninfo__bgelement_grange {
+  left: 24%;
+  width: 48%;
 }
 
 .dates__container {
@@ -291,7 +293,7 @@ body {
   width: 21%;
 }
 
-.calendar__content {
+.datescalendar__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,7 +312,7 @@ body {
   height: 100%;
   margin: 0 auto;
 }
-.calendar__choosedate {
+.datescalendar__choosedate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,7 +323,7 @@ body {
   width: 100%;
   margin: 6% 0 2%;
 }
-.calendar__actualdate {
+.datescalendar__actualdate {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -329,18 +331,18 @@ body {
   font-size: 1.7rem;
   font-weight: bold;
 }
-.calendar__rightbutton {
+.datescalendar__rightbutton {
   width: 9%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
-.calendar__stickers {
+.datescalendar__stickers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 60%;
 }
-.calendar__description {
+.datescalendar__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,30 +350,30 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.calendar__textblock {
+.datescalendar__textblock {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 48%;
           flex: 0 0 48%;
 }
-.calendar__bgelement {
+.datescalendar__bgelement {
   position: absolute;
 }
-.calendar__bgelement_zigzag {
+.datescalendar__bgelement_zigzag {
   left: 22%;
   bottom: 5%;
   width: 23%;
 }
-.calendar__bgelement_ragged {
+.datescalendar__bgelement_ragged {
   top: 0;
   left: 0;
   width: 100%;
 }
-.calendar__bgelement_grangeleft {
+.datescalendar__bgelement_grangeleft {
   left: 0;
   bottom: 0;
   height: 67%;
 }
-.calendar__bgelement_grangeright {
+.datescalendar__bgelement_grangeright {
   right: 0;
   height: 82%;
 }
@@ -434,7 +436,7 @@ body {
   bottom: 15%;
 }
 
-.ticketsinfo__wrapper {
+.ticketsinfo__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,9 +500,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 100%;
   background-color: #e1e1e1;
 }
@@ -528,7 +527,7 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-.aboutinfo__wrapper {
+.aboutinfo__content {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -624,7 +623,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.bonusinfo__container {
+.bonusinfo__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -664,4 +663,79 @@ body {
   top: 0;
   right: 0;
   height: 50%;
+}
+
+.arena__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  background-color: #9913e1;
+}
+.arena__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  z-index: 2;
+  background-image: url("../images/people05.png");
+  background-size: cover;
+}
+
+.arenainfo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.arenainfo__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 55%;
+  height: 55%;
+}
+.arenainfo__bgelement {
+  position: absolute;
+  z-index: 1;
+}
+.arenainfo__bgelement_arrow01 {
+  left: -10%;
+  top: -37%;
+  width: 30%;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+.arenainfo__bgelement_arrow02 {
+  left: -25%;
+  top: -20%;
+  width: 20%;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+.arenainfo__bgelement_arrow03 {
+  right: -10%;
+  bottom: -25%;
+  width: 40%;
+  -webkit-transform: rotate(-210deg);
+          transform: rotate(-210deg);
+}
+.arenainfo__bgelement_ragged {
+  top: 0;
+  right: 0;
+  height: 100%;
 }

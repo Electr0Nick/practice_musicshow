@@ -1,0 +1,55 @@
+.arena {
+    &__container {
+        position: relative;
+        display: flex;
+        height: 100%;
+        background-color: $color-purple;
+    }
+    &__image {
+        flex: 0 0 50%;
+        z-index: 2;
+        background-image: url("../images/people05.png");
+        background-size: cover; 
+    }
+}
+.arenainfo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 55%;
+        height: 55%;
+    }
+    &__bgelement {
+        position: absolute;
+        z-index: 1;
+        &_arrow01 {
+            left: -10%;
+            top: -37%;
+            width: 30%;
+            transform: rotate(-15deg);
+        }
+        &_arrow02 {
+            left: -25%;
+            top: -20%;
+            width: 20%;
+            transform: rotate(-40deg);
+        }
+        &_arrow03 {
+            right: -10%;
+            bottom: -25%;
+            width: 40%;
+            transform: rotate(-210deg);
+        }
+        &_ragged {
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+    }
+}

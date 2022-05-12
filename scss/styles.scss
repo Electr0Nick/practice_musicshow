@@ -121,7 +121,7 @@ body {
 .header {
     &__container {
         position: absolute;
-        top: 10%;
+        top: 8%;
         left: 0;
         right: 0;
         z-index: 3;
@@ -132,7 +132,10 @@ body {
     &__list {
         display: flex;
         justify-content: center;
-        gap: 3%;
+        flex-wrap: wrap;
+        gap: 10%;
+        width: 40%;
+        margin: 0 auto;
         padding: 20px 0;
     }
     &__link {
@@ -151,3 +154,4 @@ body {
 @import "03tickets.scss";
 @import "04about.scss";
 @import "05bonus.scss";
+@import "06arena.scss";

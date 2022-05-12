@@ -32,22 +32,25 @@
     &__button {
         align-self: center;
     }
-    &__sliderbuttons {
+    &__sliderbuttonsblock {
         display: flex;
         justify-content: space-between;
         margin: 8% 0;
     }
-    &__leftbutton {
+    &__sliderbutton {
         img {
             width: 75%;
-            transform: rotate(90deg);
         }
-    }
-    &__rightbutton {
-        text-align: right;
-        img {
-            width: 75%;
-            transform: rotate(-90deg);
+        &_left {
+            img {
+                transform: rotate(90deg);
+            }
+        }
+        &_right {
+            text-align: right;
+            img {
+                transform: rotate(-90deg);
+            }
         }
     }
     &__bgelement {

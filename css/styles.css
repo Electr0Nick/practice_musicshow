@@ -149,9 +149,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 100%;
   background-color: #e1e1e1;
 }
@@ -288,6 +285,7 @@ body {
 }
 .datesinfo__bgelement {
   position: absolute;
+  z-index: 1;
   left: 0;
   bottom: 0;
   width: 21%;
@@ -357,6 +355,7 @@ body {
 }
 .datescalendar__bgelement {
   position: absolute;
+  z-index: 1;
 }
 .datescalendar__bgelement_zigzag {
   left: 22%;
@@ -383,9 +382,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 100%;
   background-color: #e1e1e1;
 }
@@ -425,6 +421,7 @@ body {
 }
 .tickets__bgelement {
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   height: 37%;
@@ -453,10 +450,10 @@ body {
 }
 .ticketsinfo__bgelement {
   position: absolute;
+  z-index: 1;
   left: 22%;
   bottom: -8%;
   width: 50%;
-  z-index: 1;
 }
 .ticketsinfo__description {
   display: -webkit-box;
@@ -546,7 +543,7 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
 }
-.aboutinfo__sliderbuttons {
+.aboutinfo__sliderbuttonsblock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,16 +552,17 @@ body {
           justify-content: space-between;
   margin: 8% 0;
 }
-.aboutinfo__leftbutton img {
+.aboutinfo__sliderbutton img {
   width: 75%;
+}
+.aboutinfo__sliderbutton_left img {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-.aboutinfo__rightbutton {
+.aboutinfo__sliderbutton_right {
   text-align: right;
 }
-.aboutinfo__rightbutton img {
-  width: 75%;
+.aboutinfo__sliderbutton_right img {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
@@ -648,6 +646,7 @@ body {
 }
 .bonusinfo__bgelement {
   position: absolute;
+  z-index: 1;
 }
 .bonusinfo__bgelement_zigzag1 {
   top: 10%;
@@ -738,4 +737,108 @@ body {
   top: 0;
   right: 0;
   height: 100%;
+}
+
+.artists__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background-color: #e1e1e1;
+}
+.artists__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  height: 50%;
+}
+.artists__sliderbutton {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 8%;
+}
+.artists__sliderbutton img {
+  width: 100%;
+}
+.artists__sliderbutton_left {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.artists__sliderbutton_right {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.artists__infoblock {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+.artists__bgelement {
+  position: absolute;
+  z-index: 1;
+}
+.artists__bgelement_grange {
+  top: 0;
+  left: 10%;
+  width: 35%;
+}
+.artists__bgelement_raggedleft {
+  left: 0;
+  height: 100%;
+}
+.artists__bgelement_raggedright {
+  right: 0;
+  height: 100%;
+}
+
+.artistinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.artistinfo__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #9913e1;
+}
+.artistinfo__star {
+  width: 65%;
+}
+.artistinfo__textblock {
+  width: 90%;
+}
+.artistinfo__bgelement {
+  width: 100%;
 }

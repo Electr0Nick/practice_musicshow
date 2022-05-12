@@ -35,6 +35,7 @@
     }
     &__bgelement {
         position: absolute;
+        z-index: 1;
         &_zigzag1 {
             top: 10%;
             left: -2%;

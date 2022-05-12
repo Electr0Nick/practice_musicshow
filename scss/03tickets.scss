@@ -2,7 +2,6 @@
     &__container {
         position: relative;
         display: flex;
-        justify-content: space-between;
         height: 100%;
         background-color: $color-gray;
     }
@@ -27,6 +26,7 @@
     }
     &__bgelement {
         position: absolute;
+        z-index: 1;
         top: 0;
         right: 0;
         height: 37%;
@@ -51,10 +51,10 @@
     }
     &__bgelement {
         position: absolute;
+        z-index: 1;
         left: 22%;
         bottom: -8%;
         width: 50%;
-        z-index: 1;
     }
     &__description {
         display: flex;

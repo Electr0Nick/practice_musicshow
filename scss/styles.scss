@@ -4,6 +4,10 @@
 $color-purple: #9913e1;
 $color-gray: #e1e1e1;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     // min-height: 3000px;
     font-family: Monda;

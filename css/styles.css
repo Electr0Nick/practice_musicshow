@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Monda:regular,700);
 @import url(https://fonts.googleapis.com/css?family=Staatliches:regular);
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Monda;
   font-weight: regular;

@@ -9,7 +9,6 @@ html {
 }
 
 body {
-    // min-height: 3000px;
     font-family: Monda;
     font-weight: regular;
 }
@@ -91,6 +90,7 @@ body {
     border: 4px solid $color-purple;
     background-color: $color-gray;
     color: $color-purple;
+    font-family: Monda;
     font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -160,3 +160,4 @@ body {
 @import "05bonus.scss";
 @import "06arena.scss";
 @import "07artists.scss";
+@import "08feedback.scss";

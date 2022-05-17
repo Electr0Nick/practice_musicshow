@@ -1,0 +1,69 @@
+.feedback {
+    &__container {
+        position: relative;
+        display: flex;
+        height: 100%;
+        background-color: $color-purple;
+    }
+    &__info {
+        position: relative;
+        flex: 0 0 50%;
+    }
+    &__image {
+        flex: 0 0 50%;
+        z-index: 2;
+        background-image: url("../images/voice06.png");
+        background-size: cover; 
+    }
+}
+.feedbackinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 7%;
+        width: 60%;
+        height: 70%;
+    }
+    &__form {
+        flex: 0 0 80%;
+    }
+    &__bgelement {
+        position: absolute;
+        z-index: 1;
+        height: 50%;
+        left: 0;
+        bottom: 0;
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    &__item {
+        height: 50px;
+        padding: 10px 30px;
+        border-radius: 25px;
+        border: 4px solid $color-gray;
+        outline: none;
+        background-color: $color-purple;
+        color: $color-gray;
+        font-family: Monda;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        &::placeholder {
+            color: $color-gray;
+        }
+        &_message {
+            height: 300px;
+        }
+        &_button {
+            margin-top: 3%;
+            background-color: $color-gray;
+            color: $color-purple;
+        }
+    }
+}

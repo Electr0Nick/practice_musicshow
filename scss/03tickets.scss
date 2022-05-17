@@ -11,25 +11,16 @@
         background-image: url("../images/voice03.png");
         background-size: cover;
     }
-    &__content {
-        display: flex;
-        flex-direction: column;
-    }
     &__info {
-        flex: 0 0 60%;
+        flex: 0 0 70%;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
     &__photo {
-        height: 30%;
-    }
-    &__bgelement {
         position: absolute;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        height: 37%;
+        bottom: 7%;
+        height: 30%;
+        width: 100%;
     }
     &__upbutton {
         top: 15%;
@@ -43,8 +34,9 @@
         display: flex;
         flex-direction: column;
         gap: 15%;
-        width: 86%;
-        height: 70%;
+        width: 80%;
+        height: 45%;
+        margin-top: 10%;
     }
     &__titleblock {
         position: relative;
@@ -52,9 +44,16 @@
     &__bgelement {
         position: absolute;
         z-index: 1;
-        left: 22%;
-        bottom: -8%;
-        width: 50%;
+        &_zigzag {
+            left: 22%;
+            bottom: -8%;
+            width: 50%;
+        }
+        &_grange {
+            top: 0;
+            right: 0;
+            height: 37%;
+        }
     }
     &__description {
         display: flex;
@@ -71,9 +70,11 @@
     }
 }
 .ticketsphoto {
-    position: relative;
-    z-index: 2;
     display: flex;
     justify-content: end;
-    gap: 3%;
+    gap: 1%;
+    z-index: 2;
+    &__item {
+        height: 100%;
+    }
 }

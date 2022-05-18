@@ -21,6 +21,10 @@ body {
     max-width: 1920px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
+    display: flex;
+    height: 100%;
+    background-color: $color-gray;
 }
 
 .stickers {
@@ -103,20 +107,20 @@ body {
 
 .navbutton {
     position: absolute;
-    left: 3%;
-    height: 13%;
+    right: 3%;
+    height: 8%;
     z-index: 7;
     img {
         height: 100%;
     }
     &_up {
-        top: 8%;
+        top: 5%;
         img {
             transform: rotate(180deg);
         }
     }
     &_down {
-        bottom: 10%;
+        bottom: 5%;
     }
 }
 
@@ -129,7 +133,10 @@ body {
         left: 0;
         right: 0;
         z-index: 3;
+        display: block;
         width: 100%;
+        height: auto;
+        background-color: transparent;
     }
 }
 .navigation {
@@ -161,3 +168,4 @@ body {
 @import "06arena.scss";
 @import "07artists.scss";
 @import "08feedback.scss";
+@import "09contacts.scss";

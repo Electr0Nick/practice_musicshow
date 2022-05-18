@@ -1,9 +1,6 @@
 .dates {
     &__container {
-        position: relative;
-        display: flex;
         flex-direction: column;
-        height: 100%;
     }
     &__datesinfo {
         position: relative;
@@ -13,12 +10,6 @@
     &__calendar {
         position: relative;
         flex: 0 0 65%;
-        background-color: $color-gray;
-    }
-    &__upbutton,
-    &__downbutton {
-        left: auto;
-        right: 3%;
     }
 }
 .datesinfo {

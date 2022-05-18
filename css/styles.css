@@ -17,6 +17,12 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  background-color: #e1e1e1;
 }
 
 .stickers {
@@ -99,22 +105,22 @@ body {
 
 .navbutton {
   position: absolute;
-  left: 3%;
-  height: 13%;
+  right: 3%;
+  height: 8%;
   z-index: 7;
 }
 .navbutton img {
   height: 100%;
 }
 .navbutton_up {
-  top: 8%;
+  top: 5%;
 }
 .navbutton_up img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 .navbutton_down {
-  bottom: 10%;
+  bottom: 5%;
 }
 
 .header__container {
@@ -123,7 +129,10 @@ body {
   left: 0;
   right: 0;
   z-index: 3;
+  display: block;
   width: 100%;
+  height: auto;
+  background-color: transparent;
 }
 
 .navigation__list {
@@ -149,14 +158,6 @@ body {
   color: #9913e1;
 }
 
-.firstscreen__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  background-color: #e1e1e1;
-}
 .firstscreen__info {
   position: relative;
   display: -webkit-box;
@@ -227,15 +228,10 @@ body {
 }
 
 .dates__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
 }
 .dates__datesinfo {
   position: relative;
@@ -249,11 +245,6 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 65%;
           flex: 0 0 65%;
-  background-color: #e1e1e1;
-}
-.dates__upbutton, .dates__downbutton {
-  left: auto;
-  right: 3%;
 }
 
 .datesinfo__content {
@@ -382,14 +373,6 @@ body {
   height: 82%;
 }
 
-.tickets__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  background-color: #e1e1e1;
-}
 .tickets__image {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
@@ -414,12 +397,6 @@ body {
   bottom: 7%;
   height: 30%;
   width: 100%;
-}
-.tickets__upbutton {
-  top: 15%;
-}
-.tickets__downbutton {
-  bottom: 15%;
 }
 
 .ticketsinfo__content {
@@ -491,14 +468,6 @@ body {
   height: 100%;
 }
 
-.about__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  background-color: #e1e1e1;
-}
 .about__image {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
@@ -506,10 +475,6 @@ body {
   z-index: 2;
   background-image: url("../images/voice05.png");
   background-size: cover;
-}
-.about__upbutton, .about__downbutton {
-  left: auto;
-  right: 3%;
 }
 
 .aboutinfo {
@@ -583,15 +548,10 @@ body {
 }
 
 .bonus__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
 }
 .bonus__image {
   -webkit-box-flex: 0;
@@ -605,7 +565,6 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 65%;
           flex: 0 0 65%;
-  background-color: #e1e1e1;
 }
 
 .bonusinfo {
@@ -664,11 +623,6 @@ body {
 }
 
 .arena__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
   background-color: #9913e1;
 }
 .arena__image {
@@ -739,18 +693,12 @@ body {
 }
 
 .artists__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  background-color: #e1e1e1;
 }
 .artists__content {
   display: -webkit-box;
@@ -843,11 +791,6 @@ body {
 }
 
 .feedback__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
   background-color: #9913e1;
 }
 .feedback__info {
@@ -946,4 +889,92 @@ body {
   margin-top: 3%;
   background-color: #e1e1e1;
   color: #9913e1;
+}
+
+.contacts__container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contacts__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+.contacts__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+}
+
+.contactsphoto__item_left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  z-index: 2;
+  background-image: url("../images/voice02.png");
+  background-size: cover;
+}
+.contactsphoto__item_right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65%;
+          flex: 0 0 65%;
+  z-index: 2;
+  background-image: url("../images/people01.png");
+  background-size: cover;
+}
+
+.contactsinfo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contactsinfo__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+  height: 60%;
+}
+.contactsinfo__logo {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  width: 13%;
+}
+.contactsinfo__bgelement {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+.contactsinfo__bgelement_grange {
+  left: 0;
+  height: 60%;
+}
+.contactsinfo__bgelement_ragged {
+  right: 0;
+  height: 75%;
+}
+
+.column {
+  font-size: 1.5rem;
+}
+.column__title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 8%;
 }

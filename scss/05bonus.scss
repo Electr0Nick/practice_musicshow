@@ -1,9 +1,6 @@
 .bonus {
     &__container {
-        position: relative;
-        display: flex;
         flex-direction: column;
-        height: 100%;
     }
     &__image {
         flex: 0 0 35%;
@@ -13,7 +10,6 @@
     }
     &__info {
         flex: 0 0 65%;
-        background-color: $color-gray;
     }
 }
 .bonusinfo {

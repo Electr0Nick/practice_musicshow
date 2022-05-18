@@ -1,11 +1,7 @@
 .artists {
     &__container {
-        position: relative;
-        display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
-        background-color: $color-gray;
     }
     &__content {
         display: flex;

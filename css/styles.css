@@ -54,15 +54,16 @@ body {
 }
 
 .textblock {
+  z-index: 5;
+  text-align: justify;
   line-height: 1.4rem;
   font-size: 1.2rem;
-  text-align: justify;
-  z-index: 5;
 }
 .textblock_center {
   text-align: center;
 }
 .textblock__bold {
+  font-size: 1.25rem;
   font-weight: 700;
   color: #9913e1;
 }
@@ -86,8 +87,9 @@ body {
 
 .button {
   z-index: 4;
-  width: 250px;
-  height: 50px;
+  min-width: 250px;
+  min-height: 50px;
+  padding: 0 70px;
   border-radius: 25px;
   border: 4px solid #9913e1;
   background-color: #e1e1e1;
@@ -279,6 +281,11 @@ body {
           flex-direction: column;
   gap: 20px;
 }
+.datesinfo__button {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
 .datesinfo__bgelement {
   position: absolute;
   z-index: 1;
@@ -449,6 +456,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.ticketsinfo__button {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 .ticketsinfo__textblock {
   margin-bottom: 5%;
@@ -660,6 +672,11 @@ body {
           justify-content: space-between;
   width: 55%;
   height: 55%;
+}
+.arenainfo__button {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 .arenainfo__bgelement {
   position: absolute;
@@ -955,6 +972,11 @@ body {
       -ms-grid-row-align: start;
       align-self: start;
   width: 13%;
+}
+.contactsinfo__button {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 .contactsinfo__bgelement {
   position: absolute;

@@ -30,6 +30,9 @@
         flex-direction: column;
         gap: 20px;
     }
+    &__button {
+        align-self: start;
+    }
     &__bgelement {
         position: absolute;
         z-index: 1;

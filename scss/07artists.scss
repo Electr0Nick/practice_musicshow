@@ -9,7 +9,7 @@
         width: 70%;
         height: 50%;
     }
-    &__sliderbutton {
+    &__slider-button {
         align-self: center;
         width: 8%;
         img {
@@ -43,7 +43,7 @@
         }
     }
 }
-.artistinfo {
+.artist-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

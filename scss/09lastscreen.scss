@@ -1,4 +1,4 @@
-.contacts {
+.lastscreen {
     &__container {
         flex-direction: column;
     }
@@ -10,40 +10,21 @@
         flex: 0 0 70%;
     }
 }
-.contactsphoto {
+.lastscreen-photo {
     &__item {
+        background-size: cover;
         &_left {
             flex: 0 0 35%;
-            z-index: 2;
             background-image: url("../images/voice02.png");
-            background-size: cover;
         }
         &_right {
             flex: 0 0 65%;
-            z-index: 2;
             background-image: url("../images/people01.png");
-            background-size: cover;
         }
     }
 }
-.contactsinfo {
+.lastscreen-info {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &__content {
-        display: flex;
-        justify-content: space-between;
-        width: 60%;
-        height: 60%;
-    }
-    &__logo {
-        align-self: start;
-        width: 13%;
-    }
-    &__button {
-        align-self: start;
-    }
     &__bgelement {
         position: absolute;
         z-index: 1;
@@ -56,13 +37,5 @@
             right: 0;
             height: 75%;
         }
-    }
-}
-.column {
-    font-size: 1.5rem;
-    &__title {
-        font-size: 1.7rem;
-        font-weight: bold;
-        margin-bottom: 8%;
     }
 }

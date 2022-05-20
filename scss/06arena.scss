@@ -8,8 +8,11 @@
         background-image: url("../images/people05.png");
         background-size: cover; 
     }
+    &__info {
+        flex: 0 0 50%;
+    }
 }
-.arenainfo {
+.arena-info {
     position: relative;
     display: flex;
     justify-content: center;

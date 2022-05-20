@@ -17,7 +17,7 @@
         width: 100%;
     }
 }
-.ticketsinfo {
+.tickets-info {
     &__content {
         display: flex;
         flex-direction: column;
@@ -60,7 +60,7 @@
         margin-bottom: 5%;
     }
 }
-.ticketsphoto {
+.tickets-photo {
     display: flex;
     justify-content: end;
     gap: 1%;

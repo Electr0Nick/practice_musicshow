@@ -1,6 +1,7 @@
 .firstscreen {
     &__info {
         position: relative;
+        flex: 1 1 auto;
         display: flex;
         justify-content: center;
     }

@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Monda:regular,700);
-@import url(https://fonts.googleapis.com/css?family=Staatliches:regular);
+@import url(https://fonts.googleapis.com/css?family=Monda:regular,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Staatliches:regular&display=swap);
 html {
   scroll-behavior: smooth;
 }
@@ -7,6 +7,16 @@ html {
 body {
   font-family: Monda, sans-serif;
   font-weight: regular;
+  overflow: hidden;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
 }
 
 .screen {
@@ -103,6 +113,21 @@ body {
   border: 4px solid #e1e1e1;
   background-color: #9913e1;
   color: #e1e1e1;
+}
+
+.link-button {
+  z-index: 4;
+  min-width: 250px;
+  min-height: 50px;
+  padding: 0 70px;
+  border: 4px solid #e1e1e1;
+  border-radius: 25px;
+  background-color: #9913e1;
+  color: #e1e1e1;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 42px;
 }
 
 .navbutton {
@@ -972,6 +997,85 @@ body {
 .lastscreen-info__bgelement_ragged {
   right: 0;
   height: 75%;
+}
+
+.popup {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: rgba(18, 2, 27, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup.open .popup__content {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.popup__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100%;
+  padding: 30px;
+}
+.popup__content {
+  position: relative;
+  z-index: 11;
+  max-width: 900px;
+  background-color: #e1e1e1;
+  overflow: hidden;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 10%);
+          transform: translate(0, 10%);
+}
+.popup__closebutton {
+  position: absolute;
+  z-index: 14;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+}
+.popup__text {
+  position: relative;
+  z-index: 13;
+  padding: 50px 100px;
+}
+.popup__image {
+  position: relative;
+  z-index: 13;
+  line-height: 0;
+}
+.popup__bgelement {
+  position: absolute;
+  z-index: 12;
+}
+.popup__bgelement_zigzag {
+  top: 30%;
+  right: -10%;
+}
+.popup__bgelement_grange {
+  top: -10%;
+  left: -10%;
 }
 
 .footer__container {

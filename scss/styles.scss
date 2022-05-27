@@ -11,7 +11,7 @@ html {
 body {
     font-family: Monda, sans-serif;
     font-weight: regular;
-    overflow: hidden;
+    // overflow: hidden;
 }
 body.lock {
     overflow: hidden;
@@ -20,10 +20,6 @@ body.lock {
 .wrapper {
     min-height: 100%;
     overflow: hidden;
-}
-
-.screen {
-    height: 100vh;
 }
 
 .container {
@@ -36,156 +32,10 @@ body.lock {
     background-color: $color-gray;
 }
 
-.stickers {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    z-index: 6;
-    &__item {
-        position: absolute;
-        display: inline-block;
-        padding: 0 18px;
-        text-transform: uppercase;
-        font-weight: 700;
-        text-align: center;
-        color: $color-gray;
-        &_black {
-            background-color: #000;
-            transform: rotate(-6deg);
-        }
-        &_purple {
-            right: 0;
-            bottom: 0;
-            background-color: $color-purple;
-            transform: rotate(-3deg);
-        }
-    }
-}
-
-.textblock {
-    z-index: 5;
-    text-align: justify;
-    line-height: 1.4rem;
-    font-size: 1.2rem;
-    &_center {
-        text-align: center;
-    }
-    &__bold {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: $color-purple;
-        &_white {
-            color: $color-gray;
-        }
-    }
-}
-
-.title {
-    position: relative;
-    z-index: 5;
-    font-family: Staatliches;
-    font-size: 6rem;
-    line-height: 5.5rem;
-    span {
-        color: $color-purple;
-    }
-    &_white {
-        span {
-            color: $color-gray;
-        }
-    }
-}
-
-.button {
-    z-index: 4;
-    min-width: 250px;
-    min-height: 50px;
-    padding: 0 70px;
-    border-radius: 25px;
-    border: 4px solid $color-purple;
-    background-color: $color-gray;
-    color: $color-purple;
-    font-family: Monda, sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    &_white {
-        border: 4px solid $color-gray;
-        background-color: $color-purple;
-        color: $color-gray;
-    }
-}
-
-.link-button {
-    z-index: 4;
-    min-width: 250px;
-    min-height: 50px;
-    padding: 0 70px;
-    border: 4px solid $color-gray;
-    border-radius: 25px;
-    background-color: $color-purple;
-    color: $color-gray;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 42px;
-}
-
-.navbutton {
-    position: absolute;
-    right: 3%;
-    height: 8%;
-    z-index: 7;
-    img {
-        height: 100%;
-    }
-    &_up {
-        top: 5%;
-        img {
-            transform: rotate(180deg);
-        }
-    }
-    &_down {
-        bottom: 5%;
-    }
-}
-
-
-// ----------------------------------------------header----------------------------------------------
-.header {
-    &__container {
-        position: absolute;
-        top: 8%;
-        left: 0;
-        right: 0;
-        z-index: 3;
-        display: block;
-        width: 100%;
-        height: auto;
-        background-color: transparent;
-    }
-}
-.navigation {
-    &__list {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10%;
-        width: 40%;
-        margin: 0 auto;
-        padding: 20px 0;
-    }
-    &__link {
-        text-transform: uppercase;
-        font-size: 1.4rem;
-        &_active {
-            font-weight: 700;
-            color: $color-purple;
-        }
-    }
-}
 
 // ----------------------------------------------import----------------------------------------------
+@import "components";
+@import "header";
 @import "01firstscreen";
 @import "02dates";
 @import "03tickets.scss";
@@ -195,37 +45,5 @@ body.lock {
 @import "07artists.scss";
 @import "08feedback.scss";
 @import "09lastscreen.scss";
+@import "footer.scss";
 @import "popup.scss";
-
-// ----------------------------------------------footer----------------------------------------------
-.footer {
-    &__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 70vh;
-        margin-top: -70vh;
-    }
-    &__content {
-        display: flex;
-        justify-content: space-between;
-        width: 60%;
-        height: 60%;
-    }
-    &__logo {
-        align-self: start;
-        width: 13%;
-    }
-    &__button {
-        align-self: start;
-    }
-}
-.column {
-    font-size: 1.5rem;
-    &__title {
-        font-size: 1.7rem;
-        font-weight: bold;
-        margin-bottom: 8%;
-    }
-}

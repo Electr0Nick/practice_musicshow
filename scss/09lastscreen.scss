@@ -12,14 +12,11 @@
 }
 .lastscreen-photo {
     &__item {
-        background-size: cover;
         &_left {
             flex: 0 0 35%;
-            background-image: url("../images/voice02.png");
         }
         &_right {
             flex: 1 1 auto;
-            background-image: url("../images/people01.png");
         }
     }
 }

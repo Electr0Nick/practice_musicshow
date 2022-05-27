@@ -59,7 +59,9 @@
                         <img class="firstscreen-info__bgelement firstscreen-info__bgelement_grange"
                             src="images/bgdots01.png" alt="Design element">
                     </div>
-                    <div class="firstscreen__image"></div>
+                    <div class="firstscreen__image ibg">
+                        <img src="images/voice01.png" alt="Artist photo">
+                    </div>
                     <a class="firstscreen__downbutton navbutton navbutton_down" href="#dates"><img
                             src="images/arrow01.png" alt="Downscreen button"></a>
                 </div>
@@ -79,7 +81,7 @@
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
                                     exercitation.
                                 </p>
-                                <a href="#popup" class="dates-info__button link-button popup-link">Learn more</a>
+                                <a href="#popup-dates" class="dates-info__button link-button popup-link">Learn more</a>
                             </div>
                         </div>
                         <img class="dates-info__bgelement" src="images/zigzag02.png" alt="Design element">
@@ -131,7 +133,9 @@
             <!-- -----------------------------------------------tickets----------------------------------------------- -->
             <section class="tickets screen" id="tickets">
                 <div class="tickets__container container">
-                    <div class="tickets__image"></div>
+                    <div class="tickets__image ibg">
+                        <img src="images/voice03.png" alt="Artist photo">
+                    </div>
                     <div class="tickets__info tickets-info">
                         <div class="tickets-info__content">
                             <div class="tickets-info__titleblock">
@@ -205,7 +209,9 @@
                         <img class="about-info__bgelement about-info__bgelement_ragged" src="images/blackrock03.png"
                             alt="Design element">
                     </div>
-                    <div class="about__image"></div>
+                    <div class="about__image ibg">
+                        <img src="images/voice05.png" alt="Artist photo">
+                    </div>
                     <a class="about__upbutton navbutton navbutton_up" href="#tickets"><img src="images/arrow01.png"
                             alt="Upscreen button"></a>
                     <a class="about__downbutton navbutton navbutton_down" href="#bonus"><img src="images/arrow02.png"
@@ -216,7 +222,9 @@
             <!-- -----------------------------------------------bonus----------------------------------------------- -->
             <section class="bonus screen" id="bonus">
                 <div class="bonus__container container">
-                    <div class="bonus__image"></div>
+                    <div class="bonus__image ibg">
+                        <img src="images/people04.png" alt="People photo">
+                    </div>
                     <div class="bonus__info bonus-info">
                         <div class="bonus-info__content">
                             <h2 class="bonus-info__title title"><span>party like</span> there’s no tomorrow</h2>
@@ -253,7 +261,9 @@
             <!-- -----------------------------------------------arena----------------------------------------------- -->
             <section class="arena screen" id="arena">
                 <div class="arena__container container">
-                    <div class="arena__image"></div>
+                    <div class="arena__image ibg">
+                        <img src="images/people05.png" alt="People photo">
+                    </div>
                     <div class="arena__info arena-info">
                         <div class="arena-info__content">
                             <h2 class="arena-info__title title title_white"><span>party</span> your heart out!</h2>
@@ -263,7 +273,7 @@
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
                                 exercitation.
                             </p>
-                            <button class="arena-info__button button button_white">Learn more</button>
+                            <a href="#popup-arena" class="dates-info__button link-button popup-link">Learn more</a>
                             <img class="arena-info__bgelement arena-info__bgelement_arrow01" src="images/arrow02.png"
                                 alt="Design element">
                             <img class="arena-info__bgelement arena-info__bgelement_arrow02" src="images/arrow02.png"
@@ -333,7 +343,9 @@
                         </div>
                         <img class="feedback-info__bgelement" src="images/whiterock02.png" alt="Design element">
                     </div>
-                    <div class="feedback__image"></div>
+                    <div class="feedback__image ibg">
+                        <img src="images/voice06.png" alt="Artist photo">
+                    </div>
                     <a class="feedback__upbutton navbutton navbutton_up" href="#artists"><img src="images/arrow02.png"
                             alt="Upscreen button"></a>
                     <a class="feedback__downbutton navbutton navbutton_down" href="#lastscreen"><img
@@ -345,8 +357,12 @@
             <section class="lastscreen screen" id="lastscreen">
                 <div class="lastscreen__container container">
                     <div class="lastscreen__photo lastscreen-photo">
-                        <div class="lastscreen-photo__item lastscreen-photo__item_left"></div>
-                        <div class="lastscreen-photo__item lastscreen-photo__item_right"></div>
+                        <div class="lastscreen-photo__item lastscreen-photo__item_left ibg">
+                            <img src="images/voice02.png" alt="Artist photo">
+                        </div>
+                        <div class="lastscreen-photo__item lastscreen-photo__item_right ibg">
+                            <img src="images/people01.png" alt="People photo">
+                        </div>
                     </div>
                     <div class="lastscreen__info lastscreen-info">
                         <img class="lastscreen-info__bgelement lastscreen-info__bgelement_grange"
@@ -393,37 +409,85 @@
             </div>
         </footer>
 
-        <!-- -----------------------------------------------popup----------------------------------------------- -->
-        <div class="popup" id="popup">
-            <div class="popup__body">
-                <div class="popup__content">
-                    <a class="popup__closebutton popup-close" href="##">
+        <!-- -----------------------------------------------popup dates----------------------------------------------- -->
+        <div class="popup" id="popup-dates">
+            <div class="popup__content">
+                <div class="popup__window modal-dates">
+                    <a class="popup__closebutton modal-dates__closebutton popup-close" href="##">
                         <img src="images/close.png" alt="Close Button">
                     </a>
-                    <div class="popup__text">
-                        <span class="textblock__bold">Lorem
-                            ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
-                        exercitation. Odit vero dolores neque veniam, dolorum harum tenetur qui ab ex autem fuga
-                        obcaecati sunt temporibus asperiores numquam,
-                        provident blanditiis aspernatur! Corporis eveniet veritatis, exercitationem, a ipsum obcaecati
-                        explicabo eum aliquid voluptatem, quo earum fuga laudantium. Mollitia suscipit iure corrupti
-                        magni voluptatibus, accusamus cum natus id reiciendis ipsam molestias deleniti inventore
-                        pariatur impedit, numquam voluptate cumque quisquam ea! Ipsa velit nulla recusandae, totam omnis
-                        voluptates et illum enim obcaecati quis nemo mollitia similique vitae dolores ad ratione modi
-                        rem ab commodi architecto nostrum illo sequi consequatur. Voluptate repudiandae cupiditate culpa
-                        debitis quibusdam nihil aperiam exercitationem consectetur nisi voluptas rem illo quod labore
-                        deserunt quam explicabo totam, ex impedit molestiae id.
+                    <div class="modal-dates__image1 ibg">
+                        <img src="images/popups/pop_voise01.png" alt="Photo artist">
                     </div>
-                    <div class="popup__image">
-                        <img src="images/people06.png" alt="Photo people">
+                    <div class="modal-dates__info">
+                        <div class="modal-dates__textblock textblock">
+                            <p><span class="textblock__bold">Lorem
+                                ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
+                            exercitation. Odit vero dolores neque veniam, dolorum harum tenetur qui ab ex autem fuga
+                            obcaecati sunt temporibus asperiores numquam,
+                            provident blanditiis aspernatur! Corporis eveniet veritatis, exercitationem, a ipsum obcaecati
+                            explicabo eum aliquid voluptatem, quo earum fuga laudantium. Mollitia suscipit iure corrupti
+                            magni voluptatibus, accusamus cum natus id reiciendis ipsam molestias deleniti inventore
+                            pariatur impedit, numquam voluptate cumque quisquam ea! Ipsa velit nulla recusandae, totam omnis
+                            voluptates et illum enim obcaecati quis nemo mollitia similique vitae dolores ad ratione modi
+                            rem ab commodi architecto nostrum illo sequi consequatur. Voluptate repudiandae cupiditate culpa
+                            debitis quibusdam nihil aperiam exercitationem consectetur nisi voluptas rem illo quod labore
+                            deserunt quam explicabo totam, ex impedit molestiae id.</p>
+                        </div>
+                        <div class="modal-dates__image2 ibg">
+                            <img src="images/popups/pop_people01.png" alt="Photo people">
+                        </div>
+                        <img class="modal-dates__bgelement modal-dates__bgelement_grange" src="images/bgdots06.png" alt="Design element">
+                        <img class="modal-dates__bgelement modal-dates__bgelement_zigzag" src="images/zigzag05.png" alt="Design element">
                     </div>
-                    <img class="popup__bgelement popup__bgelement_grange" src="images/bgdots06.png" alt="Design element">
-                    <img class="popup__bgelement popup__bgelement_zigzag" src="images/zigzag05.png" alt="Design element">
+                    <img class="modal-dates__texture modal-dates__texture_noize" src="images/popups/noize.png" alt="Texture">
+                    <img class="modal-dates__texture modal-dates__texture_membrane" src="images/popups/membrane.png" alt="Texture">
+                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged1" src="images/popups/pop_blackrock01.png" alt="Design element">
+                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged2" src="images/popups/pop_blackrock02.png" alt="Design element">
                 </div>
             </div>
         </div>
 
+        <!-- -----------------------------------------------popup arena----------------------------------------------- -->
+        <div class="popup" id="popup-arena">
+            <div class="popup__content">
+                <div class="popup__window modal-arena">
+                    <a class="popup__closebutton modal-arena__closebutton popup-close" href="##">
+                        <img src="images/close.png" alt="Close Button">
+                    </a>
+                    <!-- <div class="modal-dates__image1 ibg">
+                        <img src="images/popups/pop_voise01.png" alt="Photo artist">
+                    </div>
+                    <div class="modal-dates__info">
+                        <div class="modal-dates__textblock textblock">
+                            <p><span class="textblock__bold">Lorem
+                                ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
+                            exercitation. Odit vero dolores neque veniam, dolorum harum tenetur qui ab ex autem fuga
+                            obcaecati sunt temporibus asperiores numquam,
+                            provident blanditiis aspernatur! Corporis eveniet veritatis, exercitationem, a ipsum obcaecati
+                            explicabo eum aliquid voluptatem, quo earum fuga laudantium. Mollitia suscipit iure corrupti
+                            magni voluptatibus, accusamus cum natus id reiciendis ipsam molestias deleniti inventore
+                            pariatur impedit, numquam voluptate cumque quisquam ea! Ipsa velit nulla recusandae, totam omnis
+                            voluptates et illum enim obcaecati quis nemo mollitia similique vitae dolores ad ratione modi
+                            rem ab commodi architecto nostrum illo sequi consequatur. Voluptate repudiandae cupiditate culpa
+                            debitis quibusdam nihil aperiam exercitationem consectetur nisi voluptas rem illo quod labore
+                            deserunt quam explicabo totam, ex impedit molestiae id.</p>
+                        </div>
+                        <div class="modal-dates__image2 ibg">
+                            <img src="images/popups/pop_people01.png" alt="Photo people">
+                        </div>
+                        <img class="modal-dates__bgelement modal-dates__bgelement_grange" src="images/bgdots06.png" alt="Design element">
+                        <img class="modal-dates__bgelement modal-dates__bgelement_zigzag" src="images/zigzag05.png" alt="Design element">
+                    </div>
+                    <img class="modal-dates__texture modal-dates__texture_noize" src="images/popups/noize.png" alt="Texture">
+                    <img class="modal-dates__texture modal-dates__texture_membrane" src="images/popups/membrane.png" alt="Texture">
+                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged1" src="images/popups/pop_blackrock01.png" alt="Design element">
+                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged2" src="images/popups/pop_blackrock02.png" alt="Design element"> -->
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- -----------------------------------------------scripts----------------------------------------------- -->

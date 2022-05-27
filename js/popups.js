@@ -40,7 +40,7 @@ function popupOpen(curentPopup) {
         }
         curentPopup.classList.add(`open`);
         curentPopup.addEventListener(`click`, function (e) {
-            if (!e.target.closest(`.popup__content`)) {
+            if (!e.target.closest(`.popup__window`)) {
                 popupClose(e.target.closest(`.popup`));
             }
         });

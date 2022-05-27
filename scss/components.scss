@@ -1,0 +1,134 @@
+.screen {
+    height: 100vh;
+}
+
+.ibg {
+    position: relative;
+    & img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+.stickers {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    z-index: 6;
+    &__item {
+        position: absolute;
+        display: inline-block;
+        padding: 0 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        color: $color-gray;
+        &_black {
+            background-color: #000;
+            transform: rotate(-6deg);
+        }
+        &_purple {
+            right: 0;
+            bottom: 0;
+            background-color: $color-purple;
+            transform: rotate(-3deg);
+        }
+    }
+}
+
+.textblock {
+    z-index: 5;
+    text-align: justify;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+    &_center {
+        text-align: center;
+    }
+    &__bold {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $color-purple;
+        &_white {
+            color: $color-gray;
+        }
+    }
+}
+
+.title {
+    position: relative;
+    z-index: 5;
+    font-family: Staatliches;
+    font-size: 6rem;
+    line-height: 5.5rem;
+    span {
+        color: $color-purple;
+    }
+    &_white {
+        span {
+            color: $color-gray;
+        }
+    }
+}
+
+.button {
+    z-index: 4;
+    min-width: 250px;
+    min-height: 50px;
+    padding: 0 70px;
+    border-radius: 25px;
+    border: 4px solid $color-purple;
+    background-color: $color-gray;
+    color: $color-purple;
+    font-family: Monda, sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    &_white {
+        border: 4px solid $color-gray;
+        background-color: $color-purple;
+        color: $color-gray;
+    }
+}
+
+.link-button {
+    z-index: 4;
+    min-width: 250px;
+    min-height: 50px;
+    padding: 0 70px;
+    border: 4px solid $color-gray;
+    border-radius: 25px;
+    background-color: $color-purple;
+    color: $color-gray;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 42px;
+    transition: 400ms;
+    &:hover {
+        background-color: $color-gray;
+        color: $color-purple;
+    }
+}
+
+.navbutton {
+    position: absolute;
+    right: 3%;
+    height: 8%;
+    z-index: 7;
+    img {
+        height: 100%;
+    }
+    &_up {
+        top: 5%;
+        img {
+            transform: rotate(180deg);
+        }
+    }
+    &_down {
+        bottom: 5%;
+    }
+}

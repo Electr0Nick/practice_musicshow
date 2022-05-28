@@ -34,10 +34,11 @@ body.lock {
 
 
 // ----------------------------------------------import----------------------------------------------
-@import "components";
-@import "header";
-@import "01firstscreen";
-@import "02dates";
+@import "navigation.scss";
+@import "components.scss";
+@import "header.scss";
+@import "01firstscreen.scss";
+@import "02dates.scss";
 @import "03tickets.scss";
 @import "04about.scss";
 @import "05bonus.scss";

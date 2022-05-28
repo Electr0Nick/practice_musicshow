@@ -11,7 +11,7 @@
         background-color: transparent;
     }
 }
-.navigation {
+.header-nav {
     &__list {
         display: flex;
         justify-content: center;
@@ -26,6 +26,9 @@
         font-size: 1.4rem;
         &_active {
             font-weight: 700;
+            color: $color-purple;
+        }
+        &:hover {
             color: $color-purple;
         }
     }

@@ -21,11 +21,16 @@
         align-self: start;
     }
 }
-.column {
+.footer-nav {
     font-size: 1.5rem;
     &__title {
         font-size: 1.7rem;
         font-weight: bold;
         margin-bottom: 8%;
+    }
+    &__item {
+        &:hover {
+            color: $color-purple;
+        }
     }
 }

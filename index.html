@@ -13,20 +13,36 @@
 
 <body>
     <div class="wrapper">
+
+        <!-- -----------------------------------------------main navigation----------------------------------------------- -->
+        <!-- <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="#firstscreen">Home</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#dates">Dates</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#tickets">Tickets</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#about">About</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#bonus">Bonus</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#arena">Arena</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#artists">Artists</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#feedback">Feedback</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#lastscreen">Contacts</a></li>
+            </ul>
+        </nav> -->
+
         <!-- -----------------------------------------------header----------------------------------------------- -->
         <header class="header">
             <div class="header__container container">
-                <nav class="header__nav navigation">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a class="navigation__link navigation__link_active"
+                <nav class="header__nav header-nav">
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item"><a class="header-nav__link header-nav__link_active"
                                 href="#home">Home</a>
                         </li>
-                        <li class="navigation__item"><a class="navigation__link" href="#dates">Dates</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#tickets">Tickets</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#about">About</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#arena">Arena</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#artists">Artists</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#lastscreen">Contacts</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="#dates">Dates</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="#tickets">Tickets</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="#about">About</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="#arena">Arena</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="#artists">Artists</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="#lastscreen">Contacts</a></li>
                     </ul>
                 </nav>
             </div>
@@ -381,29 +397,29 @@
             <div class="footer__container container">
                 <div class="footer__content">
                     <img class="footer__logo" src="images/logo.png" alt="Logo">
-                    <div class="footer__column column">
-                        <h3 class="column__title">Fast Links</h3>
-                        <ul class="column__list">
-                            <li class="column__item"><a class="column__link" href="#firstscreen">Home</a></li>
-                            <li class="column__item"><a class="column__link" href="#dates">Dates</a></li>
-                            <li class="column__item"><a class="column__link" href="#tickets">Tickets</a></li>
-                            <li class="column__item"><a class="column__link" href="#about">About</a></li>
-                            <li class="column__item"><a class="column__link" href="#bonus">Bonus</a></li>
-                            <li class="column__item"><a class="column__link" href="#arena">Arena</a></li>
-                            <li class="column__item"><a class="column__link" href="#artists">Artists</a></li>
-                            <li class="column__item"><a class="column__link" href="#feedback">Feedback</a></li>
+                    <nav class="footer__nav footer-nav">
+                        <h3 class="footer-nav__title">Fast Links</h3>
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#firstscreen">Home</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#dates">Dates</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#tickets">Tickets</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#about">About</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#bonus">Bonus</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#arena">Arena</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#artists">Artists</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#feedback">Feedback</a></li>
                         </ul>
-                    </div>
-                    <div class="footer__column column">
-                        <h3 class="column__title">Perfomers</h3>
-                        <ul class="column__list">
-                            <li class="column__item"><a class="column__link" href="#">Solo Singer</a></li>
-                            <li class="column__item"><a class="column__link" href="#">Duo Singers</a></li>
-                            <li class="column__item"><a class="column__link" href="#">Rap</a></li>
-                            <li class="column__item"><a class="column__link" href="#">Rock</a></li>
-                            <li class="column__item"><a class="column__link" href="#">EDM</a></li>
+                    </nav>
+                    <nav class="footer__nav footer-nav">
+                        <h3 class="footer-nav__title">Perfomers</h3>
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Solo Singer</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Duo Singers</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Rap</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Rock</a></li>
+                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">EDM</a></li>
                         </ul>
-                    </div>
+                    </nav>
                     <button class="footer__button button">Learn more</button>
                 </div>
             </div>
@@ -422,29 +438,41 @@
                     <div class="modal-dates__info">
                         <div class="modal-dates__textblock textblock">
                             <p><span class="textblock__bold">Lorem
-                                ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
-                            exercitation. Odit vero dolores neque veniam, dolorum harum tenetur qui ab ex autem fuga
-                            obcaecati sunt temporibus asperiores numquam,
-                            provident blanditiis aspernatur! Corporis eveniet veritatis, exercitationem, a ipsum obcaecati
-                            explicabo eum aliquid voluptatem, quo earum fuga laudantium. Mollitia suscipit iure corrupti
-                            magni voluptatibus, accusamus cum natus id reiciendis ipsam molestias deleniti inventore
-                            pariatur impedit, numquam voluptate cumque quisquam ea! Ipsa velit nulla recusandae, totam omnis
-                            voluptates et illum enim obcaecati quis nemo mollitia similique vitae dolores ad ratione modi
-                            rem ab commodi architecto nostrum illo sequi consequatur. Voluptate repudiandae cupiditate culpa
-                            debitis quibusdam nihil aperiam exercitationem consectetur nisi voluptas rem illo quod labore
-                            deserunt quam explicabo totam, ex impedit molestiae id.</p>
+                                    ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
+                                exercitation. Odit vero dolores neque veniam, dolorum harum tenetur qui ab ex autem fuga
+                                obcaecati sunt temporibus asperiores numquam,
+                                provident blanditiis aspernatur! Corporis eveniet veritatis, exercitationem, a ipsum
+                                obcaecati
+                                explicabo eum aliquid voluptatem, quo earum fuga laudantium. Mollitia suscipit iure
+                                corrupti
+                                magni voluptatibus, accusamus cum natus id reiciendis ipsam molestias deleniti inventore
+                                pariatur impedit, numquam voluptate cumque quisquam ea! Ipsa velit nulla recusandae,
+                                totam omnis
+                                voluptates et illum enim obcaecati quis nemo mollitia similique vitae dolores ad ratione
+                                modi
+                                rem ab commodi architecto nostrum illo sequi consequatur. Voluptate repudiandae
+                                cupiditate culpa
+                                debitis quibusdam nihil aperiam exercitationem consectetur nisi voluptas rem illo quod
+                                labore
+                                deserunt quam explicabo totam, ex impedit molestiae id.</p>
                         </div>
                         <div class="modal-dates__image2 ibg">
                             <img src="images/popups/pop_people01.png" alt="Photo people">
                         </div>
-                        <img class="modal-dates__bgelement modal-dates__bgelement_grange" src="images/bgdots06.png" alt="Design element">
-                        <img class="modal-dates__bgelement modal-dates__bgelement_zigzag" src="images/zigzag05.png" alt="Design element">
+                        <img class="modal-dates__bgelement modal-dates__bgelement_grange" src="images/bgdots06.png"
+                            alt="Design element">
+                        <img class="modal-dates__bgelement modal-dates__bgelement_zigzag" src="images/zigzag05.png"
+                            alt="Design element">
                     </div>
-                    <img class="modal-dates__texture modal-dates__texture_noize" src="images/popups/noize.png" alt="Texture">
-                    <img class="modal-dates__texture modal-dates__texture_membrane" src="images/popups/membrane.png" alt="Texture">
-                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged1" src="images/popups/pop_blackrock01.png" alt="Design element">
-                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged2" src="images/popups/pop_blackrock02.png" alt="Design element">
+                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged1"
+                        src="images/popups/pop_blackrock01.png" alt="Design element">
+                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged2"
+                        src="images/popups/pop_blackrock02.png" alt="Design element">
+                    <img class="modal-dates__texture modal-dates__texture_noize" src="images/popups/noize.png"
+                        alt="Texture">
+                    <img class="modal-dates__texture modal-dates__texture_membrane" src="images/popups/membrane.png"
+                        alt="Texture">
                 </div>
             </div>
         </div>
@@ -456,35 +484,46 @@
                     <a class="popup__closebutton modal-arena__closebutton popup-close" href="##">
                         <img src="images/close.png" alt="Close Button">
                     </a>
-                    <!-- <div class="modal-dates__image1 ibg">
-                        <img src="images/popups/pop_voise01.png" alt="Photo artist">
-                    </div>
-                    <div class="modal-dates__info">
-                        <div class="modal-dates__textblock textblock">
-                            <p><span class="textblock__bold">Lorem
+                    <div class="modal-arena__textblock textblock">
+                        <p><span class="textblock__bold">Lorem
                                 ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
                             exercitation. Odit vero dolores neque veniam, dolorum harum tenetur qui ab ex autem fuga
                             obcaecati sunt temporibus asperiores numquam,
-                            provident blanditiis aspernatur! Corporis eveniet veritatis, exercitationem, a ipsum obcaecati
+                            provident blanditiis aspernatur! Corporis eveniet veritatis, exercitationem, a ipsum
+                            obcaecati
                             explicabo eum aliquid voluptatem, quo earum fuga laudantium. Mollitia suscipit iure corrupti
                             magni voluptatibus, accusamus cum natus id reiciendis ipsam molestias deleniti inventore
-                            pariatur impedit, numquam voluptate cumque quisquam ea! Ipsa velit nulla recusandae, totam omnis
-                            voluptates et illum enim obcaecati quis nemo mollitia similique vitae dolores ad ratione modi
-                            rem ab commodi architecto nostrum illo sequi consequatur. Voluptate repudiandae cupiditate culpa
-                            debitis quibusdam nihil aperiam exercitationem consectetur nisi voluptas rem illo quod labore
+                            pariatur impedit, numquam voluptate cumque quisquam ea! Ipsa velit nulla recusandae, totam
+                            omnis
+                            voluptates et illum enim obcaecati quis nemo mollitia similique vitae dolores ad ratione
+                            modi
+                            rem ab commodi architecto nostrum illo sequi consequatur. Voluptate repudiandae cupiditate
+                            culpa
+                            debitis quibusdam nihil aperiam exercitationem consectetur nisi voluptas rem illo quod
+                            labore
                             deserunt quam explicabo totam, ex impedit molestiae id.</p>
-                        </div>
-                        <div class="modal-dates__image2 ibg">
-                            <img src="images/popups/pop_people01.png" alt="Photo people">
-                        </div>
-                        <img class="modal-dates__bgelement modal-dates__bgelement_grange" src="images/bgdots06.png" alt="Design element">
-                        <img class="modal-dates__bgelement modal-dates__bgelement_zigzag" src="images/zigzag05.png" alt="Design element">
                     </div>
-                    <img class="modal-dates__texture modal-dates__texture_noize" src="images/popups/noize.png" alt="Texture">
-                    <img class="modal-dates__texture modal-dates__texture_membrane" src="images/popups/membrane.png" alt="Texture">
-                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged1" src="images/popups/pop_blackrock01.png" alt="Design element">
-                    <img class="modal-dates__bgelement modal-dates__bgelement_ragged2" src="images/popups/pop_blackrock02.png" alt="Design element"> -->
+                    <div class="modal-arena__photo">
+                        <div class="modal-arena__image1 ibg">
+                            <img src="images/popups/pop_voise02.png" alt="Photo artist">
+                        </div>
+                        <div class="modal-arena__image2 ibg">
+                            <img src="images/popups/pop_people02.png" alt="Photo people">
+                        </div>
+                    </div>
+                    <img class="modal-arena__bgelement modal-arena__bgelement_grange" src="images/popups/pop_dots02.png"
+                        alt="Design element">
+                    <img class="modal-arena__bgelement modal-arena__bgelement_zigzag"
+                        src="images/popups/pop_zigzag01.png" alt="Design element">
+                    <img class="modal-arena__bgelement modal-arena__bgelement_ragged1"
+                        src="images/popups/pop_blackrock03.png" alt="Design element">
+                    <img class="modal-arena__bgelement modal-arena__bgelement_ragged2"
+                        src="images/popups/pop_blackrock04.png" alt="Design element">
+                    <img class="modal-arena__texture modal-arena__texture_noize" src="images/popups/noize.png"
+                        alt="Texture">
+                    <img class="modal-arena__texture modal-arena__texture_membrane" src="images/popups/membrane.png"
+                        alt="Texture">
                 </div>
             </div>
         </div>

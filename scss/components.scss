@@ -114,21 +114,21 @@
     }
 }
 
-.navbutton {
-    position: absolute;
-    right: 3%;
-    height: 8%;
-    z-index: 7;
-    img {
-        height: 100%;
-    }
-    &_up {
-        top: 5%;
-        img {
-            transform: rotate(180deg);
-        }
-    }
-    &_down {
-        bottom: 5%;
-    }
-}
+// .navbutton {
+//     position: absolute;
+//     right: 3%;
+//     height: 8%;
+//     z-index: 7;
+//     img {
+//         height: 100%;
+//     }
+//     &_up {
+//         top: 5%;
+//         img {
+//             transform: rotate(180deg);
+//         }
+//     }
+//     &_down {
+//         bottom: 5%;
+//     }
+// }

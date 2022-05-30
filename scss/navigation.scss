@@ -3,21 +3,35 @@
     z-index: 30;
     top: 0;
     left: 0;
+    left: calc(-10% + 30px);
+    display: flex;
     height: 100vh;
-    background-color: $color-gray;
+    width: 10%;
+    transition: 700ms;
+    &:hover {
+        left: 0;
+        .navigation__bar {
+            width: 6px;
+            background-color: $color-purple;
+            color: transparent;
+        }
+    }
     &__list {
+        flex: 1 1 auto;
+        z-index: 32;
         display: flex;
         flex-direction: column;
-        height: 100%;
+        background-color: $color-gray;
     }
-    
     &__item {
         position: relative;
         flex: 1 0 auto;
         width: 100%;
         border: 1px solid $color-darkgray;
+        border-left: none;
+        border-right: none;
         background-color: $color-gray;
-        transition: 300ms;
+        transition: 400ms;
         &::before {
             display: block;
             position: absolute;
@@ -25,15 +39,16 @@
             right: 0;
             content: '';
             height: 100%;
-            width: 6px;
+            width: 8px;
             opacity: 0;
             background-color: $color-purple;
         }
         &:hover {
             flex: 2 0 auto;
-            width: 120%;
+            width: calc(100% + 30px);
             color: $color-purple;
             font-weight: 700;
+            font-size: 1.2rem;
         }
         &:hover::before {
             opacity: 1;
@@ -49,19 +64,15 @@
         text-transform: uppercase;
     }
     &__arrow {
-        flex: 0 0 auto;
-        display: flex;
-        align-items: center;
-        align-self: center;
-        width: 50px;
-        border: none;
-        line-height: 0;
-
+        width: 100%;
+        height: 10%;
         a {
+            display: flex;
+            justify-content: center;
             padding: 0;
         }
         img {
-
+            height: 60%;
         }
         &_up {
             transform: rotate(180deg);
@@ -69,5 +80,20 @@
         &_down {
         }
     }
-
+    &__bar {
+        z-index: 31;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 30px;
+        padding: 20px 0;
+        background-color: $color-darkgray;
+        writing-mode: vertical-lr;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: $color-gray;
+        transform: rotate(180deg);
+        transition-duration: 700ms;
+    }
 }

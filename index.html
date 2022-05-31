@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Show</title>
     <link rel="shortcut icon" href="images\favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -18,8 +18,23 @@
         <!-- -----------------------------------------------main navigation----------------------------------------------- -->
         <nav class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__arrow navigation__arrow_up"><a class="navigation__link" href="##"><img src="images/arrow02.png"
-                    alt="Up button"></a></li>
+                <li class="navigation__arrow navigation__arrow_up"><a class="navigation__arrow-link" href="#"><img
+                            src="images/arrow02.png" alt="Up button"></a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Home</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Dates</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Tickets</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">About</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Bonus</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Arena</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Artists</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Feedback</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Contacts</a></li>
+                <li class="navigation__arrow navigation__arrow_down"><a class="navigation__arrow-link" href="#"><img
+                            src="images/arrow02.png" alt="Down button"></a></li>
+            </ul>
+            <!-- <ul class="navigation__list">
+                <li class="navigation__arrow navigation__arrow_up"><a class="navigation__link" href="##"><img
+                            src="images/arrow02.png" alt="Up button"></a></li>
                 <li class="navigation__item"><a class="navigation__link" href="#firstscreen">Home</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="#dates">Dates</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="#tickets">Tickets</a></li>
@@ -29,406 +44,407 @@
                 <li class="navigation__item"><a class="navigation__link" href="#artists">Artists</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="#feedback">Feedback</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="#lastscreen">Contacts</a></li>
-                <li class="navigation__arrow navigation__arrow_down"><a class="navigation__link" href="##"><img src="images/arrow02.png"
-                    alt="Down button"></a></li>
-            </ul>
+                <li class="navigation__arrow navigation__arrow_down"><a class="navigation__link" href="##"><img
+                            src="images/arrow02.png" alt="Down button"></a></li>
+            </ul> -->
             <div class="navigation__bar">Navigation</div>
         </nav>
 
-        <!-- -----------------------------------------------header----------------------------------------------- -->
-        <header class="header">
-            <div class="header__container container">
-                <nav class="header__nav header-nav">
-                    <ul class="header-nav__list">
-                        <li class="header-nav__item"><a class="header-nav__link header-nav__link_active"
-                                href="#home">Home</a>
-                        </li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="#dates">Dates</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="#tickets">Tickets</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="#about">About</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="#arena">Arena</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="#artists">Artists</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="#lastscreen">Contacts</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <main>
-            <!-- -----------------------------------------------firstscreen----------------------------------------------- -->
-            <section class="firstscreen screen" id="firstscreen">
-                <div class="firstscreen__container container">
-                    <div class="firstscreen__info firstscreen-info">
-                        <img class="firstscreen__logo" src="images/logo.png" alt="Logo">
-                        <div class="firstscreen-info__content">
-                            <img class="firstscreen-info__img" src="images/musicshow.png" alt="Music Show logo">
-                            <div class="firstscreen-info__stickers stickers">
-                                <div class="stickers__item stickers__item_black">a place to quench your thirst for music
-                                </div>
-                                <div class="stickers__item stickers__item_purple">party out with us for three days!
-                                </div>
-                            </div>
-                            <p class="firstscreen-info__textblock textblock textblock_center"><span
-                                    class="textblock__bold">Lorem
-                                    ipsum dolor sit amet</span> consectetur adipisicing elit, sed do ei usmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <img class="firstscreen-info__bgelement firstscreen-info__bgelement_zigzag"
-                                src="images/zigzag01.png" alt="Design element">
+        <main class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- -----------------------------------------------firstscreen----------------------------------------------- -->
+                <section class="firstscreen screen swiper-slide" id="firstscreen">
+                    <!-- ---------------------------------header--------------------------------- -->
+                    <header class="header">
+                        <div class="header__container container">
+                            <nav class="header__nav header-nav">
+                                <ul class="header-nav__list">
+                                    <li class="header-nav__item"><a class="header-nav__link header-nav__link_active"
+                                            href="#home">Home</a>
+                                    </li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="#dates">Dates</a>
+                                    </li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="#tickets">Tickets</a>
+                                    </li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="#about">About</a>
+                                    </li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="#arena">Arena</a>
+                                    </li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="#artists">Artists</a>
+                                    </li>
+                                    <li class="header-nav__item"><a class="header-nav__link"
+                                            href="#lastscreen">Contacts</a></li>
+                                </ul>
+                            </nav>
                         </div>
-                        <img class="firstscreen-info__bgelement firstscreen-info__bgelement_ragged"
-                            src="images/blackrock01.png" alt="Design element">
-                        <img class="firstscreen-info__bgelement firstscreen-info__bgelement_grange"
-                            src="images/bgdots01.png" alt="Design element">
-                    </div>
-                    <div class="firstscreen__image ibg">
-                        <img src="images/voice01.png" alt="Artist photo">
-                    </div>
-                    <!-- <a class="firstscreen__downbutton navbutton navbutton_down" href="#dates"><img
-                            src="images/arrow01.png" alt="Downscreen button"></a> -->
-                </div>
-            </section>
-
-            <!-- -----------------------------------------------dates----------------------------------------------- -->
-            <section class="dates screen" id="dates">
-                <div class="dates__container container">
-                    <div class="dates__datesinfo dates-info">
-                        <div class="dates-info__content">
-                            <h2 class="dates-info__title title title_white"><span>party</span> your heart out!</h2>
-                            <div class="dates-info__description">
-                                <p class="dates-info__textblock textblock"><span
-                                        class="textblock__bold textblock__bold_white">Lorem
-                                        ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
-                                    tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
-                                    exercitation.
-                                </p>
-                                <a href="#popup-dates" class="dates-info__button link-button popup-link">Learn more</a>
-                            </div>
-                        </div>
-                        <img class="dates-info__bgelement" src="images/zigzag02.png" alt="Design element">
-                    </div>
-                    <div class="dates__calendar daresdates-calendar">
-                        <div class="dates-calendar__content">
-                            <div class="dates-calendar__choosedate">
-                                <span class="dates-calendar__actualdate">26/09/2022</span>
-                                <a class="dates-calendar__rightbutton" href="##"><img src="images/arrow01.png"
-                                        alt="Right button"></a>
-                            </div>
-                            <div class="dates-calendar__stickers stickers">
-                                <div class="stickers__item stickers__item_black">a place to quench your thirst for music
-                                </div>
-                                <div class="stickers__item stickers__item_purple">party out with us for three days!
-                                </div>
-                            </div>
-                            <div class="dates-calendar__description">
-                                <p class="dates-calendar__textblock textblock"><span class="textblock__bold">Lorem
-                                        ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
-                                    tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
-                                    exercitation.
-                                </p>
-                                <p class="dates-calendar__textblock textblock"><span class="textblock__bold">Lorem
-                                        ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
-                                    tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
-                                    exercitation.
-                                </p>
-                                <img class="dates-calendar__bgelement dates-calendar__bgelement_zigzag"
-                                    src="images/zigzag03.png" alt="Design element">
-                            </div>
-                            <img class="dates-calendar__bgelement dates-calendar__bgelement_ragged"
-                                src="images/blackrock02.png" alt="Design element">
-                            <img class="dates-calendar__bgelement dates-calendar__bgelement_grangeleft"
-                                src="images/bgdots02.png" alt="Logo">
-                            <img class="dates-calendar__bgelement dates-calendar__bgelement_grangeright"
-                                src="images/bgdots03.png" alt="Design element">
-                        </div>
-                    </div>
-                    <!-- <a class="dates__upbutton navbutton navbutton_up" href="#firstscreen"><img src="images/arrow02.png"
-                            alt="Upscreen button"></a>
-                    <a class="dates__downbutton navbutton navbutton_down" href="#tickets"><img src="images/arrow01.png"
-                            alt="Downscreen button"></a> -->
-                </div>
-            </section>
-
-            <!-- -----------------------------------------------tickets----------------------------------------------- -->
-            <section class="tickets screen" id="tickets">
-                <div class="tickets__container container">
-                    <div class="tickets__image ibg">
-                        <img src="images/voice03.png" alt="Artist photo">
-                    </div>
-                    <div class="tickets__info tickets-info">
-                        <div class="tickets-info__content">
-                            <div class="tickets-info__titleblock">
-                                <h2 class="tickets-info__title title"><span>reserve</span> tickets!</h2>
-                                <img class="tickets-info__bgelement tickets-info__bgelement_zigzag"
-                                    src="images/zigzag04.png" alt="Design element">
-                            </div>
-                            <div class="tickets-info__description">
-                                <div class="tickets-info__descriptblock">
-                                    <p class="tickets-info__textblock textblock"><span class="textblock__bold">Lorem
-                                            ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                        nostrud
-                                        exercitation.
-                                    </p>
-                                    <button class="tickets-info__button button">Learn more</button>
-                                </div>
-                                <div class="tickets-info__descriptblock">
-                                    <p class="tickets-info__textblock textblock"><span class="textblock__bold">Lorem
-                                            ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                        nostrud
-                                        exercitation.
-                                    </p>
-                                    <button class="tickets-info__button button">Learn more</button>
-                                </div>
-                            </div>
-                        </div>
-                        <img class="tickets-info__bgelement tickets-info__bgelement_grange" src="images/bgdots04.png"
-                            alt="Design element">
-                    </div>
-                    <div class="tickets__photo tickets-photo">
-                        <img class="tickets-photo__item" src="images/people02.png" alt="MusicShow photo">
-                        <img class="tickets-photo__item" src="images/voice02.png" alt="MusicShow photo">
-                        <img class="tickets-photo__item" src="images/people03.png" alt="MusicShow photo">
-                    </div>
-                    <!-- <a class="tickets__upbutton navbutton navbutton_up" href="#dates"><img src="images/arrow01.png"
-                            alt="Upscreen button"></a>
-                    <a class="tickets__downbutton navbutton navbutton_down" href="#about"><img src="images/arrow01.png"
-                            alt="Downscreen button"></a> -->
-                </div>
-            </section>
-
-            <!-- -----------------------------------------------about----------------------------------------------- -->
-            <section class="about screen" id="about">
-                <div class="about__container container">
-                    <div class="about__info about-info">
-                        <div class="about-info__content">
-                            <div class="about-info__stickers stickers">
-                                <div class="stickers__item stickers__item_black">a place to quench your thirst for music
-                                </div>
-                                <div class="stickers__item stickers__item_purple">party out with us for three days!
-                                </div>
-                            </div>
-                            <p class="about-info__textblock textblock textblock_center"><span
-                                    class="textblock__bold">Lorem
-                                    ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
-                                exercitation.
-                            </p>
-                            <button class="about-info__button button">Learn more</button>
-                            <div class="about-info__sliderbuttonsblock">
-                                <a class="about-info__sliderbutton about-info__sliderbutton_left" href="##"><img
-                                        src="images/arrow01.png" alt="Right button"></a>
-                                <a class="about-info__sliderbutton about-info__sliderbutton_right" href="##"><img
-                                        src="images/arrow01.png" alt="Right button"></a>
-                            </div>
-                            <img class="about-info__bgelement about-info__bgelement_zigzag" src="images/zigzag03.png"
-                                alt="Design element">
-                        </div>
-                        <img class="about-info__bgelement about-info__bgelement_ragged" src="images/blackrock03.png"
-                            alt="Design element">
-                    </div>
-                    <div class="about__image ibg">
-                        <img src="images/voice05.png" alt="Artist photo">
-                    </div>
-                    <!-- <a class="about__upbutton navbutton navbutton_up" href="#tickets"><img src="images/arrow01.png"
-                            alt="Upscreen button"></a>
-                    <a class="about__downbutton navbutton navbutton_down" href="#bonus"><img src="images/arrow02.png"
-                            alt="Downscreen button"></a> -->
-                </div>
-            </section>
-
-            <!-- -----------------------------------------------bonus----------------------------------------------- -->
-            <section class="bonus screen" id="bonus">
-                <div class="bonus__container container">
-                    <div class="bonus__image ibg">
-                        <img src="images/people04.png" alt="People photo">
-                    </div>
-                    <div class="bonus__info bonus-info">
-                        <div class="bonus-info__content">
-                            <h2 class="bonus-info__title title"><span>party like</span> there’s no tomorrow</h2>
-                            <div class="bonus-info__description">
-                                <div class="bonus-info__stickers stickers">
+                    </header>
+                    <div class="firstscreen__container container">
+                        <div class="firstscreen__info firstscreen-info">
+                            <img class="firstscreen__logo" src="images/logo.png" alt="Logo">
+                            <div class="firstscreen-info__content">
+                                <img class="firstscreen-info__img" src="images/musicshow.png" alt="Music Show logo">
+                                <div class="firstscreen-info__stickers stickers">
                                     <div class="stickers__item stickers__item_black">a place to quench your thirst for
                                         music
                                     </div>
                                     <div class="stickers__item stickers__item_purple">party out with us for three days!
                                     </div>
                                 </div>
-                                <p class="bonus-info__textblock textblock textblock_center"><span
+                                <p class="firstscreen-info__textblock textblock textblock_center"><span
+                                        class="textblock__bold">Lorem
+                                        ipsum dolor sit amet</span> consectetur adipisicing elit, sed do ei usmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                <img class="firstscreen-info__bgelement firstscreen-info__bgelement_zigzag"
+                                    src="images/zigzag01.png" alt="Design element">
+                            </div>
+                            <img class="firstscreen-info__bgelement firstscreen-info__bgelement_ragged"
+                                src="images/blackrock01.png" alt="Design element">
+                            <img class="firstscreen-info__bgelement firstscreen-info__bgelement_grange"
+                                src="images/bgdots01.png" alt="Design element">
+                        </div>
+                        <div class="firstscreen__image ibg">
+                            <img src="images/voice01.png" alt="Artist photo">
+                        </div>
+                        <!-- <a class="firstscreen__downbutton navbutton navbutton_down" href="#dates"><img
+                            src="images/arrow01.png" alt="Downscreen button"></a> -->
+                    </div>
+                </section>
+
+                <!-- -----------------------------------------------dates----------------------------------------------- -->
+                <section class="dates screen swiper-slide" id="dates">
+                    <div class="dates__container container">
+                        <div class="dates__datesinfo dates-info">
+                            <div class="dates-info__content">
+                                <h2 class="dates-info__title title title_white"><span>party</span> your heart out!</h2>
+                                <div class="dates-info__description">
+                                    <p class="dates-info__textblock textblock"><span
+                                            class="textblock__bold textblock__bold_white">Lorem
+                                            ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                                        tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
+                                        exercitation.
+                                    </p>
+                                    <a href="#popup-dates" class="dates-info__button link-button popup-link">Learn
+                                        more</a>
+                                </div>
+                            </div>
+                            <img class="dates-info__bgelement" src="images/zigzag02.png" alt="Design element">
+                        </div>
+                        <div class="dates__calendar daresdates-calendar">
+                            <div class="dates-calendar__content">
+                                <div class="dates-calendar__choosedate">
+                                    <span class="dates-calendar__actualdate">26/09/2022</span>
+                                    <a class="dates-calendar__rightbutton" href="##"><img src="images/arrow01.png"
+                                            alt="Right button"></a>
+                                </div>
+                                <div class="dates-calendar__stickers stickers">
+                                    <div class="stickers__item stickers__item_black">a place to quench your thirst for
+                                        music
+                                    </div>
+                                    <div class="stickers__item stickers__item_purple">party out with us for three days!
+                                    </div>
+                                </div>
+                                <div class="dates-calendar__description">
+                                    <p class="dates-calendar__textblock textblock"><span class="textblock__bold">Lorem
+                                            ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                                        tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
+                                        exercitation.
+                                    </p>
+                                    <p class="dates-calendar__textblock textblock"><span class="textblock__bold">Lorem
+                                            ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                                        tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
+                                        exercitation.
+                                    </p>
+                                    <img class="dates-calendar__bgelement dates-calendar__bgelement_zigzag"
+                                        src="images/zigzag03.png" alt="Design element">
+                                </div>
+                                <img class="dates-calendar__bgelement dates-calendar__bgelement_ragged"
+                                    src="images/blackrock02.png" alt="Design element">
+                                <img class="dates-calendar__bgelement dates-calendar__bgelement_grangeleft"
+                                    src="images/bgdots02.png" alt="Logo">
+                                <img class="dates-calendar__bgelement dates-calendar__bgelement_grangeright"
+                                    src="images/bgdots03.png" alt="Design element">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- -----------------------------------------------tickets----------------------------------------------- -->
+                <section class="tickets screen swiper-slide" id="tickets">
+                    <div class="tickets__container container">
+                        <div class="tickets__image ibg">
+                            <img src="images/voice03.png" alt="Artist photo">
+                        </div>
+                        <div class="tickets__info tickets-info">
+                            <div class="tickets-info__content">
+                                <div class="tickets-info__titleblock">
+                                    <h2 class="tickets-info__title title"><span>reserve</span> tickets!</h2>
+                                    <img class="tickets-info__bgelement tickets-info__bgelement_zigzag"
+                                        src="images/zigzag04.png" alt="Design element">
+                                </div>
+                                <div class="tickets-info__description">
+                                    <div class="tickets-info__descriptblock">
+                                        <p class="tickets-info__textblock textblock"><span class="textblock__bold">Lorem
+                                                ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei
+                                            usmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                            nostrud
+                                            exercitation.
+                                        </p>
+                                        <button class="tickets-info__button button">Learn more</button>
+                                    </div>
+                                    <div class="tickets-info__descriptblock">
+                                        <p class="tickets-info__textblock textblock"><span class="textblock__bold">Lorem
+                                                ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei
+                                            usmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                            nostrud
+                                            exercitation.
+                                        </p>
+                                        <button class="tickets-info__button button">Learn more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="tickets-info__bgelement tickets-info__bgelement_grange"
+                                src="images/bgdots04.png" alt="Design element">
+                        </div>
+                        <div class="tickets__photo tickets-photo">
+                            <img class="tickets-photo__item" src="images/people02.png" alt="MusicShow photo">
+                            <img class="tickets-photo__item" src="images/voice02.png" alt="MusicShow photo">
+                            <img class="tickets-photo__item" src="images/people03.png" alt="MusicShow photo">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- -----------------------------------------------about----------------------------------------------- -->
+                <section class="about screen swiper-slide" id="about">
+                    <div class="about__container container">
+                        <div class="about__info about-info">
+                            <div class="about-info__content">
+                                <div class="about-info__stickers stickers">
+                                    <div class="stickers__item stickers__item_black">a place to quench your thirst for
+                                        music
+                                    </div>
+                                    <div class="stickers__item stickers__item_purple">party out with us for three days!
+                                    </div>
+                                </div>
+                                <p class="about-info__textblock textblock textblock_center"><span
                                         class="textblock__bold">Lorem
                                         ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
                                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
                                     exercitation.
                                 </p>
+                                <button class="about-info__button button">Learn more</button>
+                                <div class="about-info__sliderbuttonsblock">
+                                    <a class="about-info__sliderbutton about-info__sliderbutton_left" href="##"><img
+                                            src="images/arrow01.png" alt="Right button"></a>
+                                    <a class="about-info__sliderbutton about-info__sliderbutton_right" href="##"><img
+                                            src="images/arrow01.png" alt="Right button"></a>
+                                </div>
+                                <img class="about-info__bgelement about-info__bgelement_zigzag"
+                                    src="images/zigzag03.png" alt="Design element">
+                            </div>
+                            <img class="about-info__bgelement about-info__bgelement_ragged" src="images/blackrock03.png"
+                                alt="Design element">
+                        </div>
+                        <div class="about__image ibg">
+                            <img src="images/voice05.png" alt="Artist photo">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- -----------------------------------------------bonus----------------------------------------------- -->
+                <section class="bonus screen swiper-slide" id="bonus">
+                    <div class="bonus__container container">
+                        <div class="bonus__image ibg">
+                            <img src="images/people04.png" alt="People photo">
+                        </div>
+                        <div class="bonus__info bonus-info">
+                            <div class="bonus-info__content">
+                                <h2 class="bonus-info__title title"><span>party like</span> there’s no tomorrow</h2>
+                                <div class="bonus-info__description">
+                                    <div class="bonus-info__stickers stickers">
+                                        <div class="stickers__item stickers__item_black">a place to quench your thirst
+                                            for
+                                            music
+                                        </div>
+                                        <div class="stickers__item stickers__item_purple">party out with us for three
+                                            days!
+                                        </div>
+                                    </div>
+                                    <p class="bonus-info__textblock textblock textblock_center"><span
+                                            class="textblock__bold">Lorem
+                                            ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                        nostrud
+                                        exercitation.
+                                    </p>
+                                </div>
+                            </div>
+                            <img class="bonus-info__bgelement bonus-info__bgelement_zigzag1" src="images/zigzag01.png"
+                                alt="Design element">
+                            <img class="bonus-info__bgelement bonus-info__bgelement_zigzag2" src="images/zigzag05.png"
+                                alt="Design element">
+                            <img class="bonus-info__bgelement bonus-info__bgelement_grange" src="images/bgdots05.png"
+                                alt="Design element">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- -----------------------------------------------arena----------------------------------------------- -->
+                <section class="arena screen swiper-slide" id="arena">
+                    <div class="arena__container container">
+                        <div class="arena__image ibg">
+                            <img src="images/people05.png" alt="People photo">
+                        </div>
+                        <div class="arena__info arena-info">
+                            <div class="arena-info__content">
+                                <h2 class="arena-info__title title title_white"><span>party</span> your heart out!</h2>
+                                <p class="arena-info__textblock textblock"><span
+                                        class="textblock__bold textblock__bold_white">Lorem
+                                        ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                                    tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
+                                    exercitation.
+                                </p>
+                                <a href="#popup-arena" class="dates-info__button link-button popup-link">Learn more</a>
+                                <img class="arena-info__bgelement arena-info__bgelement_arrow01"
+                                    src="images/arrow02.png" alt="Design element">
+                                <img class="arena-info__bgelement arena-info__bgelement_arrow02"
+                                    src="images/arrow02.png" alt="Design element">
+                                <img class="arena-info__bgelement arena-info__bgelement_arrow03"
+                                    src="images/arrow02.png" alt="Design element">
+                            </div>
+                            <img class="arena-info__bgelement arena-info__bgelement_ragged" src="images/whiterock01.png"
+                                alt="Design element">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- -----------------------------------------------artists----------------------------------------------- -->
+                <section class="artists screen swiper-slide" id="artists">
+                    <div class="artists__container container">
+                        <div class="artists__content">
+                            <a class="artists__slider-button artists__slider-button_left" href="##"><img
+                                    src="images/arrow01.png" alt="Left button"></a>
+                            <div class="artists__infoblock artist-info">
+                                <div class="artist-info__circle">
+                                    <img class="artist-info__star" src="images/star.png" alt="Star">
+                                </div>
+                                <h2 class="artist-info__title title"><span>john</span> doe</h2>
+                                <p class="artist-info__textblock textblock textblock_center"><span
+                                        class="textblock__bold">Lorem
+                                        ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod
+                                    tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
+                                    exercitation.
+                                </p>
+                                <img class="artist-info__bgelement" src="images/zigzag04.png" alt="Design element">
+                            </div>
+                            <a class="artists__slider-button artists__slider-button_right" href="##"><img
+                                    src="images/arrow01.png" alt="Right button"></a>
+                        </div>
+                        <img class="artists__bgelement artists__bgelement_grange" src="images/bgdots06.png"
+                            alt="Design element">
+                        <img class="artists__bgelement artists__bgelement_raggedleft" src="images/blackrock04.png"
+                            alt="Design element">
+                        <img class="artists__bgelement artists__bgelement_raggedright" src="images/blackrock05.png"
+                            alt="Design element">
+                    </div>
+                </section>
+
+                <!-- -----------------------------------------------feedback----------------------------------------------- -->
+                <section class="feedback screen swiper-slide" id="feedback">
+                    <div class="feedback__container container">
+                        <div class="feedback__info feedback-info">
+                            <div class="feedback-info__content">
+                                <h2 class="feedback-info__title title title_white"><span>news</span>letter</h2>
+                                <form class="feedback-info__form form">
+                                    <input class="form__item form__item_name" type="text"
+                                        placeholder="enter your full name">
+                                    <input class="form__item form__item_email" type="email"
+                                        placeholder="enter your e-mail">
+                                    <textarea class="form__item form__item_message" cols="30" rows="10"
+                                        placeholder="enter your message"></textarea>
+                                    <button class="form__item form__item_button">confirm</button>
+                                </form>
+                            </div>
+                            <img class="feedback-info__bgelement" src="images/whiterock02.png" alt="Design element">
+                        </div>
+                        <div class="feedback__image ibg">
+                            <img src="images/voice06.png" alt="Artist photo">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- -----------------------------------------------lastscreen----------------------------------------------- -->
+                <section class="lastscreen screen swiper-slide" id="lastscreen">
+                    <div class="lastscreen__container container">
+                        <div class="lastscreen__photo lastscreen-photo">
+                            <div class="lastscreen-photo__item lastscreen-photo__item_left ibg">
+                                <img src="images/voice02.png" alt="Artist photo">
+                            </div>
+                            <div class="lastscreen-photo__item lastscreen-photo__item_right ibg">
+                                <img src="images/people01.png" alt="People photo">
                             </div>
                         </div>
-                        <img class="bonus-info__bgelement bonus-info__bgelement_zigzag1" src="images/zigzag01.png"
-                            alt="Design element">
-                        <img class="bonus-info__bgelement bonus-info__bgelement_zigzag2" src="images/zigzag05.png"
-                            alt="Design element">
-                        <img class="bonus-info__bgelement bonus-info__bgelement_grange" src="images/bgdots05.png"
-                            alt="Design element">
-                    </div>
-                    <!-- <a class="bonus__upbutton navbutton navbutton_up" href="#about"><img src="images/arrow02.png"
-                            alt="Upscreen button"></a>
-                    <a class="bonus__downbutton navbutton navbutton_down" href="#arena"><img src="images/arrow01.png"
-                            alt="Downscreen button"></a> -->
-                </div>
-            </section>
-
-            <!-- -----------------------------------------------arena----------------------------------------------- -->
-            <section class="arena screen" id="arena">
-                <div class="arena__container container">
-                    <div class="arena__image ibg">
-                        <img src="images/people05.png" alt="People photo">
-                    </div>
-                    <div class="arena__info arena-info">
-                        <div class="arena-info__content">
-                            <h2 class="arena-info__title title title_white"><span>party</span> your heart out!</h2>
-                            <p class="arena-info__textblock textblock"><span
-                                    class="textblock__bold textblock__bold_white">Lorem
-                                    ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
-                                exercitation.
-                            </p>
-                            <a href="#popup-arena" class="dates-info__button link-button popup-link">Learn more</a>
-                            <img class="arena-info__bgelement arena-info__bgelement_arrow01" src="images/arrow02.png"
-                                alt="Design element">
-                            <img class="arena-info__bgelement arena-info__bgelement_arrow02" src="images/arrow02.png"
-                                alt="Design element">
-                            <img class="arena-info__bgelement arena-info__bgelement_arrow03" src="images/arrow02.png"
-                                alt="Design element">
+                        <div class="lastscreen__info lastscreen-info">
+                            <!-- ---------------------------------footer--------------------------------- -->
+                            <footer class="footer">
+                                <div class="footer__content">
+                                    <img class="footer__logo" src="images/logo.png" alt="Logo">
+                                    <nav class="footer__nav footer-nav">
+                                        <h3 class="footer-nav__title">Fast Links</h3>
+                                        <ul class="footer-nav__list">
+                                            <li class="footer-nav__item"><a class="footer-nav__link"
+                                                    href="#firstscreen">Home</a></li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link"
+                                                    href="#dates">Dates</a></li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link"
+                                                    href="#tickets">Tickets</a></li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link"
+                                                    href="#about">About</a></li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link"
+                                                    href="#bonus">Bonus</a></li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link"
+                                                    href="#arena">Arena</a></li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link"
+                                                    href="#artists">Artists</a></li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link"
+                                                    href="#feedback">Feedback</a></li>
+                                        </ul>
+                                    </nav>
+                                    <nav class="footer__nav footer-nav">
+                                        <h3 class="footer-nav__title">Perfomers</h3>
+                                        <ul class="footer-nav__list">
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Solo
+                                                    Singer</a></li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Duo
+                                                    Singers</a></li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Rap</a>
+                                            </li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Rock</a>
+                                            </li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">EDM</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <button class="footer__button button">Learn more</button>
+                                </div>
+                            </footer>
+                            <img class="lastscreen-info__bgelement lastscreen-info__bgelement_grange"
+                                src="images/bgdots07.png" alt="Design element">
+                            <img class="lastscreen-info__bgelement lastscreen-info__bgelement_ragged"
+                                src="images/blackrock06.png" alt="Design element">
                         </div>
-                        <img class="arena-info__bgelement arena-info__bgelement_ragged" src="images/whiterock01.png"
-                            alt="Design element">
-                    </div>
-                    <!-- <a class="arena__upbutton navbutton navbutton_up" href="#bonus"><img src="images/arrow02.png"
-                            alt="Upscreen button"></a>
-                    <a class="arena__downbutton navbutton navbutton_down" href="#artists"><img src="images/arrow02.png"
-                            alt="Downscreen button"></a> -->
-                </div>
-            </section>
-
-            <!-- -----------------------------------------------artists----------------------------------------------- -->
-            <section class="artists screen" id="artists">
-                <div class="artists__container container">
-                    <div class="artists__content">
-                        <a class="artists__slider-button artists__slider-button_left" href="##"><img
-                                src="images/arrow01.png" alt="Left button"></a>
-                        <div class="artists__infoblock artist-info">
-                            <div class="artist-info__circle">
-                                <img class="artist-info__star" src="images/star.png" alt="Star">
-                            </div>
-                            <h2 class="artist-info__title title"><span>john</span> doe</h2>
-                            <p class="artist-info__textblock textblock textblock_center"><span
-                                    class="textblock__bold">Lorem
-                                    ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei usmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
-                                exercitation.
-                            </p>
-                            <img class="artist-info__bgelement" src="images/zigzag04.png" alt="Design element">
-                        </div>
-                        <a class="artists__slider-button artists__slider-button_right" href="##"><img
-                                src="images/arrow01.png" alt="Right button"></a>
-                    </div>
-                    <img class="artists__bgelement artists__bgelement_grange" src="images/bgdots06.png"
-                        alt="Design element">
-                    <img class="artists__bgelement artists__bgelement_raggedleft" src="images/blackrock04.png"
-                        alt="Design element">
-                    <img class="artists__bgelement artists__bgelement_raggedright" src="images/blackrock05.png"
-                        alt="Design element">
-                    <!-- <a class="artists__upbutton navbutton navbutton_up" href="#arena"><img src="images/arrow01.png"
-                            alt="Upscreen button"></a>
-                    <a class="artists__downbutton navbutton navbutton_down" href="#feedback"><img
-                            src="images/arrow01.png" alt="Downscreen button"></a> -->
-                </div>
-            </section>
-
-            <!-- -----------------------------------------------feedback----------------------------------------------- -->
-            <section class="feedback screen" id="feedback">
-                <div class="feedback__container container">
-                    <div class="feedback__info feedback-info">
-                        <div class="feedback-info__content">
-                            <h2 class="feedback-info__title title title_white"><span>news</span>letter</h2>
-                            <form class="feedback-info__form form">
-                                <input class="form__item form__item_name" type="text"
-                                    placeholder="enter your full name">
-                                <input class="form__item form__item_email" type="email" placeholder="enter your e-mail">
-                                <textarea class="form__item form__item_message" cols="30" rows="10"
-                                    placeholder="enter your message"></textarea>
-                                <button class="form__item form__item_button">confirm</button>
-                            </form>
-                        </div>
-                        <img class="feedback-info__bgelement" src="images/whiterock02.png" alt="Design element">
-                    </div>
-                    <div class="feedback__image ibg">
-                        <img src="images/voice06.png" alt="Artist photo">
-                    </div>
-                    <!-- <a class="feedback__upbutton navbutton navbutton_up" href="#artists"><img src="images/arrow02.png"
-                            alt="Upscreen button"></a>
-                    <a class="feedback__downbutton navbutton navbutton_down" href="#lastscreen"><img
-                            src="images/arrow02.png" alt="Downscreen button"></a> -->
-                </div>
-            </section>
-
-            <!-- -----------------------------------------------lastscreen----------------------------------------------- -->
-            <section class="lastscreen screen" id="lastscreen">
-                <div class="lastscreen__container container">
-                    <div class="lastscreen__photo lastscreen-photo">
-                        <div class="lastscreen-photo__item lastscreen-photo__item_left ibg">
-                            <img src="images/voice02.png" alt="Artist photo">
-                        </div>
-                        <div class="lastscreen-photo__item lastscreen-photo__item_right ibg">
-                            <img src="images/people01.png" alt="People photo">
-                        </div>
-                    </div>
-                    <div class="lastscreen__info lastscreen-info">
-                        <img class="lastscreen-info__bgelement lastscreen-info__bgelement_grange"
-                            src="images/bgdots07.png" alt="Design element">
-                        <img class="lastscreen-info__bgelement lastscreen-info__bgelement_ragged"
-                            src="images/blackrock06.png" alt="Design element">
-                    </div>
-                    <!-- <a class="lastscreen__upbutton navbutton navbutton_up" href="#feedback"><img
+                        <!-- <a class="lastscreen__upbutton navbutton navbutton_up" href="#feedback"><img
                             src="images/arrow02.png" alt="Upscreen button"></a> -->
-                </div>
-            </section>
-        </main>
-
-        <!-- -----------------------------------------------footer----------------------------------------------- -->
-        <footer class="footer">
-            <div class="footer__container container">
-                <div class="footer__content">
-                    <img class="footer__logo" src="images/logo.png" alt="Logo">
-                    <nav class="footer__nav footer-nav">
-                        <h3 class="footer-nav__title">Fast Links</h3>
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#firstscreen">Home</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#dates">Dates</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#tickets">Tickets</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#about">About</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#bonus">Bonus</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#arena">Arena</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#artists">Artists</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#feedback">Feedback</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="footer__nav footer-nav">
-                        <h3 class="footer-nav__title">Perfomers</h3>
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Solo Singer</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Duo Singers</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Rap</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Rock</a></li>
-                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">EDM</a></li>
-                        </ul>
-                    </nav>
-                    <button class="footer__button button">Learn more</button>
-                </div>
+                    </div>
+                </section>
             </div>
-        </footer>
+        </main>
 
         <!-- -----------------------------------------------popup dates----------------------------------------------- -->
         <div class="popup" id="popup-dates">

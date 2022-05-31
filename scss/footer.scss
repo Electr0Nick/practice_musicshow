@@ -1,17 +1,9 @@
 .footer {
-    &__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 70vh;
-        margin-top: -70vh;
-    }
+    width: 60%;
+    height: 60%;
     &__content {
         display: flex;
         justify-content: space-between;
-        width: 60%;
-        height: 60%;
     }
     &__logo {
         align-self: start;

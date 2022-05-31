@@ -9,6 +9,13 @@
         flex: 0 0 30%;
         z-index: 2;
     }
+    &__logo {
+        position: absolute;
+        z-index: 1;
+        top: 10%;
+        left: 15%;
+        width: 10%;
+    }
 }
 .firstscreen-info {
     &__content {
@@ -26,6 +33,9 @@
         width: 50%;
         margin-top: 30%;
     }
+    &__stickers {
+        font-size: calc(13px + (16 - 13) * ((100vw - 1024px) / (1920 - 1024)));
+    }
     &__bgelement {
         position: absolute;
         z-index: 1;
@@ -39,11 +49,6 @@
         &_ragged {
             left: 0;
             height: 100%;
-        }
-        &_logo {
-            top: 10%;
-            left: 10%;
-            width: 10%;
         }
         &_grange {
             left: 24%;

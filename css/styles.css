@@ -34,13 +34,12 @@ body.lock {
   position: fixed;
   z-index: 30;
   top: 0;
-  left: 0;
-  left: calc(-10% + 30px);
+  left: -170px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  width: 10%;
+  width: 200px;
   -webkit-transition: 700ms;
   transition: 700ms;
 }
@@ -112,7 +111,7 @@ body.lock {
           align-items: center;
   height: 100%;
   width: 100%;
-  padding: 5px 25px 5px 10px;
+  padding: 5px 10px;
   text-transform: uppercase;
 }
 .navigation__arrow {
@@ -318,6 +317,11 @@ body.lock {
   color: #9913e1;
 }
 
+@media (max-width: 1024px) {
+  .header {
+    display: none;
+  }
+}
 .firstscreen__info {
   position: relative;
   -webkit-box-flex: 1;
@@ -335,6 +339,13 @@ body.lock {
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
   z-index: 2;
+}
+.firstscreen__logo {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 15%;
+  width: 10%;
 }
 
 .firstscreen-info__content {
@@ -363,6 +374,9 @@ body.lock {
   width: 50%;
   margin-top: 30%;
 }
+.firstscreen-info__stickers {
+  font-size: calc(13px + 3 * (100vw - 1024px) / 896);
+}
 .firstscreen-info__bgelement {
   position: absolute;
   z-index: 1;
@@ -377,11 +391,6 @@ body.lock {
 .firstscreen-info__bgelement_ragged {
   left: 0;
   height: 100%;
-}
-.firstscreen-info__bgelement_logo {
-  top: 10%;
-  left: 10%;
-  width: 10%;
 }
 .firstscreen-info__bgelement_grange {
   left: 24%;

@@ -1,8 +1,14 @@
 "use strict"
 
-let pageSlider = new Swiper(`main`, {
-    direction: 'vertical',
-    slidesPerView: 'auto',
+let pageSlider = new Swiper(`.swiper`, {
+    direction: `vertical`,
+    slidesPerView: `auto`,
+    speed: 1000,
+    parallax: true,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
     keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -11,46 +17,42 @@ let pageSlider = new Swiper(`main`, {
     mousewheel: {
         sensitivity: 1,
     },
-    // кнопки переключения слайдов
     navigation: {
         nextEl: `.navigation__arrow_down`,
         prevEl: `.navigation__arrow_up`,
     },
-    speed: 1000,
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
     init: false,
     on: {
         init: function () {
             menuSlider();
         },
-        slideCange: function () {
-            menuSliderREmove();
-            navList[pageSlider.realIndex].classList.add('.active');
+        slideChange: function () {
+            menuSliderRemove();
+            navList[pageSlider.realIndex].classList.add(`active`);
         },
-    }
+    },
 });
 
-let navList = document.querySelectorAll('.navigation__link'); 
+// ----------------------------------------------------------------main navigation----------------------------------------------------------------
+let navList = document.querySelectorAll(`.navigation__link`); // находим все навигационные ссылки
 function menuSlider() {
-    if (navList.length > 0) {
-        navList[pageSlider.realIndex].classList.add('.active');
-        for(let i = 0; i < navList.length; i++) {
+    if (navList.length > 0) { // проверка
+        navList[pageSlider.realIndex].classList.add(`active`); // добавляем стили для ссылки актуального слайда
+        for(let i = 0; i < navList.length; i++) { // перебор массива
             const navLink = navList[i];
-            navLink.addEventListener('click', function(e) {
-                menuSliderREmove();
-                pageSlider.slideTo(i, 1000);
-                navLink.classList.add('.active');
-                e.preventDefault();
+            navLink.addEventListener(`click`, function(e) { // вешаем обработчик на каждую ссылку
+                menuSliderRemove(); // убираем стили с предыдущей ссылки
+                pageSlider.slideTo(i, 1000);  // переходим на новый слайд
+                navLink.classList.add(`active`); // добавляем стили для ссылки нового слайда
+                e.preventDefault(); // убираем действие ссылки по умолчанию
             });
         }
     }
 }
-function menuSliderREmove() {
-    let navLinkActive = document.querySelector('.navigation__link.active');
+function menuSliderRemove() { // функция для очистки стиля ссылки
+    let navLinkActive = document.querySelector(`.navigation__link.active`); // находим ссылку со ститями
     if (navLinkActive) {
-        navLinkActive.classList.remove('.active');
+        navLinkActive.classList.remove(`active`); // убираем стили со ссылки
     }
 }
 pageSlider.init();

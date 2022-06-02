@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Monda:regular,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Staatliches:regular&display=swap);
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: Monda, sans-serif;
   font-weight: regular;
@@ -120,6 +116,7 @@ main {
 }
 .navigation__link.active {
   background-color: #a9a9a9;
+  color: #9913e1;
 }
 .navigation__arrow {
   width: 100%;
@@ -140,6 +137,16 @@ main {
 .navigation__arrow_up {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.navigation__arrow-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .navigation__bar {
   z-index: 21;
@@ -170,6 +177,7 @@ main {
 
 .screen {
   height: 100vh;
+  overflow: hidden;
 }
 
 .ibg {
@@ -286,13 +294,12 @@ main {
   color: #9913e1;
 }
 
-.header__container {
+.header {
   position: absolute;
   top: 8%;
   left: 0;
   right: 0;
   z-index: 3;
-  display: block;
   width: 100%;
   height: auto;
   background-color: transparent;
@@ -324,7 +331,7 @@ main {
   color: #9913e1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .header {
     display: none;
   }

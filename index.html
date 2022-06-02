@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Show</title>
     <link rel="shortcut icon" href="images\favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -18,67 +17,43 @@
         <!-- -----------------------------------------------main navigation----------------------------------------------- -->
         <nav class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__arrow navigation__arrow_up"><a class="navigation__arrow-link" href="#"><img
+                <li class="navigation__arrow navigation__arrow_up"><a class="navigation__arrow-link" href=""><img
                             src="images/arrow02.png" alt="Up button"></a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Home</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Dates</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Tickets</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">About</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Bonus</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Arena</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Artists</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Feedback</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Contacts</a></li>
-                <li class="navigation__arrow navigation__arrow_down"><a class="navigation__arrow-link" href="#"><img
+                <li class="navigation__item"><a class="navigation__link" href="">Home</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">Dates</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">Tickets</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">About</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">Bonus</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">Arena</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">Artists</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">Feedback</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">Contacts</a></li>
+                <li class="navigation__arrow navigation__arrow_down"><a class="navigation__arrow-link" href=""><img
                             src="images/arrow02.png" alt="Down button"></a></li>
             </ul>
-            <!-- <ul class="navigation__list">
-                <li class="navigation__arrow navigation__arrow_up"><a class="navigation__link" href="##"><img
-                            src="images/arrow02.png" alt="Up button"></a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#firstscreen">Home</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#dates">Dates</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#tickets">Tickets</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#about">About</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#bonus">Bonus</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#arena">Arena</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#artists">Artists</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#feedback">Feedback</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#lastscreen">Contacts</a></li>
-                <li class="navigation__arrow navigation__arrow_down"><a class="navigation__link" href="##"><img
-                            src="images/arrow02.png" alt="Down button"></a></li>
-            </ul> -->
             <div class="navigation__bar">Navigation</div>
         </nav>
 
-        <main class="swiper-container">
+        <main class="swiper">
             <div class="swiper-wrapper">
                 <!-- -----------------------------------------------firstscreen----------------------------------------------- -->
                 <section class="firstscreen screen swiper-slide" id="firstscreen">
-                    <!-- ---------------------------------header--------------------------------- -->
-                    <header class="header">
-                        <div class="header__container container">
+                    <div class="firstscreen__container container">
+                        <!-- ---------------------------------header--------------------------------- -->
+                        <header class="header">
                             <nav class="header__nav header-nav">
                                 <ul class="header-nav__list">
                                     <li class="header-nav__item"><a class="header-nav__link header-nav__link_active"
-                                            href="#home">Home</a>
-                                    </li>
-                                    <li class="header-nav__item"><a class="header-nav__link" href="#dates">Dates</a>
-                                    </li>
-                                    <li class="header-nav__item"><a class="header-nav__link" href="#tickets">Tickets</a>
-                                    </li>
-                                    <li class="header-nav__item"><a class="header-nav__link" href="#about">About</a>
-                                    </li>
-                                    <li class="header-nav__item"><a class="header-nav__link" href="#arena">Arena</a>
-                                    </li>
-                                    <li class="header-nav__item"><a class="header-nav__link" href="#artists">Artists</a>
-                                    </li>
-                                    <li class="header-nav__item"><a class="header-nav__link"
-                                            href="#lastscreen">Contacts</a></li>
+                                            href="">Home</a></li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="">Dates</a></li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="">Tickets</a></li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="">About</a></li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="">Arena</a></li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="">Artists</a></li>
+                                    <li class="header-nav__item"><a class="header-nav__link" href="">Contacts</a></li>
                                 </ul>
                             </nav>
-                        </div>
-                    </header>
-                    <div class="firstscreen__container container">
+                        </header>
                         <div class="firstscreen__info firstscreen-info">
                             <img class="firstscreen__logo" src="images/logo.png" alt="Logo">
                             <div class="firstscreen-info__content">
@@ -102,7 +77,8 @@
                             <img class="firstscreen-info__bgelement firstscreen-info__bgelement_grange"
                                 src="images/bgdots01.png" alt="Design element">
                         </div>
-                        <div class="firstscreen__image ibg">
+                        <div class="firstscreen__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
+                            data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
                             <img src="images/voice01.png" alt="Artist photo">
                         </div>
                         <!-- <a class="firstscreen__downbutton navbutton navbutton_down" href="#dates"><img
@@ -174,7 +150,8 @@
                 <!-- -----------------------------------------------tickets----------------------------------------------- -->
                 <section class="tickets screen swiper-slide" id="tickets">
                     <div class="tickets__container container">
-                        <div class="tickets__image ibg">
+                        <div class="tickets__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
+                            data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
                             <img src="images/voice03.png" alt="Artist photo">
                         </div>
                         <div class="tickets__info tickets-info">
@@ -249,7 +226,8 @@
                             <img class="about-info__bgelement about-info__bgelement_ragged" src="images/blackrock03.png"
                                 alt="Design element">
                         </div>
-                        <div class="about__image ibg">
+                        <div class="about__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
+                            data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
                             <img src="images/voice05.png" alt="Artist photo">
                         </div>
                     </div>
@@ -296,7 +274,8 @@
                 <!-- -----------------------------------------------arena----------------------------------------------- -->
                 <section class="arena screen swiper-slide" id="arena">
                     <div class="arena__container container">
-                        <div class="arena__image ibg">
+                        <div class="arena__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
+                            data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
                             <img src="images/people05.png" alt="People photo">
                         </div>
                         <div class="arena__info arena-info">
@@ -373,7 +352,8 @@
                             </div>
                             <img class="feedback-info__bgelement" src="images/whiterock02.png" alt="Design element">
                         </div>
-                        <div class="feedback__image ibg">
+                        <div class="feedback__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
+                            data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
                             <img src="images/voice06.png" alt="Artist photo">
                         </div>
                     </div>
@@ -398,36 +378,36 @@
                                     <nav class="footer__nav footer-nav">
                                         <h3 class="footer-nav__title">Fast Links</h3>
                                         <ul class="footer-nav__list">
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Home</a>
+                                            </li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Dates</a>
+                                            </li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Tickets</a>
+                                            </li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">About</a>
+                                            </li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Bonus</a>
+                                            </li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Arena</a>
+                                            </li>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Artists</a>
+                                            </li>
                                             <li class="footer-nav__item"><a class="footer-nav__link"
-                                                    href="#firstscreen">Home</a></li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link"
-                                                    href="#dates">Dates</a></li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link"
-                                                    href="#tickets">Tickets</a></li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link"
-                                                    href="#about">About</a></li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link"
-                                                    href="#bonus">Bonus</a></li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link"
-                                                    href="#arena">Arena</a></li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link"
-                                                    href="#artists">Artists</a></li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link"
-                                                    href="#feedback">Feedback</a></li>
+                                                    href="">Feedback</a></li>
                                         </ul>
                                     </nav>
                                     <nav class="footer__nav footer-nav">
                                         <h3 class="footer-nav__title">Perfomers</h3>
                                         <ul class="footer-nav__list">
-                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Solo
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Solo
                                                     Singer</a></li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Duo
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Duo
                                                     Singers</a></li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Rap</a>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Rap</a>
                                             </li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Rock</a>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">Rock</a>
                                             </li>
-                                            <li class="footer-nav__item"><a class="footer-nav__link" href="#">EDM</a>
+                                            <li class="footer-nav__item"><a class="footer-nav__link" href="">EDM</a>
                                             </li>
                                         </ul>
                                     </nav>

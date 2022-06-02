@@ -1,15 +1,12 @@
 .header {
-    &__container {
-        position: absolute;
-        top: 8%;
-        left: 0;
-        right: 0;
-        z-index: 3;
-        display: block;
-        width: 100%;
-        height: auto;
-        background-color: transparent;
-    }
+    position: absolute;
+    top: 8%;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
 }
 .header-nav {
     &__list {
@@ -35,7 +32,7 @@
 }
 
 // ----------------------------------------------media----------------------------------------------
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
     .header {
         display: none;
     }

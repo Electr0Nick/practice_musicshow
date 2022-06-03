@@ -1,12 +1,25 @@
+@keyframes navimpulse {
+    0% {left: -170px;}
+    40% {left: -170px;}
+    50% {left: -155px;}
+    60% {left: -170px;}
+    100% {left: -170px;}
+}
+
 .navigation {
     position: fixed;
     z-index: 20;
     top: 0;
-    left: -170px;
+    left: -200px;
     display: flex;
     height: 100vh;
     width: 200px;
     transition: 700ms;
+    &.active {
+        left: -170px;
+        // animation: navimpulse 5000ms ease-in infinite;
+        transition: 700ms;
+    }
     &:hover {
         left: 0;
         .navigation__bar {

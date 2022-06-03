@@ -30,16 +30,56 @@ main {
   background-color: #e1e1e1;
 }
 
+@-webkit-keyframes navimpulse {
+  0% {
+    left: -170px;
+  }
+  40% {
+    left: -170px;
+  }
+  50% {
+    left: -155px;
+  }
+  60% {
+    left: -170px;
+  }
+  100% {
+    left: -170px;
+  }
+}
+
+@keyframes navimpulse {
+  0% {
+    left: -170px;
+  }
+  40% {
+    left: -170px;
+  }
+  50% {
+    left: -155px;
+  }
+  60% {
+    left: -170px;
+  }
+  100% {
+    left: -170px;
+  }
+}
 .navigation {
   position: fixed;
   z-index: 20;
   top: 0;
-  left: -170px;
+  left: -200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
   width: 200px;
+  -webkit-transition: 700ms;
+  transition: 700ms;
+}
+.navigation.active {
+  left: -170px;
   -webkit-transition: 700ms;
   transition: 700ms;
 }
@@ -175,6 +215,87 @@ main {
           transition-duration: 700ms;
 }
 
+@-webkit-keyframes downbutton {
+  0% {
+    bottom: 7%;
+  }
+  80% {
+    bottom: 7%;
+  }
+  85% {
+    bottom: 5%;
+  }
+  90% {
+    bottom: 7%;
+  }
+  95% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 7%;
+  }
+}
+
+@keyframes downbutton {
+  0% {
+    bottom: 7%;
+  }
+  80% {
+    bottom: 7%;
+  }
+  85% {
+    bottom: 5%;
+  }
+  90% {
+    bottom: 7%;
+  }
+  95% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 7%;
+  }
+}
+@-webkit-keyframes upbutton {
+  0% {
+    top: 44%;
+  }
+  80% {
+    top: 44%;
+  }
+  85% {
+    top: 42%;
+  }
+  90% {
+    top: 44%;
+  }
+  95% {
+    top: 42%;
+  }
+  100% {
+    top: 44%;
+  }
+}
+@keyframes upbutton {
+  0% {
+    top: 44%;
+  }
+  80% {
+    top: 44%;
+  }
+  85% {
+    top: 42%;
+  }
+  90% {
+    top: 44%;
+  }
+  95% {
+    top: 42%;
+  }
+  100% {
+    top: 44%;
+  }
+}
 .screen {
   height: 100vh;
   overflow: hidden;
@@ -292,6 +413,35 @@ main {
 .link-button:hover {
   background-color: #e1e1e1;
   color: #9913e1;
+}
+
+.navbutton {
+  position: absolute;
+  height: 10%;
+  z-index: 7;
+}
+.navbutton:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+.navbutton img {
+  height: 100%;
+}
+.navbutton_up {
+  top: 44%;
+  right: 8%;
+  -webkit-animation: upbutton 3000ms linear infinite;
+          animation: upbutton 3000ms linear infinite;
+}
+.navbutton_up img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.navbutton_down {
+  left: 7%;
+  bottom: 7%;
+  -webkit-animation: downbutton 3000ms linear infinite;
+          animation: downbutton 3000ms linear infinite;
 }
 
 .header {
@@ -753,6 +903,7 @@ main {
       -ms-flex: 0 0 35%;
           flex: 0 0 35%;
   z-index: 2;
+  overflow: hidden;
 }
 .bonus__info {
   -webkit-box-flex: 1;

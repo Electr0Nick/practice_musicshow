@@ -1,3 +1,22 @@
+@keyframes downbutton {
+    0% {bottom: 7%;}
+    80% {bottom: 7%;}
+    85% {bottom: 5%;}
+    90% {bottom: 7%;}
+    95% {bottom: 5%;}
+    100% {bottom: 7%;}
+}
+@keyframes upbutton {
+    0% {top: 44%;}
+    80% {top: 44%;}
+    85% {top: 42%;}
+    90% {top: 44%;}
+    95% {top: 42%;}
+    100% {top: 44%;}
+}
+
+
+
 .screen {
     height: 100vh;
     overflow: hidden;
@@ -115,21 +134,27 @@
     }
 }
 
-// .navbutton {
-//     position: absolute;
-//     right: 3%;
-//     height: 8%;
-//     z-index: 7;
-//     img {
-//         height: 100%;
-//     }
-//     &_up {
-//         top: 5%;
-//         img {
-//             transform: rotate(180deg);
-//         }
-//     }
-//     &_down {
-//         bottom: 5%;
-//     }
-// }
+.navbutton {
+    position: absolute;
+    height: 10%;
+    z-index: 7;
+    &:hover {
+        animation: none;
+    }
+    img {
+        height: 100%;
+    }
+    &_up {
+        top: 44%;
+        right: 8%;
+        animation: upbutton 3000ms linear infinite;
+        img {
+            transform: rotate(180deg);
+        }
+    }
+    &_down {
+        left: 7%;
+        bottom: 7%;
+        animation: downbutton 3000ms linear infinite;
+    }
+}

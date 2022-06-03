@@ -1,5 +1,6 @@
 "use strict"
 
+// ----------------------------------------------------------------slider----------------------------------------------------------------
 let pageSlider = new Swiper(`.swiper`, {
     direction: `vertical`,
     slidesPerView: `auto`,
@@ -27,11 +28,24 @@ let pageSlider = new Swiper(`.swiper`, {
             menuSlider();
         },
         slideChange: function () {
+            setTimeout(hideNav, 1100)
             menuSliderRemove();
             navList[pageSlider.realIndex].classList.add(`active`);
         },
     },
 });
+
+// ----------------------------------------------------------------hide navigation----------------------------------------------------------------
+let navBlock = document.querySelector(`.navigation`);
+function hideNav() {
+    if (navBlock) {
+        if (pageSlider.realIndex === 0 || pageSlider.realIndex === (pageSlider.slides.length - 1)) {
+            navBlock.classList.remove(`active`);
+        } else {
+            navBlock.classList.add(`active`);
+        }
+    }
+}
 
 // ----------------------------------------------------------------main navigation----------------------------------------------------------------
 let navList = document.querySelectorAll(`.navigation__link`); // находим все навигационные ссылки
@@ -56,3 +70,19 @@ function menuSliderRemove() { // функция для очистки стиля
     }
 }
 pageSlider.init();
+
+// ----------------------------------------------------------------nav arrows----------------------------------------------------------------
+let downArrow = document.querySelector(`.navbutton_down`);
+let upArrow = document.querySelector(`.navbutton_up`);
+if (downArrow) {
+    downArrow.addEventListener(`click`, function (e) {
+        pageSlider.slideTo(pageSlider.realIndex + 1);
+        e.preventDefault();
+    });
+}
+if (upArrow) {
+    upArrow.addEventListener(`click`, function (e) {
+        pageSlider.slideTo(pageSlider.realIndex - 1);
+        e.preventDefault();
+    });
+}

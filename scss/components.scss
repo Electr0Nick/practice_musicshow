@@ -14,6 +14,25 @@
     95% {top: 42%;}
     100% {top: 44%;}
 }
+@keyframes equalize1 {
+    0% {height: 30%;}
+    33% {height: 60%;}
+    66% {height: 50%;}
+    100% {height: 80%;}
+}
+@keyframes equalize2 {
+    0% {height: 100%}
+    25% {height: 90%;}
+    50% {height: 80%;}
+    75% {height: 90%;}
+    100% {height: 60%;}
+}
+@keyframes equalize3 {
+    0% {height: 50%;}
+    50% {height: 80%;}
+    100% {height: 60%;}
+}
+
 
 
 
@@ -31,6 +50,41 @@
         top: 0;
         left: 0;
         object-fit: cover;
+    }
+}
+
+.logo {
+    position: relative;
+    &__img {
+        display: block;
+        width: 100%;
+    }
+    &__equalizer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 42%;
+        height: 35%;
+    }
+    &__eq-element {
+        position: absolute;
+        bottom: 0;
+        width: 24%;
+        height: 50%;
+        background-color: #000;
+        &_1 {
+            left: 0;
+            animation: equalize1 1400ms linear infinite alternate;
+        }
+        &_2 {
+            left: 50%;
+            transform: translate(-50%);
+            animation: equalize2 1400ms linear infinite alternate;
+        }
+        &_3 {
+            right: 0;
+            animation: equalize3 1400ms linear infinite alternate;
+        }
     }
 }
 

@@ -25,4 +25,8 @@
             color: $color-purple;
         }
     }
+    &__link.active-nav {
+        color: $color-purple;
+        font-weight: 700;
+    }
 }

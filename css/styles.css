@@ -78,7 +78,7 @@ main {
   -webkit-transition: 700ms;
   transition: 700ms;
 }
-.navigation.active {
+.navigation.active-bar {
   left: -170px;
   -webkit-transition: 700ms;
   transition: 700ms;
@@ -154,13 +154,15 @@ main {
   padding: 5px 10px;
   text-transform: uppercase;
 }
-.navigation__link.active {
+.navigation__link.active-nav {
   background-color: #a9a9a9;
   color: #9913e1;
 }
 .navigation__arrow {
   width: 100%;
   height: 10%;
+  -webkit-transition: 700ms;
+  transition: 700ms;
 }
 .navigation__arrow a {
   display: -webkit-box;
@@ -177,6 +179,10 @@ main {
 .navigation__arrow_up {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.navigation__arrow.hide-arrow {
+  opacity: 0;
+  visibility: hidden;
 }
 .navigation__arrow-link {
   display: -webkit-box;
@@ -296,6 +302,90 @@ main {
     top: 44%;
   }
 }
+@-webkit-keyframes equalize1 {
+  0% {
+    height: 30%;
+  }
+  33% {
+    height: 60%;
+  }
+  66% {
+    height: 50%;
+  }
+  100% {
+    height: 80%;
+  }
+}
+@keyframes equalize1 {
+  0% {
+    height: 30%;
+  }
+  33% {
+    height: 60%;
+  }
+  66% {
+    height: 50%;
+  }
+  100% {
+    height: 80%;
+  }
+}
+@-webkit-keyframes equalize2 {
+  0% {
+    height: 100%;
+  }
+  25% {
+    height: 90%;
+  }
+  50% {
+    height: 80%;
+  }
+  75% {
+    height: 90%;
+  }
+  100% {
+    height: 60%;
+  }
+}
+@keyframes equalize2 {
+  0% {
+    height: 100%;
+  }
+  25% {
+    height: 90%;
+  }
+  50% {
+    height: 80%;
+  }
+  75% {
+    height: 90%;
+  }
+  100% {
+    height: 60%;
+  }
+}
+@-webkit-keyframes equalize3 {
+  0% {
+    height: 50%;
+  }
+  50% {
+    height: 80%;
+  }
+  100% {
+    height: 60%;
+  }
+}
+@keyframes equalize3 {
+  0% {
+    height: 50%;
+  }
+  50% {
+    height: 80%;
+  }
+  100% {
+    height: 60%;
+  }
+}
 .screen {
   height: 100vh;
   overflow: hidden;
@@ -312,6 +402,45 @@ main {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.logo {
+  position: relative;
+}
+.logo__img {
+  display: block;
+  width: 100%;
+}
+.logo__equalizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 35%;
+}
+.logo__eq-element {
+  position: absolute;
+  bottom: 0;
+  width: 24%;
+  height: 50%;
+  background-color: #000;
+}
+.logo__eq-element_1 {
+  left: 0;
+  -webkit-animation: equalize1 1400ms linear infinite alternate;
+          animation: equalize1 1400ms linear infinite alternate;
+}
+.logo__eq-element_2 {
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-animation: equalize2 1400ms linear infinite alternate;
+          animation: equalize2 1400ms linear infinite alternate;
+}
+.logo__eq-element_3 {
+  right: 0;
+  -webkit-animation: equalize3 1400ms linear infinite alternate;
+          animation: equalize3 1400ms linear infinite alternate;
 }
 
 .stickers {
@@ -469,16 +598,16 @@ main {
   margin: 0 auto;
   padding: 20px 0;
 }
-.header-nav__link {
+.header-nav__item {
   text-transform: uppercase;
   font-size: 1.4rem;
 }
-.header-nav__link_active {
-  font-weight: 700;
+.header-nav__item:hover {
   color: #9913e1;
 }
-.header-nav__link:hover {
+.header-nav__link.active-nav {
   color: #9913e1;
+  font-weight: 700;
 }
 
 @media (max-width: 1000px) {
@@ -1332,6 +1461,10 @@ main {
 }
 .footer-nav__item:hover {
   color: #9913e1;
+}
+.footer-nav__link.active-nav {
+  color: #9913e1;
+  font-weight: 700;
 }
 
 .popup {

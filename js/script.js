@@ -1,6 +1,6 @@
 "use strict"
 
-// ----------------------------------------------------------------slider----------------------------------------------------------------
+// ---------------------------------------------------------------- screen slider----------------------------------------------------------------
 let pageSlider = new Swiper(`.swiper`, {
     direction: `vertical`,
     slidesPerView: `auto`,
@@ -37,6 +37,38 @@ let pageSlider = new Swiper(`.swiper`, {
             headerNavList[pageSlider.realIndex].classList.add(`active-nav`);
             footerNavList[pageSlider.realIndex].classList.add(`active-nav`);
         },
+    },
+});
+
+// ---------------------------------------------------------------- dates slider----------------------------------------------------------------
+let dataMiniSlider = new Swiper (`.dates-nav__slider`, {
+    wrapperClass: 'dates-nav__wrapper',
+    slideClass: 'dates-nav__slide',
+    direction: `vertical`,
+    nested: true,
+    speed: 1000,
+});
+
+// ---------------------------------------------------------------- dates media slider----------------------------------------------------------------
+let dataContentSlider = new Swiper (`.dates-slider`, {
+    wrapperClass: 'dates-slider__wrapper',
+    slideClass: 'data-slide',
+    nested: true,
+    speed: 1000,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    mousewheel: {
+        sensitivity: 1,
+    },
+    navigation: {
+        nextEl: `.dates-nav__arrow_right`,
+        prevEl: `.dates-nav__arrow_left`,
+    },
+    controller: {
+        control: dataMiniSlider,
     },
 });
 

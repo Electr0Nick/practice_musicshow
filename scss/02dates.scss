@@ -2,17 +2,16 @@
     &__container {
         flex-direction: column;
     }
-    &__datesinfo {
-        position: relative;
+    &__info {
         flex: 0 0 35%;
-        background-color: $color-purple;
     }
-    &__calendar {
-        position: relative;
+    &__media {
         flex: 1 1 auto;
     }
 }
 .dates-info {
+    position: relative;
+    background-color: $color-purple;
     &__content {
         display: flex;
         justify-content: space-between;
@@ -41,66 +40,113 @@
         width: 21%;
     }
 }
-.dates-calendar {
-    &__content {
+.dates-media {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+        &__nav {
+            width: 60%;
+            height: 15%;
+        }
+		&__slider {
+            z-index: 2;
+            width: 60%;
+            height: 55%;
+            margin-bottom: 2%;
+		}
+        &__bgelement {
+            position: absolute;
+            z-index: 1;
+            &_ragged {
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            &_grangeleft {
+                left: 0;
+                bottom: 0;
+                height: 67%;
+            }
+            &_grangeright {
+                top: 20%;
+                right: 0;
+                height: 82%;
+            }
+        }
+}
+.dates-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &__arrow {
+        &_left {
+            transform: rotate(90deg);
+        }
+        &_right {
+            transform: rotate(-90deg);
+        }
+    }
+    &__slider {
+        flex: 0 0 20%;
+        align-self: center;
+        overflow: hidden;
+        width: 100%;
+        height: 30%;
+    }
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    &__slide {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 4%;
-        width: 60%;
-        height: 100%;
-        margin: 0 auto;
-    }
-    &__choosedate {
-        display: flex;
-        justify-content: end;
-        gap: 30px;
-        width: 100%;
-        margin: 6% 0 2%;
-    }
-    &__actualdate {
-        align-self: center;
         color: $color-purple;
         font-size: 1.7rem;
         font-weight: bold;
     }
-    &__rightbutton {
-        width: 9%;
-        transform: rotate(-90deg);
-    }
-    &__stickers {
+}
+.dates-slider {
+    overflow: hidden;
+    border: 1px solid #000;
+    &__wrapper {
         display: flex;
-        width: 60%;
+        width: 100%;
+        height: 100%;
     }
-    &__description {
-        display: flex;
-        justify-content: space-between;
+    &__slide {
+        flex-shrink: 0;
     }
-    &__textblock {
-        flex: 0 0 48%;
-    }
-    &__bgelement {
-        position: absolute;
-        z-index: 1;
-        &_zigzag {
-            left: 22%;
-            bottom: 5%;
-            width: 23%;
-        }
-        &_ragged {
-            top: 0;
-            left: 0;
-            width: 100%;
-        }
-        &_grangeleft {
-            left: 0;
-            bottom: 0;
-            height: 67%;
-        }
-        &_grangeright {
-            right: 0;
-            height: 82%;
-        }
-    }   
+}
+.data-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6%;
+    width: 100%;
+    height: 100%;
+		&__data {
+
+		}
+		&__stickers {
+            width: 60%;
+		}
+		&__description {
+            display: flex;
+            justify-content: space-between;
+		}
+		&__textblock {
+            flex: 0 0 48%;
+		}
+		&__bgelement {
+            position: absolute;
+            z-index: 1;
+			&_zigzag {
+                left: 20%;
+                bottom: 0;
+                width: 25%;
+			}
+		}
 }

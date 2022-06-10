@@ -821,8 +821,8 @@ main {
 }
 .dates-nav__slider {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 20%;
-          flex: 0 0 20%;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

@@ -10,6 +10,7 @@ let pageSlider = new Swiper(`.swiper`, {
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
+    simulateTouch: false,
     keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -19,8 +20,8 @@ let pageSlider = new Swiper(`.swiper`, {
         sensitivity: 1,
     },
     navigation: {
-        nextEl: `.navigation__arrow_down`,
-        prevEl: `.navigation__arrow_up`,
+        nextEl: `.navigation__arrow-link_down`,
+        prevEl: `.navigation__arrow-link_up`,
     },
     init: false,
     on: {
@@ -32,7 +33,7 @@ let pageSlider = new Swiper(`.swiper`, {
         slideChange: function () {
             setTimeout(hideNav, 1100);
             menuNavRemove();
-            removeBarArrows()
+            removeBarArrows();
             barNavList[pageSlider.realIndex].classList.add(`active-nav`);
             headerNavList[pageSlider.realIndex].classList.add(`active-nav`);
             footerNavList[pageSlider.realIndex].classList.add(`active-nav`);
@@ -40,7 +41,7 @@ let pageSlider = new Swiper(`.swiper`, {
     },
 });
 
-// ---------------------------------------------------------------- dates slider----------------------------------------------------------------
+// ---------------------------------------------------------------- dates mini-slider----------------------------------------------------------------
 let dataMiniSlider = new Swiper (`.dates-nav__slider`, {
     wrapperClass: 'dates-nav__wrapper',
     slideClass: 'dates-nav__slide',
@@ -49,21 +50,19 @@ let dataMiniSlider = new Swiper (`.dates-nav__slider`, {
     speed: 1000,
     watchOverflow: true,
     simulateTouch: false,
-    on: {
-        slideChange: function () {
-            changeColorArrows();
-        },
-    },
 });
 
 // ---------------------------------------------------------------- dates media slider----------------------------------------------------------------
 let dataContentSlider = new Swiper (`.dates-slider`, {
     wrapperClass: 'dates-slider__wrapper',
-    slideClass: 'data-slide',
+    slideClass: 'dates-slider__slide',
     nested: true,
     speed: 1000,
     spaceBetween: 50,
     watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
     keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -79,9 +78,39 @@ let dataContentSlider = new Swiper (`.dates-slider`, {
     controller: {
         control: dataMiniSlider,
     },
+    on: {
+        slideChange: function () {
+            changeColorArrows();
+        },
+    },
 });
 
-// ----------------------------------------------------------------navigation----------------------------------------------------------------
+// ---------------------------------------------------------------- dates media slider----------------------------------------------------------------
+let aboutSlider = new Swiper (`.about-slider`, {
+    wrapperClass: 'about-slider__wrapper',
+    slideClass: 'about-slider__slide',
+    nested: true,
+    speed: 1000,
+    // spaceBetween: 50,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    mousewheel: {
+        sensitivity: 1,
+    },
+    navigation: {
+        nextEl: `.about-info__sliderbutton_right`,
+        prevEl: `.about-info__sliderbutton_left`,
+    },
+});
+
+// ----------------------------------------------------------------navigation bar----------------------------------------------------------------
 let barNavList = document.querySelectorAll(`.navigation__link`);
 let headerNavList = document.querySelectorAll(`.header-nav__link`);
 let footerNavList = document.querySelectorAll(`.footer-nav__link`);
@@ -111,6 +140,31 @@ function menuNavRemove() { // функция для очистки стиля с
 }
 pageSlider.init();
 
+// ----------------------------------------------------------------navigation bar arrows----------------------------------------------------------------
+let upBarArrow = document.querySelector(`.navigation__arrow-link_up`);
+let downBarArrow = document.querySelector(`.navigation__arrow-link_down`);
+
+function removeBarArrows() {
+    if (upBarArrow) {
+        if (pageSlider.realIndex === 0) {
+            upBarArrow.style.color = `#d3d3d3`;
+            upBarArrow.style.cursor = `default`;
+        } else {
+            upBarArrow.style.color = `#a9a9a9`;
+            upBarArrow.style.cursor = `pointer`;
+        }
+    }
+    if (downBarArrow) {
+        if (pageSlider.realIndex === pageSlider.slides.length - 1) {
+            downBarArrow.style.color = `#d3d3d3`;
+            downBarArrow.style.cursor = `default`;
+        } else {
+            downBarArrow.style.color = `#a9a9a9`;
+            downBarArrow.style.cursor = `pointer`;
+        }
+    }
+}
+
 // ----------------------------------------------------------------hide navigation bar----------------------------------------------------------------
 let navBlock = document.querySelector(`.navigation`);
 function hideNav() {
@@ -123,26 +177,7 @@ function hideNav() {
     }
 }
 
-// ----------------------------------------------------------------navigation bar arrows----------------------------------------------------------------
-let upBarArrow = document.querySelector(`.navigation__arrow_up`);
-let downBarArrow = document.querySelector(`.navigation__arrow_down`);
 
-function removeBarArrows() {
-    if (upBarArrow) {
-        if (pageSlider.realIndex === 0) {
-            upBarArrow.classList.add(`hide-arrow`);
-        } else {
-            upBarArrow.classList.remove(`hide-arrow`);
-        }
-    }
-    if (downBarArrow) {
-        if (pageSlider.realIndex === pageSlider.slides.length - 1) {
-            downBarArrow.classList.add(`hide-arrow`);
-        } else {
-            downBarArrow.classList.remove(`hide-arrow`);
-        }
-    }
-}
 
 // ----------------------------------------------------------------firstscreen & lastscreen arrows----------------------------------------------------------------
 let upNavArrow = document.querySelector(`.navbutton_up`);
@@ -161,13 +196,30 @@ if (upNavArrow) {
 }
 
 // ----------------------------------------------------------------dates slider arrows----------------------------------------------------------------
-let leftDatesArrow = document.querySelector(`.dates-nav__arrow_left img`);
-let rightDatesArrow = document.querySelector(`.dates-nav__arrow_right img`);
+let leftDatesArrow = document.querySelector(`.dates-nav__arrow_left`);
+let rightDatesArrow = document.querySelector(`.dates-nav__arrow_right`);
+
+function changeColor(element, clr) {
+    element.style.color = clr;
+}
 
 function changeColorArrows() {
     if (leftDatesArrow) {
-        if (dataContentSlider.realIndex >= 0) {
-            leftDatesArrow.setAttribute(`src`, `images/arrow01.png`);
+        if (dataContentSlider.realIndex === 0) {
+            leftDatesArrow.style.color = `#d3d3d3`;
+            leftDatesArrow.style.cursor = `default`;
+        } else {
+            leftDatesArrow.style.color = `#a9a9a9`;
+            leftDatesArrow.style.cursor = `pointer`;
+        }
+    }
+    if (rightDatesArrow) {
+        if (dataContentSlider.realIndex === dataContentSlider.slides.length - 1) {
+            rightDatesArrow.style.color = `#d3d3d3`;
+            rightDatesArrow.style.cursor = `default`;
+        } else {
+            rightDatesArrow.style.color = `#a9a9a9`;
+            rightDatesArrow.style.cursor = `pointer`;
         }
     }
 }

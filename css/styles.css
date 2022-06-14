@@ -155,7 +155,7 @@ main {
   text-transform: uppercase;
 }
 .navigation__link.active-nav {
-  background-color: #a9a9a9;
+  background-color: #d3d3d3;
   color: #9913e1;
 }
 .navigation__arrow {
@@ -163,36 +163,26 @@ main {
   height: 10%;
   -webkit-transition: 700ms;
   transition: 700ms;
+  font-size: 3.5rem;
+  color: #a9a9a9;
 }
-.navigation__arrow a {
+.navigation__arrow-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0;
-}
-.navigation__arrow img {
-  height: 60%;
-}
-.navigation__arrow_up {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.navigation__arrow.hide-arrow {
-  opacity: 0;
-  visibility: hidden;
-}
-.navigation__arrow-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
   width: 100%;
+  padding: 0;
+}
+.navigation__arrow-link_up {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .navigation__bar {
   z-index: 21;
@@ -219,6 +209,7 @@ main {
           transform: rotate(180deg);
   -webkit-transition-duration: 700ms;
           transition-duration: 700ms;
+  cursor: default;
 }
 
 @-webkit-keyframes downbutton {
@@ -536,8 +527,8 @@ main {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 42px;
-  -webkit-transition: 400ms;
-  transition: 400ms;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 .link-button:hover {
   background-color: #e1e1e1;
@@ -546,23 +537,23 @@ main {
 
 .navbutton {
   position: absolute;
-  height: 10%;
   z-index: 7;
+  color: #a9a9a9;
+  font-size: 6rem;
+  line-height: 0;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 .navbutton:hover {
   -webkit-animation: none;
           animation: none;
-}
-.navbutton img {
-  height: 100%;
+  color: #9913e1;
 }
 .navbutton_up {
   top: 44%;
   right: 8%;
   -webkit-animation: upbutton 3000ms linear infinite;
           animation: upbutton 3000ms linear infinite;
-}
-.navbutton_up img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -771,6 +762,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 5%;
 }
 .dates-media__nav {
   width: 60%;
@@ -779,7 +771,7 @@ main {
 .dates-media__slider {
   z-index: 2;
   width: 60%;
-  height: 55%;
+  height: 50%;
   margin-bottom: 2%;
 }
 .dates-media__bgelement {
@@ -811,11 +803,20 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.dates-nav__arrow {
+  font-size: 6rem;
+  line-height: 0;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
 .dates-nav__arrow_left {
+  color: #d3d3d3;
+  cursor: default;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 .dates-nav__arrow_right {
+  color: #a9a9a9;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
@@ -851,7 +852,6 @@ main {
 
 .dates-slider {
   overflow: hidden;
-  border: 1px solid #000;
 }
 .dates-slider__wrapper {
   display: -webkit-box;
@@ -863,27 +863,31 @@ main {
 .dates-slider__slide {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-}
-
-.data-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.date-slide1 {
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 6%;
-  width: 100%;
-  height: 100%;
+  gap: 10%;
 }
-.data-slide__stickers {
+.date-slide1__stickers {
   width: 60%;
 }
-.data-slide__description {
+.date-slide1__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -891,19 +895,57 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.data-slide__textblock {
+.date-slide1__textblock {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 48%;
           flex: 0 0 48%;
 }
-.data-slide__bgelement {
+.date-slide1__bgelement {
   position: absolute;
   z-index: 1;
-}
-.data-slide__bgelement_zigzag {
   left: 20%;
-  bottom: 0;
-  width: 25%;
+  bottom: 5%;
+  width: 30%;
+}
+
+.date-slide2 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.date-slide2__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+}
+.date-slide2__description {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+}
+.date-slide2__title {
+  margin-bottom: 3%;
+  font-size: 5rem;
+}
+
+.date-slide3 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8%;
+}
+.date-slide3__textblock {
+  width: 80%;
+}
+.date-slide3__bgelement {
+  width: 50%;
 }
 
 .tickets__image {
@@ -1072,26 +1114,26 @@ main {
   width: 100%;
   height: 100%;
 }
-.about-slide {
-  position: relative;
+.about-slider__slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.about-slide1 {
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100%;
-  height: 100%;
 }
-.about-slide__button {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-.about-slide__bgelement {
+.about-slide1__bgelement {
   position: absolute;
   z-index: 1;
   top: 0;

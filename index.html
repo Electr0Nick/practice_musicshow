@@ -8,6 +8,7 @@
     <title>Music Show</title>
     <link rel="shortcut icon" href="images\favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
@@ -17,8 +18,8 @@
         <!-- -----------------------------------------------main navigation----------------------------------------------- -->
         <nav class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__arrow navigation__arrow_up"><a class="navigation__arrow-link" href=""><img
-                            src="images/arrow02.png" alt="Up button"></a></li>
+                <li class="navigation__arrow"><a class="navigation__arrow-link navigation__arrow-link_up icon-arrow"
+                        href=""></a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">Home</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">Dates</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">Tickets</a></li>
@@ -28,8 +29,8 @@
                 <li class="navigation__item"><a class="navigation__link" href="">Artists</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">Feedback</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">Contacts</a></li>
-                <li class="navigation__arrow navigation__arrow_down"><a class="navigation__arrow-link" href=""><img
-                            src="images/arrow02.png" alt="Down button"></a></li>
+                <li class="navigation__arrow"><a class="navigation__arrow-link navigation__arrow-link_down icon-arrow"
+                        href=""></a></li>
             </ul>
             <div class="navigation__bar">Navigation</div>
         </nav>
@@ -39,6 +40,7 @@
                 <!-- -----------------------------------------------firstscreen----------------------------------------------- -->
                 <section class="firstscreen screen swiper-slide" id="firstscreen">
                     <div class="firstscreen__container container">
+
                         <!-- ---------------------------------header--------------------------------- -->
                         <header class="header">
                             <nav class="header__nav header-nav">
@@ -55,6 +57,7 @@
                                 </ul>
                             </nav>
                         </header>
+
                         <div class="firstscreen__info firstscreen-info">
                             <div class="firstscreen__logo logo">
                                 <img class="logo__img" src="images/logo.svg" alt="Logo">
@@ -89,8 +92,7 @@
                             data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
                             <img src="images/voice01.png" alt="Artist photo">
                         </div>
-                        <a class="firstscreen__downbutton navbutton navbutton_down" href=""><img
-                                src="images/arrow01.png" alt="Downscreen button"></a>
+                        <a class="firstscreen__downbutton navbutton navbutton_down icon-arrow" href=""></a>
                     </div>
                 </section>
 
@@ -99,8 +101,7 @@
                     <div class="dates__container container">
                         <div class="dates__info dates-info">
                             <div class="dates-info__content">
-                                <h2 class="dates-info__title title title_white"><span>party</span> your heart out!
-                                </h2>
+                                <h2 class="dates-info__title title title_white"><span>party</span> your heart out!</h2>
                                 <div class="dates-info__description">
                                     <p class="dates-info__textblock textblock"><span
                                             class="textblock__bold textblock__bold_white">Lorem
@@ -117,7 +118,7 @@
                         </div>
                         <div class="dates__media dates-media">
                             <div class="dates-media__nav dates-nav">
-                                <a class="dates-nav__arrow dates-nav__arrow_left" href=""><img src="images/arrow02.png" alt="Left button"></a>
+                                <a class="dates-nav__arrow dates-nav__arrow_left icon-arrow" href=""></a>
                                 <div class="dates-nav__slider">
                                     <div class="dates-nav__wrapper">
                                         <div class="dates-nav__slide">26/09/2022</div>
@@ -125,12 +126,14 @@
                                         <div class="dates-nav__slide">28/09/2022</div>
                                     </div>
                                 </div>
-                                <a class="dates-nav__arrow dates-nav__arrow_right" href=""><img src="images/arrow01.png" alt="Right button"></a>
+                                <a class="dates-nav__arrow dates-nav__arrow_right icon-arrow" href=""></a>
                             </div>
                             <div class="dates-media__slider dates-slider">
                                 <div class="dates-slider__wrapper">
-                                    <div class="dates-slider__slide data-slide">
-                                        <div class="data-slide__stickers stickers">
+
+                                    <!-- ---------------------------------slide 1--------------------------------- -->
+                                    <div class="dates-slider__slide date-slide1">
+                                        <div class="date-slide1__stickers stickers">
                                             <div class="stickers__item stickers__item_black">
                                                 a place to quench your thirst for music
                                             </div>
@@ -138,8 +141,8 @@
                                                 party out with us for three days!
                                             </div>
                                         </div>
-                                        <div class="data-slide__description">
-                                            <p class="data-slide__textblock textblock"><span
+                                        <div class="date-slide1__description">
+                                            <p class="date-slide1__textblock textblock"><span
                                                     class="textblock__bold">Lorem
                                                     ipsum dolor sit amet</span> consectetur,
                                                 adipisicing elit. Iure, veniam. Deserunt perspiciatis excepturi aut
@@ -147,13 +150,11 @@
                                                 libero placeat odit quasi consequatur laborum enim? Perspiciatis quos
                                                 sit
                                                 perferendis necessitatibus, et aspernatur ipsa quia libero alias
-                                                cupiditate
-                                                aliquid maiores facilis ex facere neque, tempore id aperiam ad corrupti.
-                                                Voluptates earum illo maxime iure ex iusto dolorum, exercitationem
+                                                cupiditate, exercitationem
                                                 nesciunt
-                                                laborum eligendi odio molestias sint.
+                                                laborum eligendi odio molestias odit quasi sint.
                                             </p>
-                                            <p class="data-slide__textblock textblock"><span
+                                            <p class="date-slide1__textblock textblock"><span
                                                     class="textblock__bold">Lorem
                                                     ipsum dolor sit amet</span> consectetur
                                                 adipisicing elit. Eos repellat amet fugit a est animi placeat labore
@@ -163,70 +164,54 @@
                                                 beatae
                                                 corporis. Distinctio neque totam ut.
                                             </p>
-                                            <img class="data-slide__bgelement data-slide__bgelement_zigzag"
-                                                src="images/zigzag03.png" alt="Design element">
                                         </div>
+                                        <img class="date-slide1__bgelement" src="images/zigzag03.png"
+                                            alt="Design element">
                                     </div>
-                                    <div class="dates-slider__slide data-slide">
-                                        <div class="data-slide__description">
-                                            <p class="data-slide__textblock textblock"><span
-                                                    class="textblock__bold">Lorem
-                                                    ipsum dolor sit amet</span> consectetur,
-                                                adipisicing elit. Iure, veniam. Deserunt perspiciatis excepturi aut
-                                                atque
-                                                libero placeat odit quasi consequatur laborum enim? Perspiciatis quos
-                                                sit
+
+                                    <!-- ---------------------------------slide 2--------------------------------- -->
+                                    <div class="dates-slider__slide date-slide2">
+                                        <div class="date-slide2__image ibg">
+                                            <img src="images/people02.png" alt="People photo">
+                                        </div>
+                                        <div class="date-slide2__description">
+                                            <h3 class="date-slide2__title title"><span>24h</span> party!</h3>
+                                            <p class="date-slide2__textblock textblock">
+                                                <span class="textblock__bold">Lorem ipsum dolor sit amet</span>
+                                                consectetur, adipisicing elit. Iure, veniam. Deserunt perspiciatis
+                                                excepturi aut atque libero placeat odit quasi consequatur laborum enim?
+                                                Perspiciatis quos sit
                                                 perferendis necessitatibus, et aspernatur ipsa quia libero alias
                                                 cupiditate
                                                 aliquid maiores facilis ex facere neque, tempore id aperiam ad corrupti.
                                                 Voluptates earum illo maxime iure ex iusto dolorum, exercitationem
                                                 nesciunt
-                                                laborum eligendi odio molestias sint.
+                                                laborum eligendi odio molestias odit quasi sint.
                                             </p>
-                                            <p class="data-slide__textblock textblock"><span
-                                                    class="textblock__bold">Lorem
-                                                    ipsum dolor sit amet</span> consectetur
-                                                adipisicing elit. Eos repellat amet fugit a est animi placeat labore
-                                                laboriosam ut distinctio mollitia, consectetur reprehenderit quibusdam
-                                                odio
-                                                sapiente officia eveniet commodi velit fugiat ea laborum repudiandae,
-                                                beatae
-                                                corporis. Distinctio neque totam ut.
-                                            </p>
-                                            <img class="data-slide__bgelement data-slide__bgelement_zigzag"
-                                                src="images/zigzag03.png" alt="Design element">
                                         </div>
                                     </div>
-                                    <div class="dates-slider__slide data-slide">
-                                        <div class="data-slide__description">
-                                            <p class="data-slide__textblock textblock"><span
-                                                    class="textblock__bold">Lorem
-                                                    ipsum dolor sit amet</span> consectetur,
-                                                adipisicing elit. Iure, veniam. Deserunt perspiciatis excepturi aut
-                                                atque
-                                                libero placeat odit quasi consequatur laborum enim? Perspiciatis quos
-                                                sit
-                                                perferendis necessitatibus, et aspernatur ipsa quia libero alias
-                                                cupiditate
-                                                aliquid maiores facilis ex facere neque, tempore id aperiam ad corrupti.
-                                                Voluptates earum illo maxime iure ex iusto dolorum, exercitationem
-                                                nesciunt
-                                                laborum eligendi odio molestias sint.
-                                            </p>
-                                            <p class="data-slide__textblock textblock"><span
-                                                    class="textblock__bold">Lorem
-                                                    ipsum dolor sit amet</span> consectetur
-                                                adipisicing elit. Eos repellat amet fugit a est animi placeat labore
-                                                laboriosam ut distinctio mollitia, consectetur reprehenderit quibusdam
-                                                odio
-                                                sapiente officia eveniet commodi velit fugiat ea laborum repudiandae,
-                                                beatae
-                                                corporis. Distinctio neque totam ut.
-                                            </p>
-                                            <img class="data-slide__bgelement data-slide__bgelement_zigzag"
-                                                src="images/zigzag03.png" alt="Design element">
-                                        </div>
+
+                                    <!-- ---------------------------------slide 3--------------------------------- -->
+                                    <div class="dates-slider__slide date-slide3">
+                                        <p class="date-slide3__textblock textblock textblock_center"><span
+                                                class="textblock__bold">Lorem
+                                                ipsum dolor sit amet</span> consectetur
+                                            adipisicing elit. Corporis amet accusantium excepturi laudantium, sapiente
+                                            aperiam. At, in quidem. Dolorem culpa, dolores excepturi odio optio deleniti
+                                            earum ipsam natus ea maxime soluta perspiciatis dicta repudiandae, accusamus
+                                            similique, magni libero iure aut ratione debitis laudantium accusantium
+                                            adipisci. Provident doloremque placeat sequi molestiae distinctio possimus,
+                                            ab aspernatur. Perspiciatis atque quisquam molestias, nam tempore voluptatum
+                                            repellendus maxime a natus necessitatibus aspernatur corporis eaque
+                                            molestiae impedit, aliquid quaerat consequuntur distinctio laboriosam ipsa
+                                            itaque provident, vel tenetur. Debitis quaerat odit molestias repudiandae
+                                            ullam earum esse ducimus aperiam sequi, quas eveniet pariatur soluta
+                                            mollitia qui delectus provident?
+                                        </p>
+                                        <img class="date-slide3__bgelement" src="images/zigzag04.png"
+                                            alt="Design element">
                                     </div>
+
                                 </div>
                             </div>
                             <img class="dates-media__bgelement dates-media__bgelement_ragged"
@@ -256,13 +241,13 @@
                                 <div class="tickets-info__description">
                                     <div class="tickets-info__descriptblock">
                                         <p class="tickets-info__textblock textblock"><span class="textblock__bold">Lorem
-                                                ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei
-                                            usmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                            nostrud
-                                            exercitation.
+                                                ipsum dolor sit amet</span> consectetur
+                                            adipisicing elit. Sunt nam delectus maiores ipsum, quis quas odio, tenetur
+                                            illo, laborum voluptatibus impedit. Perferendis excepturi, reiciendis
+                                            voluptas eum tenetur perspiciatis rerum, non ad, sint maiores architecto
+                                            dignissimos laboriosam deleniti delectus sit molestiae. Earum ullam esse
+                                            aliquid. Doloremque quo facilis ipsum in commodi?
                                         </p>
-                                        <button class="tickets-info__button button">Learn more</button>
                                     </div>
                                     <div class="tickets-info__descriptblock">
                                         <p class="tickets-info__textblock textblock"><span class="textblock__bold">Lorem
@@ -272,7 +257,7 @@
                                             nostrud
                                             exercitation.
                                         </p>
-                                        <button class="tickets-info__button button">Learn more</button>
+                                        <button class="tickets-info__button button">buy ticket!</button>
                                     </div>
                                 </div>
                             </div>
@@ -293,8 +278,10 @@
                         <div class="about__info about-info">
                             <div class="about-info__slider about-slider">
                                 <div class="about-slider__wrapper">
-                                    <div class="about-slider__slide about-slide">
-                                        <div class="about-slide__stickers stickers">
+
+                                    <!-- ---------------------------------slide 1--------------------------------- -->
+                                    <div class="about-slider__slide about-slide1">
+                                        <div class="about-slide1__stickers stickers">
                                             <div class="stickers__item stickers__item_black">
                                                 a place to quench your thirst mfor music
                                             </div>
@@ -302,16 +289,58 @@
                                                 party out with us for three days!
                                             </div>
                                         </div>
-                                        <p class="about-slide__textblock textblock textblock_center">
-                                            <span class="textblock__bold">Lorem ipsum dolor sit amet</span>
-                                            consectetur adip isicing elit, sed do ei usmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                            nostrud exercitation.
+                                        <p class="about-slide1__textblock textblock textblock_center">
+                                            <span class="textblock__bold">111111111111Lorem ipsum dolor sit amet</span>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aperiam rem
+                                            dolore voluptatum, totam tempora optio iure nostrum ratione voluptatem unde
+                                            saepe facilis corporis nobis perspiciatis quas, velit dicta fuga ipsa. Alias
+                                            hic nulla culpa explicabo id, quisquam odio officis, deleniti sequi nam
+                                            sunt distinctio! Provident quas inventore odio mollitia vitae, corporis unde
+                                            dolore officia voluptates pariatur deserunt possimus tempora!
                                         </p>
-                                        <button class="about-slide__button button">Learn more</button>
-                                        <img class="about-slide__bgelement" src="images/zigzag03.png"
+                                        <img class="about-slide1__bgelement" src="images/zigzag03.png"
                                             alt="Design element">
                                     </div>
+
+                                    <!-- ---------------------------------slide 2--------------------------------- -->
+                                    <div class="about-slider__slide about-slide2">
+                                        <p class="about-slide2__textblock textblock textblock_center">
+                                            <span class="textblock__bold">22222222222222222222222Lorem ipsum dolor sit amet</span>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aperiam rem
+                                            dolore voluptatum, totam tempora optio iure nostrum ratione voluptatem unde
+                                            saepe facilis corporis nobis perspiciatis quas, velit dicta fuga ipsa. Alias
+                                            hic nulla culpa explicabo id, quisquam odio officis, deleniti sequi nam
+                                            sunt distinctio! Provident quas inventore odio mollitia vitae, corporis unde
+                                            dolore officia voluptates pariatur deserunt possimus tempora!
+                                        </p>
+                                    </div>
+
+                                    <!-- ---------------------------------slide 3--------------------------------- -->
+                                    <div class="about-slider__slide about-slide3">
+                                        <p class="about-slide3__textblock textblock textblock_center">
+                                            <span class="textblock__bold">33333333333333333Lorem ipsum dolor sit amet</span>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aperiam rem
+                                            dolore voluptatum, totam tempora optio iure nostrum ratione voluptatem unde
+                                            saepe facilis corporis nobis perspiciatis quas, velit dicta fuga ipsa. Alias
+                                            hic nulla culpa explicabo id, quisquam odio officis, deleniti sequi nam
+                                            sunt distinctio! Provident quas inventore odio mollitia vitae, corporis unde
+                                            dolore officia voluptates pariatur deserunt possimus tempora!
+                                        </p>
+                                    </div>
+
+                                    <!-- ---------------------------------slide 4--------------------------------- -->
+                                    <div class="about-slider__slide about-slide4">
+                                        <p class="about-slide4__textblock textblock textblock_center">
+                                            <span class="textblock__bold">444444444444444444Lorem ipsum dolor sit amet</span>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aperiam rem
+                                            dolore voluptatum, totam tempora optio iure nostrum ratione voluptatem unde
+                                            saepe facilis corporis nobis perspiciatis quas, velit dicta fuga ipsa. Alias
+                                            hic nulla culpa explicabo id, quisquam odio officis, deleniti sequi nam
+                                            sunt distinctio! Provident quas inventore odio mollitia vitae, corporis unde
+                                            dolore officia voluptates pariatur deserunt possimus tempora!
+                                        </p>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="about-info__buttonsblock">
@@ -474,6 +503,7 @@
                             </div>
                         </div>
                         <div class="lastscreen__info lastscreen-info">
+
                             <!-- ---------------------------------footer--------------------------------- -->
                             <footer class="footer">
                                 <div class="footer__content">
@@ -526,13 +556,13 @@
                                     <button class="footer__button button">Learn more</button>
                                 </div>
                             </footer>
+
                             <img class="lastscreen-info__bgelement lastscreen-info__bgelement_grange"
                                 src="images/bgdots07.png" alt="Design element">
                             <img class="lastscreen-info__bgelement lastscreen-info__bgelement_ragged"
                                 src="images/blackrock06.png" alt="Design element">
                         </div>
-                        <a class="lastscreen__upbutton navbutton navbutton_up" href=""><img src="images/arrow01.png"
-                                alt="Upscreen button"></a>
+                        <a class="lastscreen__upbutton navbutton navbutton_up icon-arrow" href=""></a>
                     </div>
                 </section>
             </div>

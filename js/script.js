@@ -68,9 +68,6 @@ let dataContentSlider = new Swiper (`.dates-slider`, {
         onlyInViewport: true,
         pageUpDown: true,
     },
-    mousewheel: {
-        sensitivity: 1,
-    },
     navigation: {
         nextEl: `.dates-nav__arrow_right`,
         prevEl: `.dates-nav__arrow_left`,
@@ -85,13 +82,14 @@ let dataContentSlider = new Swiper (`.dates-slider`, {
     },
 });
 
-// ---------------------------------------------------------------- dates media slider----------------------------------------------------------------
+// ---------------------------------------------------------------- about slider----------------------------------------------------------------
 let aboutSlider = new Swiper (`.about-slider`, {
     wrapperClass: 'about-slider__wrapper',
     slideClass: 'about-slider__slide',
     nested: true,
+    loop: true,
     speed: 1000,
-    // spaceBetween: 50,
+    spaceBetween: 50,
     watchOverflow: true,
     observer: true,
     observeParents: true,
@@ -101,12 +99,18 @@ let aboutSlider = new Swiper (`.about-slider`, {
         onlyInViewport: true,
         pageUpDown: true,
     },
-    mousewheel: {
-        sensitivity: 1,
-    },
     navigation: {
         nextEl: `.about-info__sliderbutton_right`,
         prevEl: `.about-info__sliderbutton_left`,
+    },
+    // scrollbar: {
+    //     el: `.swiper-scrollbar`,
+    //     draggable: true,
+    //     dragSize: `auto`,
+    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
     },
 });
 

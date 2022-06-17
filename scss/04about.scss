@@ -8,35 +8,38 @@
     }
 }
 .about-info {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50%;
     &__slider {
-        width: 60%;
-        height: 70%;
-        border: 1px solid #000;
+        position: relative;
+        width: 50%;
+        height: 50%;
+        margin-top: 10%;
+        z-index: 3;
     }
     &__buttonsblock {
         display: flex;
         justify-content: space-between;
-        width: 60%;
-        border: 1px solid #000;
+        width: 50%;
     }
     &__sliderbutton {
-        img {
-            width: 75%;
-        }
+        color: $color-darkgray;
+        font-size: 6rem;
+        line-height: 0;
+        z-index: 4;
+        transition: 200ms;;
         &_left {
-            img {
-                transform: rotate(90deg);
-            }
+            transform: rotate(90deg);
         }
         &_right {
-            text-align: right;
-            img {
-                transform: rotate(-90deg);
-            }
+            transform: rotate(-90deg);
+        }
+        &:hover {
+            color: $color-purple;
         }
     }
     &__bgelement {
@@ -48,45 +51,58 @@
     }
 }
 .about-slider {
-    // overflow: hidden;
+    overflow: hidden;
+    &____scrollbar {
+    }
     &__wrapper {
-        // display: flex;
+        display: flex;
         width: 100%;
         height: 100%;
     }
     &__slide {
         flex-shrink: 0;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100%;
     }
 }
 .about-slide1 {
     position: relative;
-    flex-direction: column;
-    justify-content: space-around;
-    &__stickers {
-    }
-    &__textblock {
-    }
+    gap: 8%;
     &__bgelement {
         position: absolute;
         z-index: 1;
-        top: 0;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%);
+        transform: translate(-50%, -50%);
         width: 95%;
     }
 }
 .about-slide2 {
-    &__textblock {
+    gap: 5%;
+    &__image {
+        width: 100%;
     }
 }
 .about-slide3 {
+    gap: 2%;
+    &__title {
+        &_1 {
+            align-self: start;
+        }
+        &_2 {
+            align-self: end;
+        }
+    }
     &__textblock {
     }
 }
 .about-slide4 {
-    &__textblock {
+    gap: 3%;
+    &__image {
+        width: 50%;
     }
 }

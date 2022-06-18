@@ -114,6 +114,32 @@ let aboutSlider = new Swiper (`.about-slider`, {
     },
 });
 
+// ---------------------------------------------------------------- artists slider----------------------------------------------------------------
+let artistsSlider = new Swiper (`.artist-slider`, {
+    wrapperClass: 'artist-slider__wrapper',
+    slideClass: 'artist-slider__slide',
+    nested: true,
+    speed: 1000,
+    // spaceBetween: 50,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    navigation: {
+        nextEl: `.artists__slider-button_right`,
+        prevEl: `.artists__slider-button_left`,
+    },
+    scrollbar: {
+        el: `.swiper-scrollbar`,
+        draggable: true,
+    },
+});
+
 // ----------------------------------------------------------------navigation bar----------------------------------------------------------------
 let barNavList = document.querySelectorAll(`.navigation__link`);
 let headerNavList = document.querySelectorAll(`.header-nav__link`);

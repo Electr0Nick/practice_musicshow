@@ -11,12 +11,11 @@
     .swiper-horizontal > &,
     &.swiper-scrollbar-horizontal {
       position: absolute;
-      left: 1%;
-      bottom: 3px;
-      // top: 0;
-      z-index: 50;
-      height: 5px;
-      width: 98%;
+      right: 0;
+      bottom: 0;
+      z-index: 9;
+      height: 15px;
+      width: calc(100% - 30px);
     }
   //   .swiper-vertical > &,
   //   &.swiper-scrollbar-vertical {
@@ -34,7 +33,7 @@
     position: relative;
     // background: rgba(0, 0, 0, 0.5);
     background: $color-purple;
-    border-radius: 10px;
+    // border-radius: 10px;
     left: 0;
     top: 0;
     cursor: pointer;

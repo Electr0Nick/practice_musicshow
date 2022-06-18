@@ -4,26 +4,29 @@
         align-items: center;
     }
     &__content {
+        position: relative;
         display: flex;
-        justify-content: space-between;
-        width: 70%;
+        width: 100%;
         height: 50%;
     }
     &__slider-button {
-        align-self: center;
-        width: 8%;
-        img {
-            width: 100%;
-        }
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        line-height: 0;
+        color: $color-darkgray;
+        font-size: 6rem;
         &_left {
-            transform: rotate(90deg);
+            left: 10%;
+            transform: rotate(90deg) translate(-50%);
         }
         &_right {
-            transform: rotate(-90deg);
+            right: 10%;
+            transform: rotate(-90deg) translate(50%);
         }
     }
-    &__infoblock {
-        flex: 0 0 45%;
+    &__slider {
+        width: 100%;
     }
     &__bgelement {
         position: absolute;
@@ -43,11 +46,27 @@
         }
     }
 }
-.artist-info {
+.artist-slider {
+    overflow: hidden;
+    &__wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    &__slide {
+        flex-shrink: 0;
+    }
+}
+.artist-slide {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    &__content {
+        flex: 0 0 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
     &__circle {
         display: flex;
         justify-content: center;

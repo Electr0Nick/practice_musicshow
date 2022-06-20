@@ -9,6 +9,14 @@
         width: 100%;
         height: 50%;
     }
+    &__backslider {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
     &__slider-button {
         z-index: 5;
         position: absolute;
@@ -26,6 +34,7 @@
         }
     }
     &__slider {
+        z-index: 4;
         width: 100%;
     }
     &__bgelement {
@@ -44,6 +53,23 @@
             right: 0;
             height: 100%;
         }
+    }
+}
+.back-slider {
+    &__wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    &__slide {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        opacity: 0.15;
     }
 }
 .artist-slider {

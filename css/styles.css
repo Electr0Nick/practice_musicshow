@@ -1357,6 +1357,14 @@ main {
   width: 100%;
   height: 50%;
 }
+.artists__backslider {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .artists__slider-button {
   z-index: 5;
   position: absolute;
@@ -1376,6 +1384,7 @@ main {
           transform: rotate(-90deg) translate(50%);
 }
 .artists__slider {
+  z-index: 4;
   width: 100%;
 }
 .artists__bgelement {
@@ -1394,6 +1403,25 @@ main {
 .artists__bgelement_raggedright {
   right: 0;
   height: 100%;
+}
+
+.back-slider__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.back-slider__slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+.back-slider__image {
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
 }
 
 .artist-slider {

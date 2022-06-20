@@ -42,7 +42,7 @@ let pageSlider = new Swiper(`.swiper`, {
 });
 
 // ---------------------------------------------------------------- dates mini-slider----------------------------------------------------------------
-let dataMiniSlider = new Swiper (`.dates-nav__slider`, {
+let dataMiniSlider = new Swiper(`.dates-nav__slider`, {
     wrapperClass: 'dates-nav__wrapper',
     slideClass: 'dates-nav__slide',
     direction: `vertical`,
@@ -53,7 +53,7 @@ let dataMiniSlider = new Swiper (`.dates-nav__slider`, {
 });
 
 // ---------------------------------------------------------------- dates media slider----------------------------------------------------------------
-let dataContentSlider = new Swiper (`.dates-slider`, {
+let dataContentSlider = new Swiper(`.dates-slider`, {
     wrapperClass: 'dates-slider__wrapper',
     slideClass: 'dates-slider__slide',
     nested: true,
@@ -83,7 +83,7 @@ let dataContentSlider = new Swiper (`.dates-slider`, {
 });
 
 // ---------------------------------------------------------------- about slider----------------------------------------------------------------
-let aboutSlider = new Swiper (`.about-slider`, {
+let aboutSlider = new Swiper(`.about-slider`, {
     wrapperClass: 'about-slider__wrapper',
     slideClass: 'about-slider__slide',
     nested: true,
@@ -103,24 +103,31 @@ let aboutSlider = new Swiper (`.about-slider`, {
         nextEl: `.about-info__sliderbutton_right`,
         prevEl: `.about-info__sliderbutton_left`,
     },
-    // scrollbar: {
-    //     el: `.swiper-scrollbar`,
-    //     draggable: true,
-    //     dragSize: `auto`,
-    // },
     autoplay: {
         delay: 2500,
         disableOnInteraction: true,
     },
 });
 
+// ---------------------------------------------------------------- artists background slider----------------------------------------------------------------
+let artistsBgSlider = new Swiper(`.back-slider`, {
+    wrapperClass: 'back-slider__wrapper',
+    slideClass: 'back-slider__slide',
+    nested: true,
+    watchOverflow: true,
+    simulateTouch: false,
+    effect: `fade`,
+    fadeEffect: {
+        crossFade: true,
+    },
+});
+
 // ---------------------------------------------------------------- artists slider----------------------------------------------------------------
-let artistsSlider = new Swiper (`.artist-slider`, {
+let artistsSlider = new Swiper(`.artist-slider`, {
     wrapperClass: 'artist-slider__wrapper',
     slideClass: 'artist-slider__slide',
     nested: true,
-    speed: 1000,
-    // spaceBetween: 50,
+    speed: 1200,
     watchOverflow: true,
     observer: true,
     observeParents: true,
@@ -138,6 +145,9 @@ let artistsSlider = new Swiper (`.artist-slider`, {
         el: `.swiper-scrollbar`,
         draggable: true,
     },
+    controller: {
+        control: artistsBgSlider,
+    },
 });
 
 // ----------------------------------------------------------------navigation bar----------------------------------------------------------------
@@ -148,9 +158,9 @@ let footerNavList = document.querySelectorAll(`.footer-nav__link`);
 function menuNav(linkArray) {
     if (linkArray.length > 0) { // проверка
         linkArray[pageSlider.realIndex].classList.add(`active-nav`); // добавляем стили для ссылки актуального слайда
-        for(let i = 0; i < linkArray.length; i++) { // перебор массива
+        for (let i = 0; i < linkArray.length; i++) { // перебор массива
             const link = linkArray[i];
-            link.addEventListener(`click`, function(e) { // вешаем обработчик на каждую ссылку
+            link.addEventListener(`click`, function (e) { // вешаем обработчик на каждую ссылку
                 menuNavRemove(); // убираем стили с предыдущей ссылки
                 pageSlider.slideTo(i, 1000);  // переходим на новый слайд
                 link.classList.add(`active-nav`); // добавляем стили для ссылки нового слайда
@@ -162,7 +172,7 @@ function menuNav(linkArray) {
 function menuNavRemove() { // функция для очистки стиля ссылки
     let linkArrayActive = document.querySelectorAll(`.active-nav`);// находим ссылку со ститями
     if (linkArrayActive.length > 0) {
-        for(let i = 0; i < linkArrayActive.length; i++) {
+        for (let i = 0; i < linkArrayActive.length; i++) {
             const activelink = linkArrayActive[i];
             activelink.classList.remove(`active-nav`); // убираем стили со ссылки
         }

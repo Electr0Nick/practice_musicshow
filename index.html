@@ -18,7 +18,7 @@
         <!-- -----------------------------------------------main navigation----------------------------------------------- -->
         <nav class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__arrow"><a class="navigation__arrow-link navigation__arrow-link_up icon-arrow"
+                <li class="navigation__arrow"><a class="navigation__arrow-link navigation__arrow-link_up icon-arrow noactivearrow"
                         href=""></a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">Home</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">Dates</a></li>
@@ -29,7 +29,7 @@
                 <li class="navigation__item"><a class="navigation__link" href="">Artists</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">Feedback</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">Contacts</a></li>
-                <li class="navigation__arrow"><a class="navigation__arrow-link navigation__arrow-link_down icon-arrow"
+                <li class="navigation__arrow"><a class="navigation__arrow-link navigation__arrow-link_down icon-arrow activearrow"
                         href=""></a></li>
             </ul>
             <div class="navigation__bar">Navigation</div>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="firstscreen__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
                             data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
-                            <img src="images/voice01.png" alt="Artist photo">
+                            <img src="images/home.png" alt="Artist photo">
                         </div>
                         <a class="firstscreen__downbutton navbutton navbutton_down icon-arrow" href=""></a>
                     </div>
@@ -110,7 +110,7 @@
                                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
                                         exercitation.
                                     </p>
-                                    <a href="#popup-dates" class="dates-info__button link-button popup-link">Learn
+                                    <a href="#popup-dates" class="dates-info__button link-button link-button_purple popup-link">Learn
                                         more</a>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
                         </div>
                         <div class="dates__media dates-media">
                             <div class="dates-media__nav dates-nav">
-                                <a class="dates-nav__arrow dates-nav__arrow_left icon-arrow" href=""></a>
+                                <a class="dates-nav__arrow dates-nav__arrow_left icon-arrow noactivearrow" href=""></a>
                                 <div class="dates-nav__slider">
                                     <div class="dates-nav__wrapper">
                                         <div class="dates-nav__slide">26/09/2022</div>
@@ -126,7 +126,7 @@
                                         <div class="dates-nav__slide">28/09/2022</div>
                                     </div>
                                 </div>
-                                <a class="dates-nav__arrow dates-nav__arrow_right icon-arrow" href=""></a>
+                                <a class="dates-nav__arrow dates-nav__arrow_right icon-arrow activearrow" href=""></a>
                             </div>
                             <div class="dates-media__slider dates-slider">
                                 <div class="dates-slider__wrapper">
@@ -166,7 +166,7 @@
                                     <!-- ---------------------------------slide 2--------------------------------- -->
                                     <div class="dates-slider__slide date-slide2">
                                         <div class="date-slide2__image ibg">
-                                            <img src="images/people02.png" alt="People photo">
+                                            <img src="images/dates01.jpg" alt="People photo">
                                         </div>
                                         <div class="date-slide2__description">
                                             <h3 class="date-slide2__title title"><span>24h</span> party!</h3>
@@ -190,10 +190,9 @@
                                             earum ipsam natus ea maxime soluta perspiciatis dicta repudiandae, accusamus
                                             similique, magni libero iure aut ratione debitis laudantium accusantium
                                             adipisci. Provident doloremque placeat sequi molestiae distinctio possimus,
-                                            ab aspernatur. Perspiciatis atque quisquam molestias, nam tempore voluptatum
-                                            repellendus maxime a natus necessitatibus aspernatur corporis eaque
-                                            molestiae impedit.
+                                            ab aspernatur. Perspiciatis atque quisquam molestias.
                                         </p>
+                                        <h3 class="date-slide3__title title"><span>to be</span> continued!</h3>
                                         <img class="date-slide3__bgelement" src="images/zigzag04.png"
                                             alt="Design element">
                                     </div>
@@ -215,7 +214,7 @@
                     <div class="tickets__container container">
                         <div class="tickets__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
                             data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
-                            <img src="images/voice03.png" alt="Artist photo">
+                            <img src="images/tickets.png" alt="Artist photo">
                         </div>
                         <div class="tickets__info tickets-info">
                             <div class="tickets-info__content">
@@ -243,17 +242,37 @@
                                             nostrud
                                             exercitation.
                                         </p>
-                                        <button class="tickets-info__button button">buy ticket!</button>
+                                        <a href="#..." class="footer__button link-button link-button_white">buy ticket!</a>
                                     </div>
                                 </div>
                             </div>
                             <img class="tickets-info__bgelement tickets-info__bgelement_grange"
                                 src="images/bgdots04.png" alt="Design element">
                         </div>
-                        <div class="tickets__photo tickets-photo">
-                            <img class="tickets-photo__item" src="images/people02.png" alt="MusicShow photo">
-                            <img class="tickets-photo__item" src="images/voice02.png" alt="MusicShow photo">
-                            <img class="tickets-photo__item" src="images/people03.png" alt="MusicShow photo">
+                        <div class="tickets__slider tickets-slider">
+                            <div class="tickets-slider__wrapper">
+                                <div class="tickets-slider__slide">
+                                    <img class="tickets-slider__photo" src="images/ticketsslider/01.jpg" alt="MusicShow photo">
+                                </div>
+                                <div class="tickets-slider__slide">
+                                    <img class="tickets-slider__photo" src="images/ticketsslider/02.jpg" alt="MusicShow photo">
+                                </div>
+                                <div class="tickets-slider__slide">
+                                    <img class="tickets-slider__photo" src="images/ticketsslider/03.jpg" alt="MusicShow photo">
+                                </div>
+                                <div class="tickets-slider__slide">
+                                    <img class="tickets-slider__photo" src="images/ticketsslider/04.jpg" alt="MusicShow photo">
+                                </div>
+                                <div class="tickets-slider__slide">
+                                    <img class="tickets-slider__photo" src="images/ticketsslider/05.jpg" alt="MusicShow photo">
+                                </div>
+                                <div class="tickets-slider__slide">
+                                    <img class="tickets-slider__photo" src="images/ticketsslider/06.jpg" alt="MusicShow photo">
+                                </div>
+                                <div class="tickets-slider__slide">
+                                    <img class="tickets-slider__photo" src="images/ticketsslider/07.jpg" alt="MusicShow photo">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -298,7 +317,7 @@
                                             sit aut officia, assumenda consectetur voluptas id, aperiam impedit
                                             doloribus quod.
                                         </p>
-                                        <img class="about-slide2__image" src="images/people01.png" alt="MusicShow logo">
+                                        <img class="about-slide2__image" src="images/about01.jpg" alt="MusicShow logo">
                                     </div>
 
                                     <!-- ---------------------------------slide 3--------------------------------- -->
@@ -340,7 +359,7 @@
                         </div>
                         <div class="about__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
                             data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
-                            <img src="images/voice05.png" alt="Artist photo">
+                            <img src="images/about.png" alt="Artist photo">
                         </div>
                     </div>
                 </section>
@@ -350,7 +369,7 @@
                     <div class="bonus__container container">
                         <div class="bonus__image ibg" data-swiper-parallax="0" data-swiper-parallax-opacity="1"
                             data-swiper-parallax-scale="1.1" data-swiper-parallax-duration="1000">
-                            <img src="images/people04.png" alt="People photo">
+                            <img src="images/bonus.png" alt="People photo">
                         </div>
                         <div class="bonus__info bonus-info">
                             <div class="bonus-info__content">
@@ -391,7 +410,7 @@
                     <div class="arena__container container">
                         <div class="arena__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
                             data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
-                            <img src="images/people05.png" alt="People photo">
+                            <img src="images/arena.png" alt="People photo">
                         </div>
                         <div class="arena__info arena-info">
                             <div class="arena-info__content">
@@ -403,7 +422,7 @@
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam nostrud
                                     exercitation.
                                 </p>
-                                <a href="#popup-arena" class="dates-info__button link-button popup-link">Learn more</a>
+                                <a href="#popup-arena" class="dates-info__button link-button link-button_purple popup-link">Learn more</a>
                                 <img class="arena-info__bgelement arena-info__bgelement_arrow01"
                                     src="images/arrow02.png" alt="Design element">
                                 <img class="arena-info__bgelement arena-info__bgelement_arrow02"
@@ -424,38 +443,38 @@
                             <div class="back-slider__wrapper">
                                 <div class="back-slider__slide">
                                     <div class="back-slider__image ibg">
-                                        <img src="images/artistslider/artists01.jpg" alt="Concert photo">
+                                        <img src="images/artistslider/artists01.jpg" alt="Artist photo">
                                     </div>
                                 </div>
                                 <div class="back-slider__slide">
                                     <div class="back-slider__image ibg">
-                                        <img src="images/artistslider/artists02.jpg" alt="Concert photo">
+                                        <img src="images/artistslider/artists02.jpg" alt="Artist photo">
                                     </div>
                                 </div>
                                 <div class="back-slider__slide">
                                     <div class="back-slider__image ibg">
-                                        <img src="images/artistslider/artists03.jpg" alt="Concert photo">
+                                        <img src="images/artistslider/artists03.jpg" alt="Artist photo">
                                     </div>
                                 </div>
                                 <div class="back-slider__slide">
                                     <div class="back-slider__image ibg">
-                                        <img src="images/artistslider/artists04.jpg" alt="Concert photo">
+                                        <img src="images/artistslider/artists04.jpg" alt="Artist photo">
                                     </div>
                                 </div>
                                 <div class="back-slider__slide">
                                     <div class="back-slider__image ibg">
-                                        <img src="images/artistslider/artists05.jpg" alt="Concert photo">
+                                        <img src="images/artistslider/artists05.jpg" alt="Artist photo">
                                     </div>
                                 </div>
                                 <div class="back-slider__slide">
                                     <div class="back-slider__image ibg">
-                                        <img src="images/artistslider/artists06.jpg" alt="Concert photo">
+                                        <img src="images/artistslider/artists06.jpg" alt="Artist photo">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="artists__content">
-                            <a class="artists__slider-button artists__slider-button_left icon-arrow" href=""></a>
+                            <a class="artists__slider-button artists__slider-button_left icon-arrow noactivearrow" href=""></a>
                             <div class="artists__slider artist-slider">
                                 <div class="artist-slider__wrapper">
 
@@ -486,15 +505,14 @@
                                             <div class="artist-slide__circle">
                                                 <img class="artist-slide__star" src="images/star.png" alt="Star">
                                             </div>
-                                            <h2 class="artist-slide__title title"><span>john</span> doe</h2>
+                                            <h2 class="artist-slide__title title"><span>Eclip</span>se</h2>
                                             <p class="artist-slide__textblock textblock textblock_center"><span
                                                     class="textblock__bold">Lorem
-                                                    ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei
-                                                usmod
-                                                tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                                nostrud
-                                                exercitation.
+                                                    ipsum dolor sit amet</span> consectetur
+                                                adipisicing elit. Adipisci quasi, accusamus iste, deleniti voluptatum
+                                                voluptates explicabo earum doloribus rerum tenetur assumenda atque ea
+                                                aperiam? A ea doloremque quo odio. Maiores quis tenetur dolor, nemo ad
+                                                accusantium consequuntur amet eum molestiae?
                                             </p>
                                             <img class="artist-slide__bgelement" src="images/zigzag04.png"
                                                 alt="Design element">
@@ -507,15 +525,13 @@
                                             <div class="artist-slide__circle">
                                                 <img class="artist-slide__star" src="images/star.png" alt="Star">
                                             </div>
-                                            <h2 class="artist-slide__title title"><span>john</span> doe</h2>
+                                            <h2 class="artist-slide__title title"><span>Betrate</span> the air</h2>
                                             <p class="artist-slide__textblock textblock textblock_center"><span
                                                     class="textblock__bold">Lorem
-                                                    ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei
-                                                usmod
-                                                tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                                nostrud
-                                                exercitation.
+                                                    ipsum dolor sit amet</span> consectetur
+                                                adipisicing elit. Consequatur molestias doloribus repellat numquam ipsum
+                                                beatae sequi tenetur, corporis perferendis illum? Deleniti corrupti ut
+                                                molestias ea dolores, inventore qui eum maxime!
                                             </p>
                                             <img class="artist-slide__bgelement" src="images/zigzag04.png"
                                                 alt="Design element">
@@ -528,15 +544,16 @@
                                             <div class="artist-slide__circle">
                                                 <img class="artist-slide__star" src="images/star.png" alt="Star">
                                             </div>
-                                            <h2 class="artist-slide__title title"><span>john</span> doe</h2>
+                                            <h2 class="artist-slide__title title"><span>magnum</span> 45</h2>
                                             <p class="artist-slide__textblock textblock textblock_center"><span
                                                     class="textblock__bold">Lorem
-                                                    ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei
-                                                usmod
-                                                tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                                nostrud
-                                                exercitation.
+                                                    ipsum dolor sit amet</span> consectetur
+                                                adipisicing elit. Veritatis nobis sed quaerat eaque itaque cum quidem
+                                                accusantium consequatur. Aliquam fugit soluta, unde neque magnam quis
+                                                iure molestiae, ut, eveniet voluptas possimus quidem eos error aut
+                                                praesentium. Debitis nulla consequuntur sed laboriosam magni sequi, odio
+                                                amet neque, quibusdam similique repellat fuga dolore, illo aliquid
+                                                cupiditate rerum autem. Aliquid molestiae ullam iusto?
                                             </p>
                                             <img class="artist-slide__bgelement" src="images/zigzag04.png"
                                                 alt="Design element">
@@ -549,15 +566,12 @@
                                             <div class="artist-slide__circle">
                                                 <img class="artist-slide__star" src="images/star.png" alt="Star">
                                             </div>
-                                            <h2 class="artist-slide__title title"><span>john</span> doe</h2>
+                                            <h2 class="artist-slide__title title"><span>Down to</span> atlantida</h2>
                                             <p class="artist-slide__textblock textblock textblock_center"><span
                                                     class="textblock__bold">Lorem
-                                                    ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei
-                                                usmod
-                                                tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                                nostrud
-                                                exercitation.
+                                                    ipsum dolor sit amet</span> consectetur
+                                                adipisicing elit. Odit ratione voluptatem voluptates voluptatibus
+                                                incidunt quo? Repellendus consectetur fugiat dolore quia.
                                             </p>
                                             <img class="artist-slide__bgelement" src="images/zigzag04.png"
                                                 alt="Design element">
@@ -570,15 +584,13 @@
                                             <div class="artist-slide__circle">
                                                 <img class="artist-slide__star" src="images/star.png" alt="Star">
                                             </div>
-                                            <h2 class="artist-slide__title title"><span>john</span> doe</h2>
+                                            <h2 class="artist-slide__title title"><span>joke</span> them</h2>
                                             <p class="artist-slide__textblock textblock textblock_center"><span
                                                     class="textblock__bold">Lorem
-                                                    ipsum dolor sit amet</span> consectetur adip isicing elit, sed do ei
-                                                usmod
-                                                tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                                nostrud
-                                                exercitation.
+                                                    ipsum dolor sit amet</span> consectetur
+                                                adipisicing elit. Dolores, sapiente sed fuga fugiat alias aperiam.
+                                                Aliquid natus dicta repellat eaque corrupti quasi quo delectus eveniet
+                                                iste ullam. Ut quos, dolores esse quas beatae sapiente asperiores?
                                             </p>
                                             <img class="artist-slide__bgelement" src="images/zigzag04.png"
                                                 alt="Design element">
@@ -587,7 +599,7 @@
                                 </div>
 
                             </div>
-                            <a class="artists__slider-button artists__slider-button_right icon-arrow" href=""></a>
+                            <a class="artists__slider-button artists__slider-button_right icon-arrow activearrow" href=""></a>
                         </div>
                         <img class="artists__bgelement artists__bgelement_grange" src="images/bgdots06.png"
                             alt="Design element">
@@ -619,7 +631,7 @@
                         </div>
                         <div class="feedback__image ibg" data-swiper-parallax="30%" data-swiper-parallax-opacity="1"
                             data-swiper-parallax-scale="1" data-swiper-parallax-duration="1000">
-                            <img src="images/voice06.png" alt="Artist photo">
+                            <img src="images/feedback.jpg" alt="Artist photo">
                         </div>
                     </div>
                 </section>
@@ -631,10 +643,10 @@
                             data-swiper-parallax-opacity="1" data-swiper-parallax-scale="1.1"
                             data-swiper-parallax-duration="1000">
                             <div class="lastscreen-photo__item lastscreen-photo__item_left ibg">
-                                <img src="images/voice02.png" alt="Artist photo">
+                                <img src="images/lastscreen01.jpg" alt="Artist photo">
                             </div>
                             <div class="lastscreen-photo__item lastscreen-photo__item_right ibg">
-                                <img src="images/people01.png" alt="People photo">
+                                <img src="images/lastscreen02.png" alt="People photo">
                             </div>
                         </div>
                         <div class="lastscreen__info lastscreen-info">
@@ -688,7 +700,7 @@
                                             </li>
                                         </ul>
                                     </nav>
-                                    <button class="footer__button button">Learn more</button>
+                                    <a href="#..." class="footer__button link-button link-button_white">Learn more</a>
                                 </div>
                             </footer>
 

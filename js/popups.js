@@ -4,6 +4,7 @@ const body = document.querySelector(`body`);
 const fixedObject = document.querySelectorAll(`.fixed-object`);
 let unlock = true;
 const timeout = 300;
+
 if (popupOpenLinks.length > 0) {
     for (let i = 0; i < popupOpenLinks.length; i++) {
         const openLink = popupOpenLinks[i];

@@ -1,6 +1,9 @@
 "use strict"
 
 // ---------------------------------------------------------------- screen slider----------------------------------------------------------------
+let upBarArrow = document.querySelector(`.navigation__arrow-link_up`);
+let downBarArrow = document.querySelector(`.navigation__arrow-link_down`);
+
 let pageSlider = new Swiper(`.swiper`, {
     direction: `vertical`,
     slidesPerView: `auto`,
@@ -33,7 +36,7 @@ let pageSlider = new Swiper(`.swiper`, {
         slideChange: function () {
             setTimeout(hideNav, 1100);
             menuNavRemove();
-            removeBarArrows();
+            changeColorArrows(pageSlider, upBarArrow, downBarArrow);
             barNavList[pageSlider.realIndex].classList.add(`active-nav`);
             headerNavList[pageSlider.realIndex].classList.add(`active-nav`);
             footerNavList[pageSlider.realIndex].classList.add(`active-nav`);
@@ -53,6 +56,9 @@ let dataMiniSlider = new Swiper(`.dates-nav__slider`, {
 });
 
 // ---------------------------------------------------------------- dates media slider----------------------------------------------------------------
+let leftDatesArrow = document.querySelector(`.dates-nav__arrow_left`);
+let rightDatesArrow = document.querySelector(`.dates-nav__arrow_right`);
+
 let dataContentSlider = new Swiper(`.dates-slider`, {
     wrapperClass: 'dates-slider__wrapper',
     slideClass: 'dates-slider__slide',
@@ -77,8 +83,33 @@ let dataContentSlider = new Swiper(`.dates-slider`, {
     },
     on: {
         slideChange: function () {
-            changeColorArrows();
+            changeColorArrows(dataContentSlider, leftDatesArrow, rightDatesArrow);
         },
+    },
+});
+
+// ---------------------------------------------------------------- tickets slider----------------------------------------------------------------
+let ticketsSlider = new Swiper(`.tickets-slider`, {
+    wrapperClass: 'tickets-slider__wrapper',
+    slideClass: 'tickets-slider__slide',
+    nested: true,
+    loop: true,
+    speed: 800,
+    spaceBetween: 30,
+    slidesPerView: `auto`,
+    loopedSlides: 3,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
     },
 });
 
@@ -104,8 +135,8 @@ let aboutSlider = new Swiper(`.about-slider`, {
         prevEl: `.about-info__sliderbutton_left`,
     },
     autoplay: {
-        delay: 2500,
-        disableOnInteraction: true,
+        delay: 3000,
+        disableOnInteraction: false,
     },
 });
 
@@ -123,6 +154,9 @@ let artistsBgSlider = new Swiper(`.back-slider`, {
 });
 
 // ---------------------------------------------------------------- artists slider----------------------------------------------------------------
+let leftArtistsArrow = document.querySelector(`.artists__slider-button_left`);
+let rightArtistsArrow = document.querySelector(`.artists__slider-button_right`);
+
 let artistsSlider = new Swiper(`.artist-slider`, {
     wrapperClass: 'artist-slider__wrapper',
     slideClass: 'artist-slider__slide',
@@ -148,7 +182,30 @@ let artistsSlider = new Swiper(`.artist-slider`, {
     controller: {
         control: artistsBgSlider,
     },
+    on: {
+        slideChange: function () {
+            changeColorArrows(artistsSlider, leftArtistsArrow, rightArtistsArrow);
+        },
+    },
 });
+
+// ----------------------------------------------------------------change arrows color function----------------------------------------------------------------
+function changeColorArrows(slider, prevArrow, nextArrow) {
+    if (slider.realIndex === 0) {
+        prevArrow.classList.remove(`activearrow`);
+        prevArrow.classList.add(`noactivearrow`);
+    } else {
+        prevArrow.classList.remove(`noactivearrow`);
+        prevArrow.classList.add(`activearrow`);
+    }
+    if (slider.realIndex === slider.slides.length - 1) {
+        nextArrow.classList.remove(`activearrow`);
+        nextArrow.classList.add(`noactivearrow`);
+    } else {
+        nextArrow.classList.remove(`noactivearrow`);
+        nextArrow.classList.add(`activearrow`);
+    }
+}
 
 // ----------------------------------------------------------------navigation bar----------------------------------------------------------------
 let barNavList = document.querySelectorAll(`.navigation__link`);
@@ -180,30 +237,16 @@ function menuNavRemove() { // функция для очистки стиля с
 }
 pageSlider.init();
 
-// ----------------------------------------------------------------navigation bar arrows----------------------------------------------------------------
-let upBarArrow = document.querySelector(`.navigation__arrow-link_up`);
-let downBarArrow = document.querySelector(`.navigation__arrow-link_down`);
+// ----------------------------------------------------------------navigation arrows animation----------------------------------------------------------------
+// downBarArrow.addEventListener(`mouseover`, function (e) {
+//     if (downBarArrow.classList.contains(`activearrow`)) {
+//         let activeSlide = document.querySelector(`.swiper-slide-active`);
+//         // activeSlide.style.transform = `translate(20px)`;
+//         console.log('bang!');
+//         console.log(activeSlide);
+//     }
+// });
 
-function removeBarArrows() {
-    if (upBarArrow) {
-        if (pageSlider.realIndex === 0) {
-            upBarArrow.style.color = `#d3d3d3`;
-            upBarArrow.style.cursor = `default`;
-        } else {
-            upBarArrow.style.color = `#a9a9a9`;
-            upBarArrow.style.cursor = `pointer`;
-        }
-    }
-    if (downBarArrow) {
-        if (pageSlider.realIndex === pageSlider.slides.length - 1) {
-            downBarArrow.style.color = `#d3d3d3`;
-            downBarArrow.style.cursor = `default`;
-        } else {
-            downBarArrow.style.color = `#a9a9a9`;
-            downBarArrow.style.cursor = `pointer`;
-        }
-    }
-}
 
 // ----------------------------------------------------------------hide navigation bar----------------------------------------------------------------
 let navBlock = document.querySelector(`.navigation`);
@@ -216,8 +259,6 @@ function hideNav() {
         }
     }
 }
-
-
 
 // ----------------------------------------------------------------firstscreen & lastscreen arrows----------------------------------------------------------------
 let upNavArrow = document.querySelector(`.navbutton_up`);
@@ -233,33 +274,4 @@ if (upNavArrow) {
         pageSlider.slideTo(pageSlider.realIndex - 1);
         e.preventDefault();
     });
-}
-
-// ----------------------------------------------------------------dates slider arrows----------------------------------------------------------------
-let leftDatesArrow = document.querySelector(`.dates-nav__arrow_left`);
-let rightDatesArrow = document.querySelector(`.dates-nav__arrow_right`);
-
-function changeColor(element, clr) {
-    element.style.color = clr;
-}
-
-function changeColorArrows() {
-    if (leftDatesArrow) {
-        if (dataContentSlider.realIndex === 0) {
-            leftDatesArrow.style.color = `#d3d3d3`;
-            leftDatesArrow.style.cursor = `default`;
-        } else {
-            leftDatesArrow.style.color = `#a9a9a9`;
-            leftDatesArrow.style.cursor = `pointer`;
-        }
-    }
-    if (rightDatesArrow) {
-        if (dataContentSlider.realIndex === dataContentSlider.slides.length - 1) {
-            rightDatesArrow.style.color = `#d3d3d3`;
-            rightDatesArrow.style.cursor = `default`;
-        } else {
-            rightDatesArrow.style.color = `#a9a9a9`;
-            rightDatesArrow.style.cursor = `pointer`;
-        }
-    }
 }

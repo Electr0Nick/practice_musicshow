@@ -22,8 +22,8 @@
         position: absolute;
         top: 50%;
         line-height: 0;
-        color: $color-darkgray;
         font-size: 6rem;
+        transition: 200ms;
         &_left {
             left: 10%;
             transform: rotate(90deg) translate(-50%);

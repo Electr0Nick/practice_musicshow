@@ -1,0 +1,11 @@
+.activearrow {
+    color: $color-darkgray;
+    cursor: pointer;
+    &:hover {
+        color: $color-purple;
+    }
+}
+.noactivearrow {
+    color: $color-lightgray;
+    cursor: default;
+}

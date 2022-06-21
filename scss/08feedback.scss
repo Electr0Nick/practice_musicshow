@@ -59,6 +59,11 @@
             margin-top: 3%;
             background-color: $color-gray;
             color: $color-purple;
+            transition: 200ms;
+            &:hover {
+                border: 4px solid $color-darkgray;
+                background-color: $color-darkgray;
+            }
         }
     }
 }

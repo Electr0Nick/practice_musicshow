@@ -148,43 +148,34 @@
     }
 }
 
-.button {
-    z-index: 4;
-    min-width: 250px;
-    min-height: 50px;
-    padding: 0 70px;
-    border-radius: 25px;
-    border: 4px solid $color-purple;
-    background-color: $color-gray;
-    color: $color-purple;
-    font-family: Monda, sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    &_white {
-        border: 4px solid $color-gray;
-        background-color: $color-purple;
-        color: $color-gray;
-    }
-}
-
 .link-button {
     z-index: 4;
     min-width: 250px;
     min-height: 50px;
     padding: 0 70px;
-    border: 4px solid $color-gray;
     border-radius: 25px;
-    background-color: $color-purple;
-    color: $color-gray;
     font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: bold;
     line-height: 42px;
     transition: 200ms;
-    &:hover {
+    &_purple {
+        border: 4px solid $color-gray;
+        background-color: $color-purple;
+        color: $color-gray;
+        &:hover {
+            background-color: $color-gray;
+            color: $color-purple;
+        }
+    }
+    &_white {
+        border: 4px solid $color-purple;
         background-color: $color-gray;
         color: $color-purple;
+        &:hover {
+            background-color: $color-purple;
+            color: $color-gray;
+        }
     }
 }
 

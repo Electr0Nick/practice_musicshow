@@ -86,12 +86,9 @@
         line-height: 0;
         transition: 200ms;
         &_left {
-            color: $color-lightgray;
-            cursor: default;
             transform: rotate(90deg);
         }
         &_right {
-            color: $color-darkgray;
             transform: rotate(-90deg);
         }
     }
@@ -170,7 +167,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8%;
+    gap: 6%;
     &__textblock {
         width: 80%;
     }

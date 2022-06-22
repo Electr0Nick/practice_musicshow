@@ -22,12 +22,22 @@
     }
     &__title {
         flex: 0 0 48%;
+        transition: 1000ms;
+        transform: translateX(-50vw);
+    }
+    &__title.active {
+        transform: translateX(0);
     }
     &__description {
         flex: 0 0 48%;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        transition: 1000ms;
+        transform: translateX(50vw);
+    }
+    &__description.active {
+        transform: translateX(0);
     }
     &__button {
         align-self: start;

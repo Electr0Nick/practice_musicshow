@@ -26,27 +26,33 @@
     &__button {
         align-self: start;
     }
+    &__arrow {
+        position: absolute;
+        z-index: 1;
+        color: $color-lightgray;
+        line-height: 0;
+        &_1 {
+            left: -10%;
+            top: -37%;
+            font-size: 10rem;
+            transform: rotate(-15deg);
+        }
+        &_2 {
+            left: -25%;
+            top: -20%;
+            font-size: 7rem;
+            transform: rotate(-40deg);
+        }
+        &_3 {
+            right: -10%;
+            bottom: -25%;
+            font-size: 13rem;
+            transform: rotate(-210deg);
+        }
+    }
     &__bgelement {
         position: absolute;
         z-index: 1;
-        &_arrow01 {
-            left: -10%;
-            top: -37%;
-            width: 30%;
-            transform: rotate(-15deg);
-        }
-        &_arrow02 {
-            left: -25%;
-            top: -20%;
-            width: 20%;
-            transform: rotate(-40deg);
-        }
-        &_arrow03 {
-            right: -10%;
-            bottom: -25%;
-            width: 40%;
-            transform: rotate(-210deg);
-        }
         &_ragged {
             top: 0;
             right: 0;

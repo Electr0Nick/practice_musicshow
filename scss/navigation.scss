@@ -98,18 +98,19 @@
     &__bar {
         z-index: 21;
         display: flex;
-        justify-content: end;
         align-items: center;
         width: 30px;
         padding: 20px 0;
         background-color: $color-darkgray;
         writing-mode: vertical-lr;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 2px;
-        color: $color-gray;
-        transform: rotate(180deg);
         transition-duration: 700ms;
         cursor: default;
+        color: $color-gray;
+        & span {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            transform: rotate(180deg);
+        }
     }
 }

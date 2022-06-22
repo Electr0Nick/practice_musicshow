@@ -182,23 +182,24 @@
 .navbutton {
     position: absolute;
     z-index: 7;
-    color: $color-darkgray;
     font-size: 6rem;
     line-height: 0;
-    transition: 200ms;
-    &:hover {
-        animation: none;
-        color: $color-purple;
-    }
+    transition: 400ms;
     &_up {
         top: 44%;
         right: 8%;
         animation: upbutton 3000ms linear infinite;
         transform: rotate(180deg);
+        &:hover {
+            transform: rotate(180deg) translateY(20px);
+        }
     }
     &_down {
         left: 7%;
         bottom: 7%;
         animation: downbutton 3000ms linear infinite;
+        &:hover {
+            transform: translateY(20px);
+        }
     }
 }

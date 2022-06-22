@@ -40,6 +40,7 @@ let pageSlider = new Swiper(`.swiper`, {
             barNavList[pageSlider.realIndex].classList.add(`active-nav`);
             headerNavList[pageSlider.realIndex].classList.add(`active-nav`);
             footerNavList[pageSlider.realIndex].classList.add(`active-nav`);
+            playAnimation();
         },
     },
 });
@@ -190,15 +191,17 @@ let artistsSlider = new Swiper(`.artist-slider`, {
 });
 
 // ----------------------------------------------------------------change arrows color function----------------------------------------------------------------
-function changeColorArrows(slider, prevArrow, nextArrow) {
-    if (slider.realIndex === 0) {
+function changeColorArrows(slider, prevArrow, nextArrow) { // функция присваивает классы стрелкам слайдеров (активен или нет)
+    // кнопка назад
+    if (slider.realIndex === 0) { // если первый слайд
         prevArrow.classList.remove(`activearrow`);
         prevArrow.classList.add(`noactivearrow`);
     } else {
         prevArrow.classList.remove(`noactivearrow`);
         prevArrow.classList.add(`activearrow`);
     }
-    if (slider.realIndex === slider.slides.length - 1) {
+    // кнопка вперёд
+    if (slider.realIndex === slider.slides.length - 1) { // если последний слайд
         nextArrow.classList.remove(`activearrow`);
         nextArrow.classList.add(`noactivearrow`);
     } else {
@@ -238,24 +241,43 @@ function menuNavRemove() { // функция для очистки стиля с
 pageSlider.init();
 
 // ----------------------------------------------------------------navigation arrows animation----------------------------------------------------------------
-// downBarArrow.addEventListener(`mouseover`, function (e) {
-//     if (downBarArrow.classList.contains(`activearrow`)) {
-//         let activeSlide = document.querySelector(`.swiper-slide-active`);
-//         // activeSlide.style.transform = `translate(20px)`;
-//         console.log('bang!');
-//         console.log(activeSlide);
-//     }
-// });
+let mainSlider = document.querySelector(`.swiper`);
+
+function arrowMovePage(arrow, direction) { // функция немного сдвигает страницу при наведении курсора на стрелку
+    // если направление вверх
+    if (direction === `up`) {
+        arrow.addEventListener(`mouseover`, function (e) { // вешаем обработчик (при наведении мыши)
+            if (arrow.classList.contains(`activearrow`)) { // проверка активна ли стрелка
+                mainSlider.style.transform = `translateY(20px)`; // сдвигаем страницу вверх
+            }
+        });
+        // если направление вниз
+    } else if (direction === `down`) {
+        arrow.addEventListener(`mouseover`, function (e) {
+            if (arrow.classList.contains(`activearrow`)) {
+                mainSlider.style.transform = `translateY(-20px)`; // сдвигаем страницу вниз
+            }
+        });
+    }
+    // вешаем обработчик (при отведении мыши)
+    arrow.addEventListener(`mouseout`, function (e) {
+        mainSlider.style.transform = `translateY(0)`; // убираем сдвиг страницы
+    });
+}
+
+arrowMovePage(downBarArrow, `down`); // вешаем анимацию сдвига страницы при наведении курсора на стрелку
+arrowMovePage(upBarArrow, `up`); // вешаем анимацию сдвига страницы при наведении курсора на стрелку
 
 
 // ----------------------------------------------------------------hide navigation bar----------------------------------------------------------------
 let navBlock = document.querySelector(`.navigation`);
-function hideNav() {
-    if (navBlock) {
-        if (pageSlider.realIndex === 0 || pageSlider.realIndex === (pageSlider.slides.length - 1)) {
-            navBlock.classList.remove(`active-bar`);
-        } else {
-            navBlock.classList.add(`active-bar`);
+
+function hideNav() { // функция присваивает класс панели навигации (активен или нет)
+    if (navBlock) { // проверка
+        if (pageSlider.realIndex === 0 || pageSlider.realIndex === (pageSlider.slides.length - 1)) { // если активен 1 или последний слайд
+            navBlock.classList.remove(`active-bar`); // убрать класс, сделает не активным
+        } else { // иначе
+            navBlock.classList.add(`active-bar`); // добавить класс, сделает активным
         }
     }
 }
@@ -263,15 +285,43 @@ function hideNav() {
 // ----------------------------------------------------------------firstscreen & lastscreen arrows----------------------------------------------------------------
 let upNavArrow = document.querySelector(`.navbutton_up`);
 let downNavArrow = document.querySelector(`.navbutton_down`);
-if (downNavArrow) {
-    downNavArrow.addEventListener(`click`, function (e) {
-        pageSlider.slideTo(pageSlider.realIndex + 1);
-        e.preventDefault();
+
+if (downNavArrow) { // проверка
+    downNavArrow.addEventListener(`click`, function (e) { // вешаем обработчик по клику
+        pageSlider.slideTo(pageSlider.realIndex + 1); // переместиться на следующий слайд
+        e.preventDefault(); // убрать стандартные параметры ссылки
     });
 }
 if (upNavArrow) {
     upNavArrow.addEventListener(`click`, function (e) {
-        pageSlider.slideTo(pageSlider.realIndex - 1);
+        pageSlider.slideTo(pageSlider.realIndex - 1); // переместиться на предыдущий слайд
         e.preventDefault();
     });
 }
+
+arrowMovePage(downNavArrow, `down`); // вешаем анимацию сдвига страницы при наведении курсора на стрелку
+arrowMovePage(upNavArrow, `up`); // вешаем анимацию сдвига страницы при наведении курсора на стрелку
+
+// ----------------------------------------------------------------shange slide animation----------------------------------------------------------------
+// function playAnimation() {
+//     let animObjectsArray = document.querySelectorAll(`.swiper-slide-active .animate`);
+//     if (animObjectsArray.length > 0) {
+//         console.log(animObjectsArray);
+//     }
+// }
+
+
+// function playAnimation(array) {
+//     if (array.length > 0) {
+//         let actualAnimObjects = array.filter(function(item) {
+//             if (item.classList.contains("someClass");)
+//         })
+
+//         for (let i = 0; i < array.length; i++) {
+//             const animObject = array[i];
+//             animObject.classList.add(`active`);
+//         }
+//     }
+// }
+
+// let activeAnimObjects = document.querySelectorAll(`.animate.active`);

@@ -3,6 +3,7 @@
     cursor: pointer;
     &:hover {
         color: $color-purple;
+        animation: none;
     }
 }
 .noactivearrow {

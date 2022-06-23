@@ -501,6 +501,7 @@ main {
   padding: 0 70px;
   border-radius: 25px;
   font-size: 0.9rem;
+  text-align: center;
   text-transform: uppercase;
   font-weight: bold;
   line-height: 42px;
@@ -692,6 +693,7 @@ main {
 }
 
 .dates-info {
+  z-index: 5;
   position: relative;
   background-color: #9913e1;
 }
@@ -713,14 +715,6 @@ main {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 48%;
           flex: 0 0 48%;
-  -webkit-transition: 1000ms;
-  transition: 1000ms;
-  -webkit-transform: translateX(-50vw);
-          transform: translateX(-50vw);
-}
-.dates-info__title.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
 }
 .dates-info__description {
   -webkit-box-flex: 0;
@@ -734,14 +728,6 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  -webkit-transition: 1000ms;
-  transition: 1000ms;
-  -webkit-transform: translateX(50vw);
-          transform: translateX(50vw);
-}
-.dates-info__description.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
 }
 .dates-info__button {
   -ms-flex-item-align: start;
@@ -761,27 +747,42 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 5%;
+}
+.dates-media__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5%;
+  width: 60%;
+  height: 65%;
+  margin-bottom: 3%;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+  -webkit-transform: translateY(-10vw);
+          transform: translateY(-10vw);
+}
+.dates-media__content.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .dates-media__nav {
-  width: 60%;
-  height: 15%;
+  width: 100%;
+  height: 25%;
 }
 .dates-media__slider {
   z-index: 2;
-  width: 60%;
-  height: 50%;
-  margin-bottom: 2%;
+  width: 100%;
+  height: 75%;
 }
 .dates-media__bgelement {
   position: absolute;
@@ -978,6 +979,14 @@ main {
   right: 0;
   height: 30%;
   width: 80%;
+  -webkit-transition: 1500ms;
+  transition: 1500ms;
+  -webkit-transform: translateX(85vw);
+          transform: translateX(85vw);
+}
+.tickets__slider.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .tickets-info__content {
@@ -1235,11 +1244,22 @@ main {
           align-items: center;
 }
 .bonus-info__content {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 65%;
   height: 55%;
+}
+.bonus-info__title {
+  -webkit-transition: 1800ms;
+  transition: 1800ms;
+  -webkit-transform: translateX(-80vw);
+          transform: translateX(-80vw);
+}
+.bonus-info__title.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .bonus-info__description {
   -webkit-box-flex: 0;
@@ -1256,6 +1276,14 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 15%;
+  -webkit-transition: 1500ms;
+  transition: 1500ms;
+  -webkit-transform: translateX(-80vw);
+          transform: translateX(-80vw);
+}
+.bonus-info__description.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .bonus-info__bgelement {
   position: absolute;
@@ -1329,27 +1357,41 @@ main {
   z-index: 1;
   color: #d3d3d3;
   line-height: 0;
+  -webkit-transition: 1500ms;
+  transition: 1500ms;
 }
 .arena-info__arrow_1 {
   left: -10%;
   top: -37%;
   font-size: 10rem;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  -webkit-transform: translate(-150px, -300px) rotate(-15deg);
+          transform: translate(-150px, -300px) rotate(-15deg);
+}
+.arena-info__arrow_1.active {
+  -webkit-transform: translate(0, 0) rotate(-15deg);
+          transform: translate(0, 0) rotate(-15deg);
 }
 .arena-info__arrow_2 {
   left: -25%;
   top: -20%;
   font-size: 7rem;
-  -webkit-transform: rotate(-40deg);
-          transform: rotate(-40deg);
+  -webkit-transform: translate(-300px, -300px) rotate(-40deg);
+          transform: translate(-300px, -300px) rotate(-40deg);
+}
+.arena-info__arrow_2.active {
+  -webkit-transform: translate(0, 0) rotate(-40deg);
+          transform: translate(0, 0) rotate(-40deg);
 }
 .arena-info__arrow_3 {
   right: -10%;
   bottom: -25%;
   font-size: 13rem;
-  -webkit-transform: rotate(-210deg);
-          transform: rotate(-210deg);
+  -webkit-transform: translate(300px, 400px) rotate(150deg);
+          transform: translate(300px, 400px) rotate(150deg);
+}
+.arena-info__arrow_3.active {
+  -webkit-transform: translate(0, 0) rotate(150deg);
+          transform: translate(0, 0) rotate(150deg);
 }
 .arena-info__bgelement {
   position: absolute;
@@ -1549,6 +1591,14 @@ main {
   gap: 7%;
   width: 60%;
   height: 70%;
+  -webkit-transition: 1500ms;
+  transition: 1500ms;
+  -webkit-transform: translateX(-50vw);
+          transform: translateX(-50vw);
+}
+.feedback-info__content.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .feedback-info__form {
   -webkit-box-flex: 0;
@@ -1587,19 +1637,34 @@ main {
   font-weight: bold;
 }
 .form__item::-webkit-input-placeholder {
-  color: #e1e1e1;
+  color: #a9a9a9;
 }
 .form__item::-moz-placeholder {
-  color: #e1e1e1;
+  color: #a9a9a9;
 }
 .form__item:-ms-input-placeholder {
-  color: #e1e1e1;
+  color: #a9a9a9;
 }
 .form__item::-ms-input-placeholder {
-  color: #e1e1e1;
+  color: #a9a9a9;
 }
 .form__item::placeholder {
-  color: #e1e1e1;
+  color: #a9a9a9;
+}
+.form__item:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.form__item:focus::-moz-placeholder {
+  color: transparent;
+}
+.form__item:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.form__item:focus::-ms-input-placeholder {
+  color: transparent;
+}
+.form__item:focus::placeholder {
+  color: transparent;
 }
 .form__item_message {
   -webkit-box-flex: 1;
@@ -1608,14 +1673,15 @@ main {
 }
 .form__item_button {
   margin-top: 3%;
-  background-color: #e1e1e1;
+  border: 4px solid #a9a9a9;
+  background-color: #a9a9a9;
   color: #9913e1;
   -webkit-transition: 200ms;
   transition: 200ms;
 }
 .form__item_button:hover {
-  border: 4px solid #a9a9a9;
-  background-color: #a9a9a9;
+  border: 4px solid #e1e1e1;
+  background-color: #e1e1e1;
 }
 
 .lastscreen__container {
@@ -1727,8 +1793,8 @@ main {
   background-color: rgba(18, 2, 27, 0.6);
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 300ms;
-  transition: 300ms;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 .popup.open {
   z-index: 30;
@@ -1755,6 +1821,7 @@ main {
 .popup__window {
   position: relative;
   z-index: 31;
+  width: 1100px;
   max-width: 1100px;
   min-height: 650px;
   background-color: #fff;
@@ -1865,6 +1932,55 @@ main {
 }
 .modal-dates__texture_membrane {
   opacity: 0.3;
+}
+
+.modal-tickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1%;
+  background-color: transparent;
+  overflow: visible;
+}
+.modal-tickets__closebutton {
+  right: -50px;
+  top: -50px;
+}
+.modal-tickets__block {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 31%;
+          flex: 0 0 31%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4%;
+  padding: 3%;
+  background-color: #e1e1e1;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+.modal-tickets__block:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.modal-tickets__image {
+  width: 60%;
+}
+.modal-tickets__title {
+  font-size: 3.5rem;
 }
 
 .modal-arena {

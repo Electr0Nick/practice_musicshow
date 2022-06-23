@@ -42,6 +42,11 @@ let pageSlider = new Swiper(`.swiper`, {
             footerNavList[pageSlider.realIndex].classList.add(`active-nav`);
             playAnimation();
         },
+        slideChangeTransitionEnd: function () {
+            removeAnimation();
+            addStaticFlag();
+            playAnimation();
+        }
     },
 });
 
@@ -107,10 +112,6 @@ let ticketsSlider = new Swiper(`.tickets-slider`, {
         enabled: true,
         onlyInViewport: true,
         pageUpDown: true,
-    },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
     },
 });
 
@@ -303,25 +304,48 @@ arrowMovePage(downNavArrow, `down`); // вешаем анимацию сдвиг
 arrowMovePage(upNavArrow, `up`); // вешаем анимацию сдвига страницы при наведении курсора на стрелку
 
 // ----------------------------------------------------------------shange slide animation----------------------------------------------------------------
-// function playAnimation() {
-//     let animObjectsArray = document.querySelectorAll(`.swiper-slide-active .animate`);
-//     if (animObjectsArray.length > 0) {
-//         console.log(animObjectsArray);
-//     }
-// }
+let pagesArray = document.querySelectorAll(`.swiper-slide`);
 
+function playAnimation() { // функция присваивает класс элементам, анимируемым при смене слайдов
+    let activeSlide = pagesArray[pageSlider.realIndex]; // находим активный в данный момент слайд
+    let animObjectsArray = activeSlide.querySelectorAll(`.animate`); // находим элементы слайда, которые должны анимироваться
+    if (animObjectsArray.length > 0) { // проверка
+        for (let i = 0; i < animObjectsArray.length; i++) { // перебор всех элементов
+            const animObject = animObjectsArray[i];
+            animObject.classList.add(`active`); // присваиваем класс
+        }
+    }
+}
+function removeAnimation() { // функция убирает класс у активных элементов с флагом
+    let activeAnimObjectsArray = document.querySelectorAll(`.animate.active.static-flag`); // поиск всех активных элементов с флагом
+    if (activeAnimObjectsArray.length > 0) { // проверка
+        for (let i = 0; i < activeAnimObjectsArray.length; i++) { // перебор всех элементов 
+            const activeAnimObject = activeAnimObjectsArray[i];
+            activeAnimObject.classList.remove(`active`); // убираем класс
+            activeAnimObject.classList.remove(`static-flag`); // убираем класс
+        }
+    }
+}
+function addStaticFlag() { // функция ставит флаг на активный элемент после полного перехода на активный слайд
+    let activeAnimObjectsArray = document.querySelectorAll(`.animate.active`); // находим все активные элементы
+    if (activeAnimObjectsArray.length > 0) { // проверка
+        for (let i = 0; i < activeAnimObjectsArray.length; i++) { // перебор всех элементов 
+            const activeAnimObject = activeAnimObjectsArray[i];
+            activeAnimObject.classList.add(`static-flag`); // присваиваем класс
+        }
+    }
+}
 
-// function playAnimation(array) {
-//     if (array.length > 0) {
-//         let actualAnimObjects = array.filter(function(item) {
-//             if (item.classList.contains("someClass");)
-//         })
+// как это работает:
 
-//         for (let i = 0; i < array.length; i++) {
-//             const animObject = array[i];
-//             animObject.classList.add(`active`);
-//         }
-//     }
-// }
+// при инициации перехода на актуальный слайд:
+// --- все анимированные элементы актуального слайда становятся активными (получают класс active)
+// ------ зачем? Анимированные элементы начинают анимироваться
 
-// let activeAnimObjects = document.querySelectorAll(`.animate.active`);
+// после полного перехода на актуальный слайд:
+// --- все анимированные элементы любого предыдущего слайда (помечены флагом) теряют активность (класс active) и теряют флаг (класс static-flag)
+// ------ зачем? Анимированные элементы любого предыдущего слайда возвращаются в изначальное положение, пользователь этого не видит
+// --- все анимированные активные элементы получают флаг (класс static-flag)
+// ------ зачем? Чтобы подготовиться к переходу на следующий слайд. Флаг нужен чтобы временно отделить элементы актуального слайда (без флага) от элементов предыдущего слайда (с флагом)
+// --- все анимированные элементы актуального слайда становятся активными (получают класс active)
+// ------ зачем? Это дублирование самой первой функции (дублирование спасает, если пользователь быстро прыгает со слайда на слайд, не давая осуществить полный переход на слайд)

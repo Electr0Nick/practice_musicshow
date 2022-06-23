@@ -21,6 +21,11 @@
         gap: 7%;
         width: 60%;
         height: 70%;
+        transition: 1500ms;
+        transform: translateX(-50vw);
+    }
+    &__content.active {
+        transform: translateX(0);
     }
     &__form {
         flex: 0 0 80%;
@@ -50,19 +55,23 @@
         text-transform: uppercase;
         font-weight: bold;
         &::placeholder {
-            color: $color-gray;
+            color: $color-darkgray;
+        }
+        &:focus::placeholder {
+            color: transparent;
         }
         &_message {
             flex: 1 0 auto;
         }
         &_button {
             margin-top: 3%;
-            background-color: $color-gray;
+            border: 4px solid $color-darkgray;
+            background-color: $color-darkgray;
             color: $color-purple;
             transition: 200ms;
             &:hover {
-                border: 4px solid $color-darkgray;
-                background-color: $color-darkgray;
+                border: 4px solid $color-gray;
+                background-color: $color-gray;
             }
         }
     }

@@ -15,6 +15,11 @@
         right: 0;
         height: 30%;
         width: 80%;
+        transition: 1500ms;
+        transform: translateX(85vw);
+    }
+    &__slider.active {
+        transform: translateX(0);
     }
 }
 .tickets-info {

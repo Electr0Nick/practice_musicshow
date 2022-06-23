@@ -31,23 +31,33 @@
         z-index: 1;
         color: $color-lightgray;
         line-height: 0;
+        transition: 1500ms;
         &_1 {
             left: -10%;
             top: -37%;
             font-size: 10rem;
-            transform: rotate(-15deg);
+            transform: translate(-150px, -300px) rotate(-15deg);
+        }
+        &_1.active {
+            transform: translate(0, 0) rotate(-15deg);
         }
         &_2 {
             left: -25%;
             top: -20%;
             font-size: 7rem;
-            transform: rotate(-40deg);
+            transform: translate(-300px, -300px) rotate(-40deg);
+        }
+        &_2.active {
+            transform:translate(0, 0) rotate(-40deg);
         }
         &_3 {
             right: -10%;
             bottom: -25%;
             font-size: 13rem;
-            transform: rotate(-210deg);
+            transform: translate(300px, 400px) rotate(150deg);
+        }
+        &_3.active {
+            transform:translate(0, 0) rotate(150deg);
         }
     }
     &__bgelement {

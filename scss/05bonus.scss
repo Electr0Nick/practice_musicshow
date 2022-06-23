@@ -17,9 +17,17 @@
     justify-content: center;
     align-items: center;
     &__content {
+        z-index: 2;
         display: flex;
         width: 65%;
         height: 55%;
+    }
+    &__title {
+        transition: 1800ms;
+        transform: translateX(-80vw);
+    }
+    &__title.active {
+        transform: translateX(0);
     }
     &__description {
         flex: 0 0 55%;
@@ -27,6 +35,11 @@
         flex-direction: column;
         justify-content: center;
         gap: 15%;
+        transition: 1500ms;
+        transform: translateX(-80vw);
+    }
+    &__description.active {
+        transform: translateX(0);
     }
     &__bgelement {
         position: absolute;

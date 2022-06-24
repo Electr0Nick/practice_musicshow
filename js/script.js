@@ -26,6 +26,11 @@ let pageSlider = new Swiper(`.swiper`, {
         nextEl: `.navigation__arrow-link_down`,
         prevEl: `.navigation__arrow-link_up`,
     },
+    preloadImages: false,
+    lazy: {
+        loadOnTransitionStart: true,
+        loadPrevNext: true,
+    },
     init: false,
     on: {
         init: function () {
@@ -113,6 +118,13 @@ let ticketsSlider = new Swiper(`.tickets-slider`, {
         onlyInViewport: true,
         pageUpDown: true,
     },
+    preloadImages: false,
+    lazy: {
+        loadOnTransitionStart: true,
+        loadPrevNext: true,
+    },
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
 });
 
 // ---------------------------------------------------------------- about slider----------------------------------------------------------------
@@ -153,6 +165,13 @@ let artistsBgSlider = new Swiper(`.back-slider`, {
     fadeEffect: {
         crossFade: true,
     },
+    preloadImages: false,
+    lazy: {
+        loadOnTransitionStart: true,
+        loadPrevNext: true,
+    },
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
 });
 
 // ---------------------------------------------------------------- artists slider----------------------------------------------------------------

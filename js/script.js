@@ -1,4 +1,5 @@
 "use strict"
+const wrapper = document.querySelector(`.wrapper`);
 
 // ---------------------------------------------------------------- screen slider----------------------------------------------------------------
 let upBarArrow = document.querySelector(`.navigation__arrow-link_up`);
@@ -37,6 +38,7 @@ let pageSlider = new Swiper(`.swiper`, {
             menuNav(barNavList);
             menuNav(headerNavList);
             menuNav(footerNavList);
+            addFreeMode();
         },
         slideChange: function () {
             setTimeout(hideNav, 1100);
@@ -51,7 +53,10 @@ let pageSlider = new Swiper(`.swiper`, {
             removeAnimation();
             addStaticFlag();
             playAnimation();
-        }
+        },
+        resize: function () {
+            addFreeMode();
+        },
     },
 });
 
@@ -368,3 +373,21 @@ function addStaticFlag() { // функция ставит флаг на акти
 // ------ зачем? Чтобы подготовиться к переходу на следующий слайд. Флаг нужен чтобы временно отделить элементы актуального слайда (без флага) от элементов предыдущего слайда (с флагом)
 // --- все анимированные элементы актуального слайда становятся активными (получают класс active)
 // ------ зачем? Это дублирование самой первой функции (дублирование спасает, если пользователь быстро прыгает со слайда на слайд, не давая осуществить полный переход на слайд)
+
+
+// ----------------------------------------------------------------disable swiper----------------------------------------------------------------
+
+function addFreeMode() {
+    const minWidthForSwiper = 1024;
+    const maxWidthForSwiper = 2048;
+    // if (wrapper.classList.contains(`freeMode`)) {
+    //     wrapper.classList.remove(`freeMode`);
+    //     pageSlider.params.freeMode = false;
+    //     console.log(`removeFreeMode`);
+    // }
+    if (window.innerWidth < minWidthForSwiper || window.innerWidth > maxWidthForSwiper) {
+        // wrapper.classList.add(`freeMode`);
+        pageSlider.params.freeMode = true;
+        console.log(`addFreeMode`);
+    }
+}

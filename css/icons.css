@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icons';
   src:  url('../fonts/icons.eot?io6m7n');
-  src:  url('../onts/icons.eot?io6m7n#iefix') format('embedded-opentype'),
+  src:  url('../fonts/icons.eot?io6m7n#iefix') format('embedded-opentype'),
     url('../fonts/icons.ttf?io6m7n') format('truetype'),
     url('../fonts/icons.woff?io6m7n') format('woff'),
     url('../fonts/icons.svg?io6m7n#icons') format('svg');
